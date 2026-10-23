@@ -1,0 +1,434 @@
+/* ===========================================================================
+   MARCA — cores medidas na logo, nao escolhidas no olho:
+     verde do letreiro   #20E860   so' em botao, selo e destaque de acao
+     fumaca              #0C120E   o fundo, tirado da propria arte do topo
+
+   O site e' ESCURO porque o cliente aprovou o fundo escuro atras dos produtos.
+   O que fazia parecer "painel" nao era a cor, era a anatomia: caixas iguais
+   com borda, rotulos em caixa alta, faixa de status. Aqui os produtos ficam
+   soltos na pagina (foto + texto embaixo), como em loja de verdade.
+
+   Tipografia: Archivo, uma familia so', usando o eixo de largura. Expandida e
+   pesada no codigo do modelo (V155, V300) — e' o elemento marcante da loja e
+   o que o cliente fala no balcao. Normal no resto, para preco e endereco
+   serem lidos sem esforco.
+   =========================================================================== */
+:root{
+  --fundo:#0C120E; --fundo-2:#111914; --painel:#162019; --painel-2:#1C281F;
+  --fio:#253128; --fio-2:#33423A;
+  --branco:#F2F6F1; --texto:#C3D0C5; --fraco:#869889;
+  --verde:#20E860; --verde-2:#18C048; --verde-texto:#4DF184;
+  --erro:#FF8A6A;
+  --f:'Archivo',-apple-system,'Segoe UI',Roboto,sans-serif;
+  --alt-topo:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--fundo);color:var(--texto);font-family:var(--f);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  padding-bottom:84px}
+body.travado{overflow:hidden}
+img{max-width:100%;height:auto;display:block}
+button,input,select,textarea{font-family:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--verde);outline-offset:3px}
+.w{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+
+/* Um so' estilo de botao principal em toda a loja: o cliente aprende uma vez
+   onde tocar. */
+.bt{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--verde);color:#06120A;border:0;border-radius:999px;
+  padding:15px 28px;font:700 15.5px/1 var(--f);text-decoration:none;
+  transition:background .15s}
+.bt:hover{background:var(--verde-2)}
+.bt:disabled{background:var(--painel-2);color:var(--fraco);cursor:not-allowed}
+.bt.feito{background:var(--branco)}
+.bt-sec{display:inline-flex;align-items:center;justify-content:center;
+  background:transparent;border:1px solid var(--fio-2);border-radius:999px;
+  padding:14px 24px;font:600 15px/1 var(--f);text-decoration:none;color:var(--branco)}
+.bt-sec:hover{border-color:var(--verde)}
+
+/* ------------------------------------------------------- porta de idade */
+.idade{position:fixed;inset:0;z-index:200;
+  background:linear-gradient(180deg,rgba(12,18,14,.3),rgba(12,18,14,.94) 68%),
+             url('assets/hero.jpg') center 38% / cover no-repeat var(--fundo);
+  display:flex;align-items:flex-end;justify-content:center;
+  padding:24px 24px calc(44px + env(safe-area-inset-bottom,0px))}
+.idade .cx{max-width:400px;text-align:center}
+.idade .idade-t{font-size:clamp(28px,7vw,38px);font-weight:800;line-height:1.1;
+  color:var(--branco);font-stretch:112%;margin-bottom:10px}
+.idade p{font-size:15px;margin-bottom:24px}
+.idade .bts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.idade .lei{margin-top:22px;font-size:12.5px;color:var(--fraco)}
+
+/* ------------------------------------------------------------ aviso + topo */
+.aviso{background:var(--verde);color:#06120A;text-align:center;
+  font-size:13.5px;font-weight:600;padding:8px 16px}
+.topo{position:sticky;top:0;z-index:50;background:rgba(12,18,14,.86);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--fio)}
+.topo .faixa{display:flex;align-items:center;gap:28px;height:var(--alt-topo)}
+.topo .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.topo .logo img{width:38px;height:38px;border-radius:50%}
+.topo .logo span{font-weight:800;font-size:19px;color:var(--branco);font-stretch:118%}
+.topo nav{display:flex;gap:24px;font-size:14.5px}
+.topo nav a{text-decoration:none;color:var(--texto)}
+.topo nav a:hover{color:var(--branco)}
+.bt-carrinho{margin-left:auto;position:relative;background:transparent;border:0;
+  color:var(--branco);width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center}
+.bt-carrinho:hover{background:var(--painel)}
+.bt-carrinho svg{width:24px;height:24px}
+.bt-carrinho .n{position:absolute;top:2px;right:0;background:var(--verde);
+  color:#06120A;border-radius:999px;min-width:19px;height:19px;font-size:11.5px;
+  font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 5px}
+.bt-carrinho .n.zero{display:none}
+@media (max-width:720px){.topo nav{display:none}}
+
+/* ---------------------------------------------------------------- capa
+   A arte e' VERTICAL (726x1280), com o mascote no meio. Como fundo "cover"
+   no computador, o titulo caia em cima do mascote e o escondia. Agora: no
+   celular a arte ocupa a tela e o texto fica no pe; no computador a tela
+   divide, texto a' esquerda e a arte inteira a' direita, com uma copia
+   borrada dela enchendo o fundo para a fumaca nao ter emenda. */
+.capa{position:relative;isolation:isolate;overflow:hidden;background:var(--fundo)}
+.capa .fundo{position:absolute;inset:-60px;z-index:-2;
+  background:url('assets/hero.jpg') center / cover no-repeat;
+  filter:blur(40px) saturate(1.15);opacity:.8}
+.capa .arte{position:absolute;inset:0;z-index:-1;
+  background:url('assets/hero.jpg') center 22% / cover no-repeat}
+.capa .arte::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(12,18,14,0) 40%,rgba(12,18,14,.9) 72%,var(--fundo) 100%)}
+.capa .dentro{min-height:clamp(560px,86svh,740px);display:flex;
+  flex-direction:column;justify-content:flex-end;padding-bottom:clamp(32px,6vw,56px)}
+.capa h1{color:var(--branco);font-weight:800;font-size:clamp(36px,8.4vw,68px);
+  line-height:.96;letter-spacing:-.015em;font-stretch:115%;max-width:10.5em;
+  text-wrap:balance}
+.capa p{max-width:32em;margin-top:16px;font-size:clamp(16px,1.6vw,18px)}
+.capa .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+/* Celular e tablet: a arte fica EM CIMA e o texto comeca abaixo do letreiro.
+   Com a arte em "cover" e o texto no pe, o titulo caia em cima do mascote.
+   A conta: o letreiro termina a ~62% da altura da arte, que tem proporcao
+   1280/726 = 1,763. Largura da arte limitada a 480px para nao virar um
+   mascote gigante no tablet; o resto da largura e' a fumaca borrada. */
+@media (max-width:899px){
+  .capa{--la:min(100vw,480px)}
+  .capa .arte{background-size:var(--la) auto;background-position:center -60px}
+  .capa .arte::after{background:linear-gradient(180deg,rgba(12,18,14,0) 0,
+    rgba(12,18,14,0) calc(var(--la) * 1.02 - 60px),var(--fundo) calc(var(--la) * 1.14 - 40px))}
+  .capa .dentro{min-height:0;justify-content:flex-start;
+    padding-top:calc(var(--la) * 1.09 - 28px)}
+}
+@media (min-width:900px){
+  .capa .arte{left:auto;width:min(44vw,560px);right:max(0px,calc(50vw - 620px));
+    /* auto 140%: a arte e' estreita (726x1280) e, com "contain", ocupava so'
+       uma faixa no meio do elemento — a mascara esfumava o vazio em volta e a
+       borda da arte ficava reta. Ampliada, ela enche a largura e o mascote
+       cresce junto. */
+    background-size:auto 140%;background-position:center 56%;
+    /* a mascara precisa chegar a transparente ANTES da borda do elemento,
+       senao sobra uma aresta reta dizendo "aqui acaba a imagem" */
+    -webkit-mask-image:radial-gradient(closest-side at 50% 50%,#000 45%,transparent 96%);
+            mask-image:radial-gradient(closest-side at 50% 50%,#000 45%,transparent 96%)}
+  .capa .arte::after{display:none}
+  .capa .fundo::after{content:'';position:absolute;inset:0;
+    background:linear-gradient(90deg,rgba(12,18,14,.92) 0%,rgba(12,18,14,.45) 55%,rgba(12,18,14,.25) 100%)}
+  .capa .dentro{justify-content:center;min-height:clamp(540px,78vh,680px)}
+  .capa .texto{max-width:54%}
+}
+
+/* --------------------------------------------------------------- garantias */
+.garantias{border-top:1px solid var(--fio);border-bottom:1px solid var(--fio);
+  background:var(--fundo-2)}
+.garantias ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr)}
+.garantias li{display:flex;gap:14px;align-items:flex-start;padding:22px 0;font-size:14.5px;
+  line-height:1.45}
+.garantias li + li{padding-left:24px;border-left:1px solid var(--fio)}
+.garantias svg{flex:none;width:26px;height:26px;color:var(--verde);margin-top:1px}
+.garantias b{display:block;color:var(--branco);font-size:15.5px;font-weight:700}
+@media (max-width:760px){
+  .garantias ul{grid-template-columns:1fr}
+  .garantias li{padding:15px 0}
+  .garantias li + li{padding-left:0;border-left:0;border-top:1px solid var(--fio)}
+}
+
+/* ------------------------------------------------------------ catalogo */
+/* so' vertical: o .w do mesmo elemento cuida da margem lateral */
+.cat{padding-top:clamp(48px,7vw,84px);padding-bottom:clamp(40px,6vw,64px)}
+.cat-cab{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
+  gap:18px 32px;margin-bottom:28px}
+.cat-cab h2{font-weight:800;font-size:clamp(32px,5vw,48px);line-height:1;
+  color:var(--branco);font-stretch:115%;letter-spacing:-.01em}
+.cat-cab .sub{margin-top:8px;color:var(--fraco)}
+
+/* Busca por SABOR, que e' como o cliente pensa ("tem de uva?"). Procura no
+   nome em ingles e na traducao, entao "uva" acha Grape Ice. */
+.ferramentas{display:flex;gap:10px;flex-wrap:wrap}
+.busca{position:relative;flex:1 1 280px;min-width:0}
+.busca svg{position:absolute;left:16px;top:50%;width:18px;height:18px;
+  margin-top:-9px;color:var(--fraco);pointer-events:none}
+.busca input{width:100%;height:48px;background:var(--painel);border:1px solid var(--fio);
+  border-radius:999px;padding:0 18px 0 44px;font-size:15.5px;color:var(--branco)}
+.busca input::placeholder{color:var(--fraco)}
+.busca input:focus{border-color:var(--fio-2);outline:none}
+.busca input:focus-visible{outline:2px solid var(--verde);outline-offset:2px}
+
+.sel{position:relative;min-width:0}
+.sel select{width:100%;height:48px;appearance:none;-webkit-appearance:none;
+  background:var(--painel);border:1px solid var(--fio);border-radius:999px;
+  color:var(--branco);padding:0 42px 0 18px;font:500 15px/1.2 var(--f);cursor:pointer;
+  text-overflow:ellipsis}
+.sel select:hover{border-color:var(--fio-2)}
+.sel::after{content:'';position:absolute;right:19px;top:50%;width:8px;height:8px;
+  margin-top:-6px;pointer-events:none;border-right:2px solid var(--verde);
+  border-bottom:2px solid var(--verde);transform:rotate(45deg)}
+.sel.vazio select{color:var(--fraco)}
+.sel.falta select{border-color:var(--erro)}
+.sel select option{background:var(--painel);color:var(--branco)}
+.ordem{flex:0 0 210px}
+
+.prateleira{display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(36px,5vw,56px) clamp(20px,3vw,36px)}
+@media (max-width:980px){.prateleira{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.prateleira{grid-template-columns:1fr}}
+.modelo{display:flex;flex-direction:column}
+
+/* A FOTO NO ESCURO, com halo verde: aprovado pelo cliente. O halo e' o que
+   recorta o aparelho preto do fundo preto. */
+.foto{position:relative;display:flex;align-items:center;justify-content:center;
+  aspect-ratio:1/1;border-radius:18px;padding:24px;border:0;width:100%;
+  background:radial-gradient(60% 55% at 50% 46%,rgba(32,232,96,.17),transparent 72%),
+             linear-gradient(180deg,#17221B,#111914);overflow:hidden}
+.foto img{max-width:84%;max-height:100%;width:auto;height:auto;object-fit:contain;
+  filter:drop-shadow(0 16px 24px rgba(0,0,0,.55));transition:transform .35s ease}
+.foto:hover img{transform:scale(1.04)}
+.selo{position:absolute;top:14px;left:14px;background:var(--branco);color:#06120A;
+  font-size:12.5px;font-weight:700;padding:6px 11px;border-radius:999px}
+
+.modelo .fab{margin-top:18px;font-size:14px;color:var(--fraco)}
+.modelo h3{font-weight:900;font-size:clamp(40px,4.8vw,52px);line-height:.92;
+  letter-spacing:-.02em;color:var(--branco);font-stretch:125%}
+.modelo h3 a{text-decoration:none}
+.modelo h3 a:hover{color:var(--verde-texto)}
+.modelo .subtitulo{margin-top:8px;font-size:15px;font-weight:600;color:var(--branco)}
+.modelo .resumo{margin-top:6px;font-size:15px;line-height:1.55}
+
+/* Diferenciais com um tique verde: a lista que o cliente compara entre os
+   cartoes. O tique e' a unica marca de cor no texto do cartao. */
+.pontos{list-style:none;margin-top:12px;font-size:14.5px}
+.pontos li{position:relative;padding-left:24px;margin-bottom:5px}
+.pontos li::before{content:'';position:absolute;left:3px;top:.42em;width:10px;height:5px;
+  border-left:2px solid var(--verde);border-bottom:2px solid var(--verde);
+  transform:rotate(-45deg)}
+.ficha-curta{display:flex;gap:18px;margin-top:10px;font-size:14px;color:var(--fraco)}
+.ficha-curta b{color:var(--branco);font-weight:700}
+.achou{margin-top:10px;font-size:14px;color:var(--verde-texto)}
+.linha-preco{display:flex;align-items:baseline;gap:14px;margin:16px 0 14px}
+.preco{font-weight:800;font-size:27px;line-height:1;color:var(--branco);
+  font-variant-numeric:tabular-nums}
+.sem-preco{font-size:14px;color:var(--erro)}
+.ver{margin-left:auto;background:none;border:0;font-size:14px;color:var(--texto);
+  text-decoration:underline;text-underline-offset:4px}
+.ver:hover{color:var(--branco)}
+.escolha{margin-top:auto;display:grid;grid-template-columns:1fr auto;gap:8px}
+.add{height:48px;padding:0 22px}
+.no-carrinho{grid-column:1/-1;font-size:13.5px;font-weight:600;color:var(--verde-texto);
+  min-height:20px}
+.no-carrinho.aviso-erro{color:var(--erro)}
+.nada{padding:40px 0;text-align:center;color:var(--fraco);grid-column:1/-1}
+.nada a{color:var(--branco)}
+
+/* ----------------------------------------------------- pagina do produto
+   Pagina de verdade, com endereco proprio (ignite-v155.html): e' o que o
+   Google indexa como produto. Foto parada a' esquerda enquanto a coluna de
+   compra rola; no celular, uma coluna so'. */
+.trilha{display:flex;flex-wrap:wrap;gap:8px;padding-top:22px;font-size:14px;color:var(--fraco)}
+.trilha a{text-decoration:none}
+.trilha a:hover{color:var(--branco);text-decoration:underline}
+.pp-topo{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,64px);
+  padding-top:22px;padding-bottom:clamp(48px,7vw,80px);align-items:start}
+.pp-foto{position:sticky;top:88px}
+.pp-foto .foto{aspect-ratio:1/1;border-radius:22px}
+.pp-info .fab{font-size:15px;color:var(--fraco);margin-bottom:4px}
+.pp-info h1{font-weight:900;font-size:clamp(52px,7vw,84px);line-height:.9;
+  color:var(--branco);font-stretch:125%;letter-spacing:-.02em}
+.pp-info .subtitulo{margin-top:12px;font-size:18px;color:var(--branco)}
+.pp-info .preco{font-size:32px;margin:20px 0 4px}
+.pp-info .pagto{font-size:14px;color:var(--fraco)}
+.pp-info .pontos{margin-top:20px;font-size:15.5px}
+.pp-h{font-size:18px;font-weight:700;color:var(--branco);margin:30px 0 8px}
+.pp-sobre,.pp-outros{border-top:1px solid var(--fio);padding-top:clamp(44px,6vw,72px);
+  padding-bottom:clamp(44px,6vw,72px)}
+.pp-sobre{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(28px,5vw,72px)}
+.pp-sobre h2,.pp-outros h2{font-weight:800;font-size:clamp(26px,3.4vw,34px);
+  line-height:1.05;color:var(--branco);font-stretch:112%;margin-bottom:18px}
+.pp-sobre p{font-size:16.5px;line-height:1.7;max-width:62ch;margin-bottom:14px}
+@media (max-width:860px){
+  .pp-topo,.pp-sobre{grid-template-columns:1fr}
+  .pp-foto{position:static}
+  .pp-foto .foto{aspect-ratio:4/3}
+}
+.tabela{width:100%;border-collapse:collapse;font-size:14.5px}
+.tabela th,.tabela td{text-align:left;padding:9px 0;border-bottom:1px solid var(--fio);
+  vertical-align:top}
+.tabela th{font-weight:400;color:var(--fraco);width:46%}
+.tabela td{color:var(--branco)}
+
+/* Lista de sabores com quantidade em cada um: quem leva tres sabores monta
+   tudo aqui de uma vez, em vez de escolher e adicionar tres vezes. */
+.sabores{list-style:none}
+.sabores li{display:flex;align-items:center;gap:12px;padding:10px 0;
+  border-bottom:1px solid var(--fio)}
+.sabores .nm{flex:1;min-width:0}
+.sabores .nm b{display:block;font-weight:600;color:var(--branco);font-size:15px}
+.sabores .nm span{font-size:13.5px;color:var(--fraco)}
+.sabores li.esgotado .nm{opacity:.45}
+.sabores li.tem b{color:var(--verde-texto)}
+.passo{display:flex;align-items:center;gap:2px;flex:none}
+.passo button{width:36px;height:36px;border-radius:50%;border:1px solid var(--fio-2);
+  background:transparent;font-size:18px;line-height:1;color:var(--branco)}
+.passo button:hover:not(:disabled){border-color:var(--verde)}
+.passo button:disabled{opacity:.3;cursor:not-allowed}
+.passo .q{min-width:30px;text-align:center;font-weight:700;color:var(--branco);
+  font-variant-numeric:tabular-nums}
+.rodape-prod{position:sticky;bottom:0;margin-top:22px;padding:16px 0 18px;
+  background:linear-gradient(180deg,rgba(12,18,14,0),var(--fundo) 26%)}
+.rodape-prod .bt{width:100%}
+@media (max-width:520px){.so-largo{display:none}}
+.rodape-prod .dica{font-size:13.5px;color:var(--fraco);text-align:center;margin-top:8px}
+
+.fechar{background:var(--painel);border:1px solid var(--fio-2);width:42px;height:42px;
+  border-radius:50%;font-size:22px;line-height:1;color:var(--branco)}
+.fechar:hover{border-color:var(--verde)}
+
+/* -------------------------------------------------------------- como pedir
+   Numeracao aqui e' informacao: e' uma sequencia de verdade, e o passo 3 e'
+   onde pedido se perde (cliente nao toca em enviar no WhatsApp). */
+.secao{padding:clamp(52px,8vw,92px) 0;border-top:1px solid var(--fio)}
+.secao h2{font-weight:800;font-size:clamp(28px,4vw,38px);line-height:1.05;
+  color:var(--branco);font-stretch:115%;margin-bottom:28px}
+.passos{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(20px,3vw,44px);counter-reset:p}
+.passos li{counter-increment:p;font-size:15px}
+.passos li::before{content:counter(p);display:flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--fio-2);
+  font-weight:800;font-size:17px;color:var(--verde);margin-bottom:16px}
+.passos b{display:block;color:var(--branco);font-size:17px;margin-bottom:4px}
+@media (max-width:760px){.passos{grid-template-columns:1fr}}
+
+/* --------------------------------------------------------------- duvidas */
+.duvidas{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);
+  gap:clamp(24px,5vw,72px)}
+.duvidas .lado p{color:var(--fraco);margin-top:-14px;margin-bottom:20px;max-width:30ch}
+details{border-bottom:1px solid var(--fio)}
+details:first-of-type{border-top:1px solid var(--fio)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;
+  padding:20px 0;font-size:17px;font-weight:600;color:var(--branco)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';margin-left:auto;font-size:24px;font-weight:400;
+  color:var(--verde);line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 40px 22px 0;max-width:62ch}
+@media (max-width:820px){.duvidas{grid-template-columns:1fr}}
+
+/* ------------------------------------------------------------ rodape */
+footer{background:var(--fundo-2);border-top:1px solid var(--fio);
+  padding:48px 0 36px;font-size:14.5px}
+footer .colunas{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer .marca{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+footer .marca img{width:50px;height:50px;border-radius:50%}
+footer .marca span{color:var(--branco);font-weight:800;font-size:18px;font-stretch:118%}
+footer .rod-h{color:var(--branco);font-size:15px;font-weight:700;margin-bottom:10px}
+footer ul{list-style:none}
+footer li{margin-bottom:7px}
+footer li a{text-decoration:none}
+footer li a:hover{color:var(--branco);text-decoration:underline}
+footer .lei{margin-top:36px;padding-top:20px;border-top:1px solid var(--fio);
+  font-size:13px;color:var(--fraco);line-height:1.7}
+@media (max-width:760px){footer .colunas{grid-template-columns:1fr}}
+
+/* ------------------------------------------------------------ carrinho */
+.barra-fixa{position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:rgba(12,18,14,.97);border-top:1px solid var(--fio);
+  padding:12px clamp(16px,4vw,32px);
+  padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+.barra-fixa .faixa{max-width:1136px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.barra-fixa .tt{font-size:13.5px;color:var(--fraco)}
+.barra-fixa .vv{font-weight:800;font-size:22px;line-height:1.1;color:var(--branco);
+  font-variant-numeric:tabular-nums}
+.barra-fixa .bt{margin-left:auto}
+
+.folha{position:fixed;inset:0;z-index:120;background:rgba(4,7,5,.65);
+  display:flex;justify-content:flex-end}
+.folha .painel{background:var(--fundo-2);width:min(460px,100%);height:100%;
+  overflow-y:auto;border-left:1px solid var(--fio);
+  padding:22px clamp(18px,3vw,26px) 32px;
+  /* a barra de rolagem come largura quando aparece; reservar a goteira
+     mantem o "remover" longe da borda */
+  scrollbar-gutter:stable}
+.folha .cabeca{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.folha .cabeca h2{font-weight:800;font-size:24px;color:var(--branco);font-stretch:112%}
+.folha .cabeca .fechar{margin-left:auto}
+.linha-item{display:grid;grid-template-columns:56px 1fr auto;gap:2px 14px;
+  padding:14px 0;border-bottom:1px solid var(--fio);align-items:start}
+.linha-item .mini{grid-row:1/4;width:56px;height:56px;border-radius:10px;
+  background:radial-gradient(60% 55% at 50% 46%,rgba(32,232,96,.15),transparent 72%),#17221B;
+  display:flex;align-items:center;justify-content:center;padding:6px}
+.linha-item .mini img{max-height:100%;width:auto}
+.linha-item .n{font-weight:700;font-size:15.5px;color:var(--branco)}
+.linha-item .s{font-size:14px;color:var(--fraco);grid-column:2}
+.linha-item .v{font-weight:700;color:var(--branco);white-space:nowrap;
+  font-variant-numeric:tabular-nums}
+.linha-item .passo{grid-column:2/4;margin-top:8px}
+.linha-item .tirar{margin-left:auto;border:0;background:transparent;width:auto;
+  color:var(--fraco);font-size:13.5px;text-decoration:underline}
+.linha-taxa{display:flex;justify-content:space-between;padding:12px 0;
+  border-bottom:1px solid var(--fio);font-size:15px}
+.total{display:flex;align-items:baseline;gap:10px;margin:18px 0}
+.total .r{font-size:15px;color:var(--fraco)}
+.total .v{margin-left:auto;font-weight:800;font-size:28px;line-height:1;
+  color:var(--branco);font-variant-numeric:tabular-nums}
+.folha-vazia{color:var(--fraco);font-size:15px;padding:32px 0;text-align:center}
+.folha-vazia .bt{margin-top:18px}
+
+/* ------------------------------------------------------------ formulario */
+.campo{margin-bottom:13px}
+.campo label{display:block;font-size:14px;font-weight:600;color:var(--branco);margin-bottom:6px}
+.campo input,.campo textarea,.campo select{width:100%;background:var(--painel);
+  border:1px solid var(--fio);border-radius:12px;color:var(--branco);
+  padding:13px 14px;font:400 16px/1.4 var(--f)}
+.campo input::placeholder,.campo textarea::placeholder{color:var(--fraco)}
+.campo input:focus-visible,.campo textarea:focus-visible,.campo select:focus-visible{
+  outline:2px solid var(--verde);outline-offset:1px}
+.campo textarea{min-height:72px;resize:vertical}
+.dupla{display:grid;grid-template-columns:1fr 1.5fr;gap:12px}
+.erro{color:var(--erro);font-size:13px;margin-top:4px}
+.enviar{width:100%;margin-top:6px}
+.aviso-form{font-size:13.5px;color:var(--fraco);margin-top:12px;line-height:1.6}
+.aviso-form b{color:var(--branco)}
+
+/* ------------------------------------------------------------ confirmado */
+.ok{text-align:center;padding:24px 0}
+.ok .marca{width:64px;height:64px;border-radius:50%;background:var(--verde);
+  color:#06120A;display:flex;align-items:center;justify-content:center;
+  font-size:30px;font-weight:800;margin:0 auto 18px}
+.ok h2{font-weight:800;font-size:28px;color:var(--branco);margin-bottom:10px;font-stretch:112%}
+.ok p{font-size:15.5px;margin-bottom:14px}
+.ok .prazo{background:var(--painel);border-radius:14px;padding:16px;margin:18px 0}
+.ok .prazo b{display:block;font-size:22px;font-weight:800;color:var(--branco);margin-top:2px}
+
+/* ------------------------------------------------- area de toque (celular)
+   Link de texto pequeno tem uns 20px de altura: no dedo, vira toque errado.
+   O padding aumenta a area clicavel sem mudar o desenho; a margem negativa
+   devolve o espaco para o layout nao mexer. */
+.ver{padding:12px 0;margin:-12px 0}
+.trilha a{display:inline-block;padding:12px 0;margin:-12px 0}
+footer li a{display:inline-block;padding:9px 0}
+footer li{margin-bottom:0}

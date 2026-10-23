@@ -1,0 +1,3 @@
+# arquivos de conferencia local, nao vao para o site
+_*.html
+_*.js
