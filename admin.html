@@ -220,6 +220,10 @@ main{padding:22px 0 120px}
       <input class="in" id="senha" type="password" required autocomplete="current-password" autofocus></label>
     <button class="bt" type="submit">Entrar</button>
     <div class="msg" id="login-msg" role="status"></div>
+    <!-- O token do GitHub vence (no maximo em 1 ano). Trocar e' refazer a
+         configuracao; so' funciona com um token novo que tenha acesso ao repo,
+         entao este link nao abre porta para ninguem de fora. -->
+    <p style="margin-top:14px;font-size:13px"><a href="#" id="trocar-token" style="color:var(--fraco)">Token expirou? Configurar de novo</a></p>
   </form>
 </section>
 
@@ -440,6 +444,10 @@ $('form-login').addEventListener('submit', async function(ev){
   abrirPainel();
 });
 
+$('trocar-token').addEventListener('click', function(ev){
+  ev.preventDefault(); mostra('tela-config'); $('cfg-token').focus();
+});
+
 $('sair').addEventListener('click', function(){
   if (mexidas() && !sairConfirmado){
     sairConfirmado = true; $('sair').textContent = 'Sair sem publicar?';
@@ -480,7 +488,8 @@ async function abrirPainel(){
     aviso('', '');
     desenhar();
   } catch(e){
-    if (e.status === 401){ guarda('vpx-token', null); aviso('erro', 'O acesso expirou. Saia e entre de novo.'); return; }
+    if (e.status === 401){ guarda('vpx-token', null);
+      aviso('erro', 'O token do GitHub expirou ou foi apagado. Toque em Sair e use "Configurar de novo" na tela de entrada.'); return; }
     aviso('erro', 'Não consegui carregar o catálogo: ' + esc(e.message));
   }
 }
