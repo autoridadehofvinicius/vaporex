@@ -265,27 +265,6 @@ window.VAPOREX_CATALOGO = [
       "Menthol",
       "Icy Mint"
     ]
-  },
-  {
-    "modelo": "Spearmint Ignite",
-    "slug": "spearmint-ignite",
-    "foto": "assets/produtos/spearmint-ignite.png",
-    "puffs": "teste",
-    "preco": 139,
-    "destaque": "Teste",
-    "seo_titulo": "Spearmint Ignite em Umuarama: teste puffs | Vaporex",
-    "seo_descricao": "Spearmint Ignite com teste puffs e 1 sabores. Entrega em Umuarama até 1h30 e pagamento na entrega.",
-    "subtitulo": "Pod descartável de teste puffs",
-    "resumo": "Teste",
-    "pontos": [],
-    "descricao": [
-      "Teste"
-    ],
-    "ficha": {},
-    "sabores": [
-      "Spearmint",
-      "ignite"
-    ]
   }
 ];
 
