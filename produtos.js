@@ -107,7 +107,6 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Banana Ice",
-      "Strawberry Ice",
       "Blueberry Strawberry Coconut",
       "Green Apple"
     ]
