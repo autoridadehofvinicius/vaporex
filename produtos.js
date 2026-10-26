@@ -262,6 +262,68 @@ window.VAPOREX_CATALOGO = [
       "Menthol",
       "Icy Mint"
     ]
+  },
+  {
+    "modelo": "NIK BAR",
+    "slug": "nik-bar",
+    "foto": "assets/produtos/nik-bar.png",
+    "puffs": "10000",
+    "preco": 69.9,
+    "destaque": "Custo benefício",
+    "seo_titulo": "NIK BAR em Umuarama: 10000 puffs | Vaporex",
+    "seo_descricao": "NIK BAR com 10000 puffs e 4 sabores. Entrega em Umuarama até 1h30 e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 10000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "Menthol",
+      "Grape ice",
+      "Pineapple ice",
+      "Strawberry KIwi"
+    ]
+  },
+  {
+    "modelo": "NIK BAR 30K",
+    "slug": "nik-bar-30k",
+    "foto": "assets/produtos/nik-bar-30k.png",
+    "puffs": "30000",
+    "preco": 89.9,
+    "destaque": "",
+    "seo_titulo": "NIK BAR 30K em Umuarama: 30000 puffs | Vaporex",
+    "seo_descricao": "NIK BAR 30K com 30000 puffs e 1 sabores. Entrega em Umuarama até 1h30 e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 30000 puffs",
+    "resumo": "Outro custo benefício que cabe no seu bolso!",
+    "pontos": [],
+    "descricao": [
+      "Outro custo benefício que cabe no seu bolso!"
+    ],
+    "ficha": {},
+    "sabores": [
+      "Grape ice"
+    ]
+  },
+  {
+    "modelo": "LIFE POD 10K",
+    "slug": "life-pod-10k",
+    "foto": "assets/produtos/life-pod-10k.png",
+    "puffs": "10000",
+    "preco": 79.9,
+    "destaque": "",
+    "seo_titulo": "LIFE POD 10K em Umuarama: 10000 puffs | Vaporex",
+    "seo_descricao": "LIFE POD 10K com 10000 puffs e 4 sabores. Entrega em Umuarama até 1h30 e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 10000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "Banana Bubblegum",
+      "Pitaya",
+      "Uva ice",
+      "Uva e mel"
+    ]
   }
 ];
 
