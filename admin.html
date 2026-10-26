@@ -1,0 +1,807 @@
+<!doctype html>
+<!-- ===========================================================================
+     PAINEL DA LOJA — o dono da Vaporex mexe no catalogo sem passar por ninguem.
+
+     COMO FUNCIONA SEM SERVIDOR
+       O site e' estatico no GitHub Pages. Este painel edita o produtos.js,
+       remonta TODAS as paginas no proprio navegador (com o mesmo render.js e
+       paginas.js do gerador do computador) e publica tudo num commit so' pela
+       API do GitHub. O Pages republica em ~1 minuto.
+
+     A SENHA
+       O painel precisa de um token do GitHub para publicar. O token fica
+       guardado CRIPTOGRAFADO com a senha (PBKDF2 600 mil voltas + AES-GCM) em
+       admin-chave.json, que e' publico. Sem a senha ele nao serve para nada;
+       com uma senha fraca, alguem poderia adivinhar por forca bruta. Por isso
+       a configuracao exige no minimo 10 caracteres.
+       O token tem que ser de acesso SO' a este repositorio: se vazar, o
+       estrago maximo e' alguem mexer na loja, nao nos outros sites.
+
+     O QUE O PAINEL NAO GUARDA
+       Nada de cliente. Ele so' le e escreve o catalogo.
+     =========================================================================== -->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Painel da loja | Vaporex</title>
+<link rel="icon" href="assets/emblema.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<style>
+:root{
+  --fundo:#0C120E; --fundo-2:#111914; --painel:#162019; --painel-2:#1C281F;
+  --fio:#253128; --fio-2:#33423A;
+  --branco:#F2F6F1; --texto:#C3D0C5; --fraco:#869889;
+  --verde:#20E860; --verde-2:#18C048; --verde-texto:#4DF184;
+  --erro:#FF8A6A; --aviso:#F5C451;
+  --f:'Archivo',-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{background:var(--fundo);color:var(--texto);font:16px/1.5 var(--f);
+  -webkit-font-smoothing:antialiased;min-height:100vh}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:2px solid var(--verde);outline-offset:2px}
+.w{max-width:880px;margin:0 auto;padding:0 16px}
+
+/* botoes: um principal verde, um secundario de contorno, um de perigo */
+.bt{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--verde);color:#06120A;border:0;border-radius:999px;
+  padding:13px 22px;font-weight:700;font-size:15px;line-height:1;min-height:44px}
+.bt:hover{background:var(--verde-2)}
+.bt:disabled{background:var(--painel-2);color:var(--fraco);cursor:not-allowed}
+.bt2{display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  background:transparent;border:1px solid var(--fio-2);border-radius:999px;
+  padding:10px 16px;font-weight:600;font-size:14px;line-height:1;min-height:40px;color:var(--branco)}
+.bt2:hover{border-color:var(--verde)}
+.perigo{border-color:#5a2c22;color:var(--erro)}
+.perigo:hover{border-color:var(--erro)}
+.bt-icone{width:40px;height:40px;padding:0;border-radius:50%}
+
+/* ------------------------------------------------------------ acesso */
+.acesso{min-height:100vh;display:grid;place-items:center;padding:24px 16px}
+.cx{width:100%;max-width:400px;background:var(--fundo-2);border:1px solid var(--fio);
+  border-radius:20px;padding:28px 24px}
+.cx .marca{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.cx .marca img{width:48px;height:48px;border-radius:50%}
+.cx h1{font-size:22px;color:var(--branco);font-stretch:112%;font-weight:800;line-height:1.1}
+.cx p{font-size:14px;color:var(--fraco)}
+label.c{display:block;margin-top:14px;font-size:14px;font-weight:600;color:var(--branco)}
+label.c small{display:block;font-weight:400;color:var(--fraco);margin-top:2px}
+.in{width:100%;margin-top:6px;background:var(--fundo);border:1px solid var(--fio-2);
+  border-radius:12px;padding:12px 14px;font-size:16px;color:var(--branco);min-height:46px}
+.in:focus{border-color:var(--verde);outline:0}
+textarea.in{min-height:84px;resize:vertical;line-height:1.45}
+.cx .bt{width:100%;margin-top:20px}
+.msg{margin-top:12px;font-size:14px;min-height:20px}
+.msg.erro{color:var(--erro)} .msg.ok{color:var(--verde-texto)}
+.passos{margin:14px 0 0 18px;font-size:14px;color:var(--texto)}
+.passos li{margin:6px 0}
+.passos a{color:var(--verde-texto)}
+
+/* ------------------------------------------------------------ topo */
+.topo{position:sticky;top:0;z-index:20;background:rgba(12,18,14,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--fio)}
+.topo .w{display:flex;align-items:center;gap:12px;min-height:64px}
+.topo img{width:36px;height:36px;border-radius:50%}
+.topo b{color:var(--branco);font-stretch:112%;font-weight:800;font-size:17px;line-height:1.1}
+.topo .esp{flex:1}
+.topo small{display:block;color:var(--fraco);font-size:12px;font-weight:400;font-stretch:100%}
+
+.aviso-bar{background:var(--painel);border-bottom:1px solid var(--fio);font-size:14px}
+.aviso-bar .w{display:flex;gap:12px;align-items:center;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.aviso-bar.ok{background:#0f2a18;color:var(--verde-texto)}
+.aviso-bar.erro{background:#2a1510;color:var(--erro)}
+.aviso-bar.pend{background:#2a2410;color:var(--aviso)}
+
+main{padding:22px 0 120px}
+.intro{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.intro h2{color:var(--branco);font-size:24px;font-stretch:112%;font-weight:800}
+.intro p{font-size:14px;color:var(--fraco)}
+
+/* ------------------------------------------------------------ modelo */
+.mod{background:var(--fundo-2);border:1px solid var(--fio);border-radius:18px;
+  margin-bottom:14px;overflow:hidden}
+.mod.mexido{border-color:var(--aviso)}
+.mod-cab{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;padding:14px}
+.mod-cab .ft{width:72px;height:72px;border-radius:14px;
+  background:radial-gradient(circle at 50% 55%,rgba(32,232,96,.22),transparent 70%),var(--painel)}
+.mod-cab .ft img{width:72px;height:72px;object-fit:contain}
+.mod-cab h3{color:var(--branco);font-size:19px;font-stretch:112%;font-weight:800;line-height:1.15}
+.mod-cab .meta{font-size:13px;color:var(--fraco)}
+.mod-cab .meta b{color:var(--texto);font-weight:600}
+.zero{color:var(--erro)!important}
+.ord{display:flex;gap:6px}
+
+.mod-corpo{border-top:1px solid var(--fio);padding:14px}
+.grade{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.grade .larga{grid-column:1/-1}
+.mod-corpo .grade{margin-top:-14px}   /* tira o respiro do 1o campo de cada coluna */
+
+.sab-cab{display:flex;justify-content:space-between;align-items:center;gap:8px;
+  margin:20px 0 8px;flex-wrap:wrap}
+.sab-cab h4{color:var(--branco);font-size:15px}
+.sab-cab .acoes{display:flex;gap:6px;flex-wrap:wrap}
+.sabs{list-style:none;border:1px solid var(--fio);border-radius:14px;overflow:hidden}
+.sabs li{display:flex;align-items:center;gap:10px;padding:8px 8px 8px 14px;border-top:1px solid var(--fio)}
+.sabs li:first-child{border-top:0}
+.sabs .nm{flex:1;min-width:0;color:var(--branco);font-size:15px;overflow-wrap:anywhere}
+.sabs li.fora .nm{color:var(--fraco);text-decoration:line-through}
+
+/* chave de estoque: grande para o dedo, e diz o estado em palavra */
+.chave{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--fio-2);
+  border-radius:999px;padding:6px 12px 6px 6px;background:var(--fundo);
+  font-size:13px;font-weight:700;min-height:40px;white-space:nowrap}
+.chave i{width:28px;height:28px;border-radius:50%;background:var(--verde);display:block;
+  box-shadow:0 0 0 4px rgba(32,232,96,.16)}
+.chave.fora i{background:var(--fio-2);box-shadow:none}
+.chave span{color:var(--verde-texto)}
+.chave.fora span{color:var(--fraco)}
+.tira{width:40px;height:40px;border-radius:50%;border:0;background:transparent;
+  color:var(--fraco);font-size:20px;line-height:1}
+.tira:hover{color:var(--erro);background:#2a1510}
+.add-sab{display:flex;gap:8px;margin-top:10px}
+.add-sab .in{margin-top:0}
+
+.mod-pe{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:18px;
+  padding-top:14px;border-top:1px dashed var(--fio)}
+.confirma{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--erro)}
+
+/* ------------------------------------------------------------ novo */
+.novo{border:1px dashed var(--fio-2);border-radius:18px;padding:18px;margin-top:22px}
+.novo h3{color:var(--branco);font-size:19px;font-stretch:112%;font-weight:800}
+.novo > p{font-size:14px;color:var(--fraco);margin-top:2px}
+.foto-escolha{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;margin-top:14px}
+.foto-escolha .pre{width:120px;height:120px;border-radius:16px;
+  background:radial-gradient(circle at 50% 55%,rgba(32,232,96,.22),transparent 70%),var(--painel);
+  display:grid;place-items:center;color:var(--fraco);font-size:12px;text-align:center;overflow:hidden}
+.foto-escolha .pre img{width:120px;height:120px;object-fit:contain}
+.foto-escolha small{display:block;color:var(--fraco);font-size:13px;margin-top:6px}
+.foto-escolha small.alerta{color:var(--aviso)}
+
+/* ------------------------------------------------------------ barra de publicar */
+.pub{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(17,25,20,.97);
+  border-top:1px solid var(--fio);backdrop-filter:blur(8px);
+  padding:12px 0 calc(12px + env(safe-area-inset-bottom))}
+.pub .w{display:flex;align-items:center;gap:12px}
+.pub .txt{flex:1;font-size:14px;min-width:0}
+.pub .txt b{color:var(--aviso);display:block}
+.pub .bt{flex-shrink:0}
+
+@media (max-width:560px){
+  .grade{grid-template-columns:1fr}
+  .mod-cab{grid-template-columns:56px 1fr;gap:12px}
+  .mod-cab .ft,.mod-cab .ft img{width:56px;height:56px}
+  .ord{grid-column:1/-1;justify-content:flex-end}
+  .foto-escolha{grid-template-columns:96px 1fr}
+  .foto-escolha .pre,.foto-escolha .pre img{width:96px;height:96px}
+  .topo .sair-txt{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================================================= primeira vez -->
+<section class="acesso" id="tela-config" hidden>
+  <form class="cx" id="form-config" autocomplete="off">
+    <div class="marca"><img src="assets/emblema.jpg" alt=""><div>
+      <h1>Configurar o painel</h1><p>Só é feito uma vez.</p></div></div>
+    <p>O painel publica as mudanças no GitHub. Para isso, cole um token que dá acesso
+      <b>somente</b> ao repositório da loja:</p>
+    <ol class="passos">
+      <li>Abra <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com → novo token</a></li>
+      <li>Em <b>Repository access</b>, escolha <b>Only select repositories</b> e marque só <b id="nome-repo">vaporex</b></li>
+      <li>Em <b>Permissions → Contents</b>, escolha <b>Read and write</b></li>
+      <li>Gere e cole aqui embaixo</li>
+    </ol>
+    <label class="c">Token do GitHub
+      <input class="in" id="cfg-token" type="password" required placeholder="github_pat_..." spellcheck="false"></label>
+    <label class="c">Senha do painel
+      <small>Mínimo de 10 caracteres. É o que protege a loja: o painel é uma página pública.</small>
+      <input class="in" id="cfg-senha" type="password" required minlength="10" autocomplete="new-password"></label>
+    <label class="c">Repita a senha
+      <input class="in" id="cfg-senha2" type="password" required minlength="10" autocomplete="new-password"></label>
+    <button class="bt" type="submit">Salvar e entrar</button>
+    <div class="msg" id="cfg-msg" role="status"></div>
+  </form>
+</section>
+
+<!-- ======================================================= login -->
+<section class="acesso" id="tela-login" hidden>
+  <form class="cx" id="form-login">
+    <div class="marca"><img src="assets/emblema.jpg" alt=""><div>
+      <h1>Painel da loja</h1><p>Vaporex Vape Store</p></div></div>
+    <label class="c">Senha
+      <input class="in" id="senha" type="password" required autocomplete="current-password" autofocus></label>
+    <button class="bt" type="submit">Entrar</button>
+    <div class="msg" id="login-msg" role="status"></div>
+  </form>
+</section>
+
+<!-- ======================================================= painel -->
+<div id="tela-painel" hidden>
+  <header class="topo"><div class="w">
+    <img src="assets/emblema.jpg" alt="">
+    <div><b>Painel da loja</b><small>Vaporex Vape Store</small></div>
+    <span class="esp"></span>
+    <a class="bt2" href="./" target="_blank" rel="noopener">Ver site</a>
+    <button class="bt2" id="sair" type="button" aria-label="Sair">Sair<span class="sair-txt"></span></button>
+  </div></header>
+  <div class="aviso-bar" id="aviso" hidden><div class="w" id="aviso-txt"></div></div>
+
+  <main class="w">
+    <div class="intro">
+      <div><h2>Produtos</h2>
+        <p>Toque no sabor para marcar <b>esgotado</b> ou <b>em estoque</b>. Nada vai para o site até você tocar em <b>Publicar</b>.</p></div>
+    </div>
+    <div id="lista"></div>
+
+    <section class="novo" id="novo">
+      <h3>Adicionar modelo novo</h3>
+      <p>Aparece no site com página própria, igual aos outros.</p>
+      <div class="foto-escolha">
+        <div class="pre" id="nv-pre">sem foto</div>
+        <div>
+          <label class="bt2" for="nv-foto" style="cursor:pointer">Escolher foto</label>
+          <input id="nv-foto" type="file" accept="image/png,image/webp,image/jpeg" hidden>
+          <small id="nv-foto-dica">Use foto com <b>fundo transparente</b> (PNG ou WEBP), como as dos outros produtos. O painel recorta e centraliza sozinho.</small>
+        </div>
+      </div>
+      <div class="grade">
+        <label class="c">Nome do modelo<small>Marca e código, ex.: Ignite V500</small>
+          <input class="in" id="nv-nome" placeholder="Ignite V500"></label>
+        <label class="c">Puffs<small>Ex.: 50.000</small>
+          <input class="in" id="nv-puffs" inputmode="numeric" placeholder="50.000"></label>
+        <label class="c">Preço (R$)
+          <input class="in" id="nv-preco" inputmode="decimal" placeholder="139,90"></label>
+        <label class="c">Selo na foto<small>Opcional, ex.: Lançamento</small>
+          <input class="in" id="nv-destaque" placeholder="Lançamento"></label>
+        <label class="c larga">Descrição curta<small>Uma ou duas frases sobre o aparelho</small>
+          <textarea class="in" id="nv-resumo"></textarea></label>
+        <label class="c larga">Sabores<small>Um por linha</small>
+          <textarea class="in" id="nv-sabores" placeholder="Grape Ice&#10;Watermelon Ice&#10;Menthol"></textarea></label>
+      </div>
+      <div class="msg" id="nv-msg" role="status"></div>
+      <button class="bt" id="nv-add" type="button" style="margin-top:8px">Adicionar à lista</button>
+    </section>
+  </main>
+
+  <div class="pub"><div class="w">
+    <div class="txt" id="pub-txt">Nenhuma alteração</div>
+    <button class="bt" id="publicar" type="button" disabled>Publicar</button>
+  </div></div>
+</div>
+
+<script src="render.js"></script>
+<script src="paginas.js"></script>
+<script>
+(function(){
+'use strict';
+/* ---------------------------------------------------------------- ajustes */
+var REPO = {dono: 'autoridadehofvinicius', nome: 'vaporex', ramo: 'main'};
+var API = 'https://api.github.com/repos/' + REPO.dono + '/' + REPO.nome;
+var CHAVE = 'admin-chave.json';
+var VOLTAS = 600000;
+
+var $ = function(id){ return document.getElementById(id); };
+var V = window.VPX, esc = V.esc;
+document.getElementById('nome-repo').textContent = REPO.nome;
+
+/* ------------------------------------------------------------ utilidades */
+function b64(bytes){
+  var s = '', u = new Uint8Array(bytes);
+  for (var i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000));
+  return btoa(s);
+}
+function deB64(t){
+  var s = atob(t.replace(/\s/g, '')), u = new Uint8Array(s.length);
+  for (var i = 0; i < s.length; i++) u[i] = s.charCodeAt(i);
+  return u;
+}
+function clone(o){ return JSON.parse(JSON.stringify(o)); }
+function guarda(k, v){ try { v == null ? sessionStorage.removeItem(k) : sessionStorage.setItem(k, v); } catch(e){} }
+function pega(k){ try { return sessionStorage.getItem(k); } catch(e){ return null; } }
+function preco(txt){
+  var t = String(txt || '').replace(/[^\d,.]/g, '');
+  if (!t) return null;
+  /* "1.299,90" e "89,90" (brasileiro) e "89.90" */
+  if (t.indexOf(',') >= 0) t = t.replace(/\./g, '').replace(',', '.');
+  var n = Number(t);
+  return isFinite(n) && n > 0 ? Math.round(n * 100) / 100 : null;
+}
+function precoTxt(n){ return typeof n === 'number' ? n.toFixed(2).replace('.', ',') : ''; }
+function slugDe(nome){
+  return String(nome).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+/* ------------------------------------------------------------ cripto */
+async function derivar(senha, sal, voltas){
+  var base = await crypto.subtle.importKey('raw', new TextEncoder().encode(senha), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey({name: 'PBKDF2', salt: sal, iterations: voltas, hash: 'SHA-256'},
+    base, {name: 'AES-GCM', length: 256}, false, ['encrypt', 'decrypt']);
+}
+async function cifrar(token, senha){
+  var sal = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+  var k = await derivar(senha, sal, VOLTAS);
+  var d = await crypto.subtle.encrypt({name: 'AES-GCM', iv: iv}, k, new TextEncoder().encode(token));
+  return {v: 1, voltas: VOLTAS, sal: b64(sal), iv: b64(iv), dados: b64(d)};
+}
+async function decifrar(c, senha){
+  var k = await derivar(senha, deB64(c.sal), c.voltas || VOLTAS);
+  var d = await crypto.subtle.decrypt({name: 'AES-GCM', iv: deB64(c.iv)}, k, deB64(c.dados));
+  return new TextDecoder().decode(d);
+}
+
+/* ------------------------------------------------------------ GitHub */
+var TOKEN = null;
+async function gh(caminho, opc){
+  opc = opc || {};
+  var r = await fetch(caminho.indexOf('http') === 0 ? caminho : API + caminho, {
+    method: opc.method || 'GET',
+    headers: Object.assign({'Accept': 'application/vnd.github+json',
+      'Authorization': 'Bearer ' + TOKEN}, opc.body ? {'Content-Type': 'application/json'} : {}),
+    body: opc.body ? JSON.stringify(opc.body) : undefined,
+    cache: 'no-store'
+  });
+  if (opc.aceita404 && r.status === 404) return null;
+  if (!r.ok){
+    var t = ''; try { t = (await r.json()).message || ''; } catch(e){}
+    var err = new Error('GitHub ' + r.status + (t ? ': ' + t : ''));
+    err.status = r.status; throw err;
+  }
+  return r.status === 204 ? null : r.json();
+}
+async function lerArquivo(caminho){
+  var j = await gh('/contents/' + caminho + '?ref=' + REPO.ramo);
+  return {texto: new TextDecoder().decode(deB64(j.content)), sha: j.sha};
+}
+
+/* Um commit so' com tudo: produtos.js, as paginas remontadas, fotos novas e
+   paginas apagadas. Commit por arquivo deixaria o site meio-atualizado por
+   alguns segundos e dispararia uma publicacao do Pages para cada um. */
+async function publicarArquivos(textos, binarios, apagar, mensagem){
+  var ref = await gh('/git/ref/heads/' + REPO.ramo);
+  var base = await gh('/git/commits/' + ref.object.sha);
+  var arvore = [];
+  for (var nome in textos){
+    var b = await gh('/git/blobs', {method: 'POST', body: {content: textos[nome], encoding: 'utf-8'}});
+    arvore.push({path: nome, mode: '100644', type: 'blob', sha: b.sha});
+  }
+  for (var nb in binarios){
+    var bb = await gh('/git/blobs', {method: 'POST', body: {content: binarios[nb], encoding: 'base64'}});
+    arvore.push({path: nb, mode: '100644', type: 'blob', sha: bb.sha});
+  }
+  apagar.forEach(function(p){ arvore.push({path: p, mode: '100644', type: 'blob', sha: null}); });
+  var t = await gh('/git/trees', {method: 'POST', body: {base_tree: base.tree.sha, tree: arvore}});
+  var c = await gh('/git/commits', {method: 'POST', body: {message: mensagem, tree: t.sha, parents: [ref.object.sha]}});
+  await gh('/git/refs/heads/' + REPO.ramo, {method: 'PATCH', body: {sha: c.sha}});
+  return c.sha;
+}
+
+/* ------------------------------------------------------------ telas */
+function mostra(id){
+  ['tela-config', 'tela-login', 'tela-painel'].forEach(function(t){ $(t).hidden = t !== id; });
+}
+var CIFRA = null;
+
+async function iniciar(){
+  try {
+    var r = await fetch(CHAVE + '?t=' + Date.now(), {cache: 'no-store'});
+    if (r.status === 404){ mostra('tela-config'); return; }
+    CIFRA = await r.json();
+  } catch(e){ mostra('tela-config'); return; }
+  var salvo = pega('vpx-token');
+  if (salvo){ TOKEN = salvo; abrirPainel(); return; }
+  mostra('tela-login'); $('senha').focus();
+}
+
+$('form-config').addEventListener('submit', async function(ev){
+  ev.preventDefault();
+  var msg = $('cfg-msg'), tk = $('cfg-token').value.trim(), s1 = $('cfg-senha').value, s2 = $('cfg-senha2').value;
+  msg.className = 'msg';
+  if (s1.length < 10){ msg.className = 'msg erro'; msg.textContent = 'A senha precisa ter pelo menos 10 caracteres.'; return; }
+  if (s1 !== s2){ msg.className = 'msg erro'; msg.textContent = 'As duas senhas não são iguais.'; return; }
+  msg.textContent = 'Conferindo o token...';
+  TOKEN = tk;
+  try {
+    var repo = await gh('');
+    if (!repo.permissions || !repo.permissions.push) throw new Error('O token não tem permissão de escrita (Contents: Read and write).');
+    msg.textContent = 'Guardando a chave...';
+    var c = await cifrar(tk, s1);
+    var existe = await gh('/contents/' + CHAVE + '?ref=' + REPO.ramo, {aceita404: true});
+    await gh('/contents/' + CHAVE, {method: 'PUT', body: {
+      message: 'Painel: chave de acesso criptografada', branch: REPO.ramo,
+      content: b64(new TextEncoder().encode(JSON.stringify(c, null, 1) + '\n')),
+      sha: existe ? existe.sha : undefined}});
+    CIFRA = c; guarda('vpx-token', tk);
+    $('cfg-token').value = $('cfg-senha').value = $('cfg-senha2').value = '';
+    abrirPainel();
+  } catch(e){
+    TOKEN = null;
+    msg.className = 'msg erro';
+    msg.textContent = e.status === 401 ? 'Token inválido ou expirado.' :
+                      e.status === 404 ? 'Esse token não enxerga o repositório ' + REPO.nome + '.' : e.message;
+  }
+});
+
+$('form-login').addEventListener('submit', async function(ev){
+  ev.preventDefault();
+  var msg = $('login-msg'); msg.className = 'msg'; msg.textContent = 'Entrando...';
+  try {
+    TOKEN = await decifrar(CIFRA, $('senha').value);
+  } catch(e){ msg.className = 'msg erro'; msg.textContent = 'Senha incorreta.'; return; }
+  $('senha').value = ''; guarda('vpx-token', TOKEN);
+  abrirPainel();
+});
+
+$('sair').addEventListener('click', function(){
+  if (mexidas() && !sairConfirmado){
+    sairConfirmado = true; $('sair').textContent = 'Sair sem publicar?';
+    setTimeout(function(){ sairConfirmado = false; $('sair').textContent = 'Sair'; }, 4000);
+    return;
+  }
+  if (ORIG) CAT = clone(ORIG);      // ja confirmou: nao perguntar de novo ao recarregar
+  guarda('vpx-token', null); TOKEN = null; location.reload();
+});
+var sairConfirmado = false;
+
+/* ------------------------------------------------------------ estado */
+var ORIG = null;     // catalogo como esta publicado
+var CAT = null;      // catalogo sendo editado
+var FONTE = null;    // texto do produtos.js publicado
+var GLOB = null;     // VAPOREX_SABORES e VAPOREX_LOJA lidos do produtos.js
+var FOTOS = {};      // slug -> {png, og} das fotos novas (base64)
+var ABERTO = {};     // quais modelos estao expandidos
+
+function aviso(tipo, html){
+  var a = $('aviso'); a.hidden = !html; a.className = 'aviso-bar ' + (tipo || '');
+  $('aviso-txt').innerHTML = html || '';
+}
+
+async function abrirPainel(){
+  mostra('tela-painel');
+  aviso('', 'Carregando o catálogo...');
+  try {
+    var arq = await lerArquivo('produtos.js');
+    var w = {};
+    new Function('window', arq.texto)(w);
+    if (!Array.isArray(w.VAPOREX_CATALOGO)) throw new Error('produtos.js sem catálogo');
+    FONTE = arq.texto;
+    GLOB = {sabores: w.VAPOREX_SABORES || {}, loja: w.VAPOREX_LOJA || {}};
+    ORIG = clone(w.VAPOREX_CATALOGO);
+    CAT = clone(w.VAPOREX_CATALOGO);
+    FOTOS = {};
+    aviso('', '');
+    desenhar();
+  } catch(e){
+    if (e.status === 401){ guarda('vpx-token', null); aviso('erro', 'O acesso expirou. Saia e entre de novo.'); return; }
+    aviso('erro', 'Não consegui carregar o catálogo: ' + esc(e.message));
+  }
+}
+
+/* ------------------------------------------------------------ desenho */
+function sabor(s){ return V.normSabor(s); }
+function mexido(m){
+  var o = ORIG.filter(function(x){ return x.slug === m.slug; })[0];
+  return !o || JSON.stringify(o) !== JSON.stringify(m);
+}
+
+function desenhar(){
+  $('lista').innerHTML = CAT.map(function(m, i){
+    var s = (m.sabores || []).map(sabor), dentro = s.filter(function(x){ return x.estoque; }).length;
+    var foto = FOTOS[m.slug] ? 'data:image/png;base64,' + FOTOS[m.slug].png : m.foto;
+    var aberto = ABERTO[m.slug];
+    return '<article class="mod' + (mexido(m) ? ' mexido' : '') + '" data-i="' + i + '">' +
+      '<div class="mod-cab">' +
+        '<div class="ft">' + (foto ? '<img src="' + esc(foto) + '" alt="">' : '') + '</div>' +
+        '<div><h3>' + esc(m.modelo) + (ORIG.some(function(o){ return o.slug === m.slug; }) ? '' : ' <small style="color:var(--aviso);font-size:12px">NOVO</small>') + '</h3>' +
+          '<div class="meta"><b>' + (V.temPreco(m) ? V.moeda(m.preco) : 'sem preço') + '</b> · ' +
+          '<span class="' + (dentro ? '' : 'zero') + '">' + dentro + ' de ' + s.length + ' sabores em estoque</span></div></div>' +
+        '<div class="ord">' +
+          '<button class="bt2 bt-icone" data-acao="sobe" aria-label="Subir ' + esc(m.modelo) + '"' + (i ? '' : ' disabled') + '>↑</button>' +
+          '<button class="bt2 bt-icone" data-acao="desce" aria-label="Descer ' + esc(m.modelo) + '"' + (i < CAT.length - 1 ? '' : ' disabled') + '>↓</button>' +
+          '<button class="bt2" data-acao="abre" aria-expanded="' + !!aberto + '">' + (aberto ? 'Fechar' : 'Editar') + '</button>' +
+        '</div>' +
+      '</div>' +
+      (aberto ? corpo(m, s) : '') +
+    '</article>';
+  }).join('');
+  rodape();
+}
+
+function corpo(m, s){
+  return '<div class="mod-corpo">' +
+    '<div class="grade">' +
+      '<label class="c">Preço (R$)<input class="in" data-campo="preco" inputmode="decimal" value="' + esc(precoTxt(m.preco)) + '"></label>' +
+      '<label class="c">Puffs<input class="in" data-campo="puffs" value="' + esc(m.puffs || '') + '"></label>' +
+      '<label class="c larga">Selo na foto<small>Ex.: Mais vendido. Em branco = sem selo</small>' +
+        '<input class="in" data-campo="destaque" value="' + esc(m.destaque || '') + '"></label>' +
+      '<label class="c larga">Descrição curta<small>Aparece no cartão do produto</small>' +
+        '<textarea class="in" data-campo="resumo">' + esc(m.resumo || '') + '</textarea></label>' +
+    '</div>' +
+    '<div class="sab-cab"><h4>Sabores</h4><div class="acoes">' +
+      '<button class="bt2" data-acao="esgota-todos">Esgotar todos</button>' +
+      '<button class="bt2" data-acao="repoe-todos">Repor todos</button></div></div>' +
+    '<ul class="sabs">' + (s.length ? s.map(function(x, k){
+      return '<li class="' + (x.estoque ? '' : 'fora') + '">' +
+        '<span class="nm">' + esc(x.nome) + '</span>' +
+        '<button class="chave' + (x.estoque ? '' : ' fora') + '" data-acao="estoque" data-k="' + k + '"' +
+          ' aria-pressed="' + x.estoque + '" aria-label="' + esc(x.nome) + ': ' + (x.estoque ? 'em estoque' : 'esgotado') + '">' +
+          '<i></i><span>' + (x.estoque ? 'Em estoque' : 'Esgotado') + '</span></button>' +
+        '<button class="tira" data-acao="tira-sabor" data-k="' + k + '" aria-label="Remover sabor ' + esc(x.nome) + '">×</button>' +
+      '</li>';
+    }).join('') : '<li><span class="nm" style="color:var(--fraco)">Nenhum sabor</span></li>') + '</ul>' +
+    '<div class="add-sab"><input class="in" data-novo-sabor placeholder="Novo sabor, ex.: Blue Razz Ice">' +
+      '<button class="bt2" data-acao="add-sabor">Adicionar</button></div>' +
+    '<div class="mod-pe">' +
+      '<span></span>' +
+      '<span id="rm-' + esc(m.slug) + '"><button class="bt2 perigo" data-acao="remove">Remover este modelo do site</button></span>' +
+    '</div>' +
+  '</div>';
+}
+
+function rodape(){
+  var n = mexidas();
+  $('pub-txt').innerHTML = n ? '<b>' + n + ' alteração(ões) não publicada(s)</b>Toque em Publicar para mandar para o site.'
+                              : 'Nenhuma alteração pendente';
+  $('publicar').disabled = !n;
+}
+
+/* Quantas coisas mudaram em relacao ao que esta no ar. */
+function mexidas(){
+  if (!ORIG) return 0;
+  var n = 0, slugsO = ORIG.map(function(m){ return m.slug; }), slugsN = CAT.map(function(m){ return m.slug; });
+  ORIG.forEach(function(o){ if (slugsN.indexOf(o.slug) < 0) n++; });
+  CAT.forEach(function(m){ if (slugsO.indexOf(m.slug) < 0 || mexido(m)) n++; });
+  if (!n && slugsO.join() !== slugsN.join()) n = 1;   // so' mudou a ordem
+  return n;
+}
+
+/* ------------------------------------------------------------ edicao */
+$('lista').addEventListener('click', function(ev){
+  var b = ev.target.closest('button'); if (!b) return;
+  var card = b.closest('.mod'), i = Number(card.dataset.i), m = CAT[i], ac = b.dataset.acao;
+  if (!ac) return;
+  if (ac === 'abre'){ ABERTO[m.slug] = !ABERTO[m.slug]; desenhar(); return; }
+  if (ac === 'sobe' || ac === 'desce'){
+    var j = ac === 'sobe' ? i - 1 : i + 1;
+    CAT.splice(j, 0, CAT.splice(i, 1)[0]); desenhar(); return;
+  }
+  if (ac === 'estoque'){
+    var k = Number(b.dataset.k), s = sabor(m.sabores[k]);
+    /* em estoque volta a ser texto simples: e' o formato que o produtos.js
+       sempre usou, e o diff do que mudou fica limpo */
+    m.sabores[k] = s.estoque ? {nome: s.nome, estoque: false} : s.nome;
+  }
+  if (ac === 'esgota-todos') m.sabores = m.sabores.map(function(x){ return {nome: sabor(x).nome, estoque: false}; });
+  if (ac === 'repoe-todos') m.sabores = m.sabores.map(function(x){ return sabor(x).nome; });
+  if (ac === 'tira-sabor') m.sabores.splice(Number(b.dataset.k), 1);
+  if (ac === 'add-sabor'){
+    var inp = card.querySelector('[data-novo-sabor]'), nome = inp.value.trim();
+    if (!nome){ inp.focus(); return; }
+    if (m.sabores.some(function(x){ return sabor(x).nome.toLowerCase() === nome.toLowerCase(); })){
+      inp.value = ''; inp.placeholder = nome + ' já está na lista'; return;
+    }
+    m.sabores.push(nome);
+  }
+  if (ac === 'remove'){
+    /* confirmacao na propria tela, sem caixa do navegador */
+    $('rm-' + m.slug).innerHTML = '<span class="confirma">Remover o ' + esc(m.modelo) + ' e a página dele?' +
+      '<button class="bt2 perigo" data-acao="remove-sim">Sim, remover</button>' +
+      '<button class="bt2" data-acao="remove-nao">Cancelar</button></span>';
+    return;
+  }
+  if (ac === 'remove-sim'){ CAT.splice(i, 1); delete FOTOS[m.slug]; }
+  desenhar();
+  if (ac === 'add-sabor'){ var c2 = document.querySelector('.mod[data-i="' + i + '"] [data-novo-sabor]'); if (c2) c2.focus(); }
+});
+$('lista').addEventListener('keydown', function(ev){
+  if (ev.key === 'Enter' && ev.target.matches('[data-novo-sabor]')){
+    ev.preventDefault(); ev.target.closest('.add-sab').querySelector('button').click();
+  }
+});
+/* campos de texto: grava ao digitar, sem redesenhar (redesenhar tiraria o
+   foco do campo no meio da digitacao) */
+$('lista').addEventListener('input', function(ev){
+  var c = ev.target.dataset.campo; if (!c) return;
+  var card = ev.target.closest('.mod'), m = CAT[Number(card.dataset.i)], v = ev.target.value;
+  if (c === 'preco') m.preco = preco(v);
+  else m[c] = v;
+  card.classList.toggle('mexido', mexido(m));
+  var meta = card.querySelector('.meta b'); if (meta) meta.textContent = V.temPreco(m) ? V.moeda(m.preco) : 'sem preço';
+  rodape();
+});
+
+/* ------------------------------------------------------------ foto nova */
+function carregaImagem(src){
+  return new Promise(function(ok, falha){
+    var im = new Image(); im.onload = function(){ ok(im); }; im.onerror = falha; im.src = src;
+  });
+}
+/* Mesmo enquadramento das fotos atuais: recorta o vazio em volta do produto
+   e centraliza numa caixa de 560px com o lado maior em 492px (medido nas 6
+   fotos que ja estao no site). Sem isso cada produto apareceria numa escala. */
+async function prepararFoto(arquivo){
+  var url = URL.createObjectURL(arquivo);
+  try {
+    var im = await carregaImagem(url);
+    var c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight;
+    var x = c.getContext('2d'); x.drawImage(im, 0, 0);
+    var px = x.getImageData(0, 0, c.width, c.height).data;
+    var minX = c.width, minY = c.height, maxX = -1, maxY = -1, transp = 0;
+    for (var y = 0; y < c.height; y++) for (var xx = 0; xx < c.width; xx++){
+      var a = px[(y * c.width + xx) * 4 + 3];
+      if (a < 250) transp++;
+      if (a > 8){ if (xx < minX) minX = xx; if (xx > maxX) maxX = xx; if (y < minY) minY = y; if (y > maxY) maxY = y; }
+    }
+    if (maxX < 0) throw new Error('A imagem está vazia.');
+    var w = maxX - minX + 1, h = maxY - minY + 1, esc2 = 492 / Math.max(w, h);
+    var out = document.createElement('canvas'); out.width = out.height = 560;
+    var o = out.getContext('2d'); o.imageSmoothingQuality = 'high';
+    o.drawImage(c, minX, minY, w, h, (560 - w * esc2) / 2, (560 - h * esc2) / 2, w * esc2, h * esc2);
+    return {canvas: out, png: out.toDataURL('image/png').split(',')[1],
+            semFundo: transp > c.width * c.height * 0.05};
+  } finally { URL.revokeObjectURL(url); }
+}
+/* Imagem de previa do link (WhatsApp/Instagram), no mesmo desenho das que
+   ja existem: fundo escuro com halo verde, emblema a esquerda, produto a direita. */
+async function montarOg(fotoCanvas){
+  var c = document.createElement('canvas'); c.width = 1200; c.height = 630;
+  var x = c.getContext('2d');
+  x.fillStyle = '#0C120E'; x.fillRect(0, 0, 1200, 630);
+  var g = x.createRadialGradient(800, 330, 20, 800, 330, 620);
+  g.addColorStop(0, 'rgba(32,160,72,.55)'); g.addColorStop(1, 'rgba(12,18,14,0)');
+  x.fillStyle = g; x.fillRect(0, 0, 1200, 630);
+  try {
+    var em = await carregaImagem('assets/emblema.jpg');
+    x.save(); x.beginPath(); x.arc(205, 315, 95, 0, Math.PI * 2); x.clip();
+    x.drawImage(em, 110, 220, 190, 190); x.restore();
+  } catch(e){}
+  x.drawImage(fotoCanvas, 500, 15, 600, 600);
+  return c.toDataURL('image/jpeg', 0.86).split(',')[1];
+}
+
+var NOVA = null;
+$('nv-foto').addEventListener('change', async function(){
+  var f = this.files[0]; if (!f) return;
+  var dica = $('nv-foto-dica');
+  try {
+    NOVA = await prepararFoto(f);
+    $('nv-pre').innerHTML = '<img src="data:image/png;base64,' + NOVA.png + '" alt="Prévia">';
+    dica.className = NOVA.semFundo ? '' : 'alerta';
+    dica.innerHTML = NOVA.semFundo ? 'Foto pronta: recortada e centralizada.'
+      : 'Essa foto <b>tem fundo</b>: vai aparecer como um quadrado na loja. Se puder, use uma com fundo transparente.';
+  } catch(e){ NOVA = null; dica.className = 'alerta'; dica.textContent = 'Não consegui abrir essa imagem.'; }
+});
+
+$('nv-add').addEventListener('click', async function(){
+  var msg = $('nv-msg'); msg.className = 'msg erro';
+  var nome = $('nv-nome').value.trim().replace(/\s+/g, ' ');
+  var sabs = $('nv-sabores').value.split('\n').map(function(s){ return s.trim(); }).filter(Boolean);
+  var p = preco($('nv-preco').value), slug = slugDe(nome);
+  if (!/\S+\s+\S+/.test(nome)){ msg.textContent = 'Escreva marca e código, ex.: Ignite V500.'; return; }
+  if (CAT.some(function(m){ return m.slug === slug; })){ msg.textContent = 'Já existe um modelo com esse nome.'; return; }
+  if (!NOVA){ msg.textContent = 'Escolha a foto do produto.'; return; }
+  if (!p){ msg.textContent = 'Preencha o preço.'; return; }
+  if (!sabs.length){ msg.textContent = 'Coloque pelo menos um sabor.'; return; }
+  msg.className = 'msg'; msg.textContent = 'Preparando...';
+  var puffs = $('nv-puffs').value.trim();
+  var cidade = GLOB.loja.cidade || '';
+  FOTOS[slug] = {png: NOVA.png, og: await montarOg(NOVA.canvas)};
+  CAT.push({
+    modelo: nome, slug: slug, foto: 'assets/produtos/' + slug + '.png',
+    puffs: puffs, preco: p, destaque: $('nv-destaque').value.trim(),
+    seo_titulo: (nome + ' em ' + cidade + (puffs ? ': ' + puffs + ' puffs' : '') + ' | Vaporex').slice(0, 65),
+    seo_descricao: (nome + (puffs ? ' com ' + puffs + ' puffs' : '') + ' e ' + sabs.length +
+      ' sabores. Entrega em ' + cidade + ' ' + (GLOB.loja.prazo_entrega || '') + ' e pagamento na entrega.').slice(0, 160),
+    subtitulo: 'Pod descartável' + (puffs ? ' de ' + puffs + ' puffs' : ''),
+    resumo: $('nv-resumo').value.trim(),
+    pontos: [],
+    descricao: $('nv-resumo').value.trim() ? [$('nv-resumo').value.trim()] : [],
+    ficha: {},
+    sabores: sabs
+  });
+  ['nv-nome', 'nv-puffs', 'nv-preco', 'nv-destaque', 'nv-resumo', 'nv-sabores', 'nv-foto'].forEach(function(id){ $(id).value = ''; });
+  $('nv-pre').textContent = 'sem foto'; NOVA = null;
+  $('nv-foto-dica').className = ''; $('nv-foto-dica').innerHTML = 'Use foto com <b>fundo transparente</b> (PNG ou WEBP), como as dos outros produtos. O painel recorta e centraliza sozinho.';
+  msg.className = 'msg ok'; msg.textContent = nome + ' entrou na lista. Toque em Publicar para mandar para o site.';
+  desenhar();
+});
+
+/* ------------------------------------------------------------ publicar */
+/* Troca SO' o bloco do catalogo no produtos.js. Sabores (traducoes) e dados
+   da loja ficam como estao, com os comentarios. */
+function novoProdutos(){
+  var ini = FONTE.indexOf('window.VAPOREX_CATALOGO = [');
+  var fim = FONTE.indexOf('\n];', ini);
+  if (ini < 0 || fim < 0) throw new Error('Não achei o bloco do catálogo no produtos.js.');
+  return FONTE.slice(0, ini) + 'window.VAPOREX_CATALOGO = ' + JSON.stringify(CAT, null, 2) + ';' +
+         FONTE.slice(fim + 3);
+}
+
+$('publicar').addEventListener('click', async function(){
+  var bt = this; bt.disabled = true; bt.textContent = 'Publicando...';
+  try {
+    /* alguem publicou depois que este painel abriu? nao sobrescrever as cegas */
+    var atual = await lerArquivo('produtos.js');
+    if (atual.texto !== FONTE)
+      throw new Error('O catálogo foi alterado em outro lugar desde que você abriu o painel. Recarregue a página e refaça as mudanças.');
+
+    var textoProd = novoProdutos();
+    /* remonta as paginas com o catalogo novo, com o mesmo montador do computador */
+    window.VAPOREX_CATALOGO = CAT;
+    window.VAPOREX_SABORES = GLOB.sabores;
+    window.VAPOREX_LOJA = GLOB.loja;
+    var r = window.VPX_PAGINAS();
+    var textos = Object.assign({'produtos.js': textoProd}, r.arquivos);
+
+    var binarios = {};
+    Object.keys(FOTOS).forEach(function(slug){
+      if (!CAT.some(function(m){ return m.slug === slug; })) return;
+      binarios['assets/produtos/' + slug + '.png'] = FOTOS[slug].png;
+      binarios['assets/og/' + slug + '.jpg'] = FOTOS[slug].og;
+    });
+    /* modelo removido: tira a pagina dele do ar, senao o link antigo
+       continuaria vendendo um produto que saiu */
+    var apagar = [];
+    ORIG.forEach(function(o){
+      if (CAT.some(function(m){ return m.slug === o.slug; })) return;
+      apagar.push(o.slug + '.html', 'assets/og/' + o.slug + '.jpg');
+      if (o.foto) apagar.push(o.foto);
+    });
+
+    var resumo = resumoMudancas();
+    await publicarArquivos(textos, binarios, apagar, 'Painel: ' + resumo);
+
+    FONTE = textoProd; ORIG = clone(CAT); FOTOS = {};
+    desenhar();
+    aviso('pend', 'Publicado. O site atualiza em cerca de 1 minuto...');
+    esperarNoAr(textoProd);
+  } catch(e){
+    aviso('erro', esc(e.message));
+    rodape();
+  }
+  bt.textContent = 'Publicar';
+});
+
+function resumoMudancas(){
+  var p = [];
+  var n = CAT.filter(function(m){ return !ORIG.some(function(o){ return o.slug === m.slug; }); });
+  var r = ORIG.filter(function(o){ return !CAT.some(function(m){ return m.slug === o.slug; }); });
+  var e = CAT.filter(function(m){ return ORIG.some(function(o){ return o.slug === m.slug; }) && mexido(m); });
+  if (n.length) p.push('novo ' + n.map(function(m){ return m.modelo; }).join(', '));
+  if (r.length) p.push('removido ' + r.map(function(m){ return m.modelo; }).join(', '));
+  if (e.length) p.push('editado ' + e.map(function(m){ return m.modelo; }).join(', '));
+  return p.join('; ') || 'ordem dos modelos';
+}
+
+/* Confere no proprio site quando a versao nova entrou no ar. */
+async function esperarNoAr(texto){
+  for (var t = 0; t < 24; t++){
+    await new Promise(function(ok){ setTimeout(ok, 10000); });
+    try {
+      var r = await fetch('produtos.js?t=' + Date.now(), {cache: 'no-store'});
+      if (r.ok && (await r.text()) === texto){
+        aviso('ok', 'Pronto: as mudanças já estão no site. <a href="./" target="_blank" rel="noopener" style="color:inherit">Ver site</a>');
+        return;
+      }
+    } catch(e){}
+  }
+  aviso('pend', 'Publicado. O site está demorando para atualizar; confira em alguns minutos.');
+}
+
+window.addEventListener('beforeunload', function(ev){
+  if (mexidas()){ ev.preventDefault(); ev.returnValue = ''; }
+});
+
+iniciar();
+})();
+</script>
+</body>
+</html>

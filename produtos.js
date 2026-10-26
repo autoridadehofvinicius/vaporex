@@ -1,6 +1,11 @@
 /* ===========================================================================
    CATALOGO DA VAPOREX
    ===========================================================================
+   O DONO EDITA PELO PAINEL: /admin.html (senha). O painel reescreve SO' o
+   bloco VAPOREX_CATALOGO abaixo, em formato JSON, e publica sozinho.
+   Comentario escrito DENTRO desse bloco se perde na proxima publicacao do
+   painel; os blocos de sabores e da loja nao sao tocados.
+
    Este e' o unico arquivo que precisa ser editado para mexer no catalogo.
    Mexer aqui NAO arrisca o site: se tiver erro de digitacao, a loja avisa na
    tela em vez de abrir vazia.
