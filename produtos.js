@@ -33,28 +33,28 @@
 
 window.VAPOREX_CATALOGO = [
   {
-    modelo: "Ignite V155",
-    slug: "ignite-v155",
-    foto: "assets/produtos/ignite-v155.png",
-    puffs: "15.500",
-    preco: 89.90,
-    destaque: "Mais fino",
-    seo_titulo: "Ignite V155 em Umuarama: 15.500 puffs | Vaporex",
-    seo_descricao: "Ignite V155 Ultra Slim com 15.500 puffs, modos Eco e Boost e 11 sabores. Entrega em Umuarama em até 1h30 e pagamento na entrega.",
-    subtitulo: "Pod descartável ultrafino de 15.500 puffs",
-    resumo: "O pod mais fino da Ignite: cabe no bolso sem fazer volume. Tem visor de bateria e líquido e dois modos, o Eco, que rende mais, e o Boost, de tragada mais cheia.",
-    pontos: [
+    "modelo": "Ignite V155",
+    "slug": "ignite-v155",
+    "foto": "assets/produtos/ignite-v155.png",
+    "puffs": "15.500",
+    "preco": 89.9,
+    "destaque": "Mais fino",
+    "seo_titulo": "Ignite V155 em Umuarama: 15.500 puffs | Vaporex",
+    "seo_descricao": "Ignite V155 Ultra Slim com 15.500 puffs, modos Eco e Boost e 11 sabores. Entrega em Umuarama em até 1h30 e pagamento na entrega.",
+    "subtitulo": "Pod descartável ultrafino de 15.500 puffs",
+    "resumo": "O pod mais fino da Ignite: cabe no bolso sem fazer volume. Tem visor de bateria e líquido e dois modos, o Eco, que rende mais, e o Boost, de tragada mais cheia.",
+    "pontos": [
       "O mais fino da linha Ignite",
       "Visor de bateria e de líquido",
       "Modos Eco e Boost",
       "11 sabores, a maior variedade da loja"
     ],
-    descricao: [
+    "descricao": [
       "O Ignite V155 Ultra Slim é o pod mais fino da linha Ignite. O corpo achatado cabe no bolso da calça sem fazer volume e quase não pesa na mão: é o modelo de quem leva o pod para todo lado.",
       "No visor da frente você acompanha quanto resta de bateria e de líquido, então ele não acaba de surpresa no meio do dia. E você escolhe como ele trabalha: o modo Eco usa menos potência e faz o pod render mais; o Boost aumenta a potência para uma tragada mais cheia, com mais vapor e mais sabor.",
       "São 15.500 puffs e 11 sabores, a maior variedade da loja. Tem fruta com gelo, como Grape Ice e Pineapple Ice, combinações como Kiwi Passion Fruit Guava e os mentolados puros, Menthol e Icy Mint."
     ],
-    ficha: {
+    "ficha": {
       "Visor": "Bateria e líquido",
       "Modos": "Eco e Boost",
       "Formato": "Ultrafino",
@@ -62,7 +62,7 @@ window.VAPOREX_CATALOGO = [
       "Nicotina": null,
       "Recarga": null
     },
-    sabores: [
+    "sabores": [
       "Grape Ice",
       "Strawberry Kiwi",
       "Strawberry Banana",
@@ -77,35 +77,35 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    modelo: "Ignite V300",
-    slug: "ignite-v300",
-    foto: "assets/produtos/ignite-v300.png",
-    puffs: "30.000",
-    preco: 109.90,
-    destaque: "Tela colorida",
-    seo_titulo: "Ignite V300 em Umuarama: 30.000 puffs com tela | Vaporex",
-    seo_descricao: "Ignite V300 com 30.000 puffs, tela colorida com bateria e líquido em % e modo Boost. 7 sabores, entrega em Umuarama em até 1h30.",
-    subtitulo: "Pod descartável de 30.000 puffs com tela colorida",
-    resumo: "Tela colorida que mostra bateria e líquido em porcentagem, sem adivinhação. Rende quase o dobro do V155 e tem modo Boost para mais vapor e mais sabor.",
-    pontos: [
+    "modelo": "Ignite V300",
+    "slug": "ignite-v300",
+    "foto": "assets/produtos/ignite-v300.png",
+    "puffs": "30.000",
+    "preco": 109.9,
+    "destaque": "Tela colorida",
+    "seo_titulo": "Ignite V300 em Umuarama: 30.000 puffs com tela | Vaporex",
+    "seo_descricao": "Ignite V300 com 30.000 puffs, tela colorida com bateria e líquido em % e modo Boost. 7 sabores, entrega em Umuarama em até 1h30.",
+    "subtitulo": "Pod descartável de 30.000 puffs com tela colorida",
+    "resumo": "Tela colorida que mostra bateria e líquido em porcentagem, sem adivinhação. Rende quase o dobro do V155 e tem modo Boost para mais vapor e mais sabor.",
+    "pontos": [
       "Tela colorida com bateria e líquido em %",
       "30.000 puffs, quase o dobro do V155",
       "Modo Boost",
       "Sabor que só tem nele: Blueberry Strawberry Coconut"
     ],
-    descricao: [
+    "descricao": [
       "O Ignite V300 é para quem quer saber exatamente quanto ainda tem. A tela colorida mostra bateria e líquido em porcentagem, em número, e não em tracinhos que você precisa adivinhar.",
       "Com 30.000 puffs, ele rende quase o dobro do V155 e dura bem mais entre uma compra e outra. O modo Boost aumenta a potência quando você quer uma tragada mais cheia e com mais sabor.",
       "São 7 sabores, com destaque para os gelados de fruta, como Banana Ice e Strawberry Ice, e para o Blueberry Strawberry Coconut, mirtilo e morango com fundo de coco, que na Vaporex só tem nesse modelo."
     ],
-    ficha: {
+    "ficha": {
       "Visor": "Tela colorida, em %",
       "Modos": "Boost",
       "Bateria": null,
       "Nicotina": null,
       "Recarga": null
     },
-    sabores: [
+    "sabores": [
       "Banana Ice",
       "Strawberry Ice",
       "Strawberry Kiwi",
@@ -116,35 +116,35 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    modelo: "Ignite V400 Ice",
-    slug: "ignite-v400-ice",
-    foto: "assets/produtos/ignite-v400-ice.png",
-    puffs: "40.000",
-    preco: 129.90,
-    destaque: "Maior duração",
-    seo_titulo: "Ignite V400 Ice em Umuarama: 40.000 puffs | Vaporex",
-    seo_descricao: "Ignite V400 Ice com 40.000 puffs, o pod que mais dura na Vaporex. 6 sabores, como Sakura Grape e Grape Mix. Entrega em Umuarama em até 1h30.",
-    subtitulo: "Pod descartável de 40.000 puffs, o que mais dura na loja",
-    resumo: "O pod que mais dura na loja, com mais que o dobro do V155. Para quem prefere comprar menos vezes, com três versões de uva no cardápio.",
-    pontos: [
+    "modelo": "Ignite V400 Ice",
+    "slug": "ignite-v400-ice",
+    "foto": "assets/produtos/ignite-v400-ice.png",
+    "puffs": "40.000",
+    "preco": 129.9,
+    "destaque": "Maior duração",
+    "seo_titulo": "Ignite V400 Ice em Umuarama: 40.000 puffs | Vaporex",
+    "seo_descricao": "Ignite V400 Ice com 40.000 puffs, o pod que mais dura na Vaporex. 6 sabores, como Sakura Grape e Grape Mix. Entrega em Umuarama em até 1h30.",
+    "subtitulo": "Pod descartável de 40.000 puffs, o que mais dura na loja",
+    "resumo": "O pod que mais dura na loja, com mais que o dobro do V155. Para quem prefere comprar menos vezes, com três versões de uva no cardápio.",
+    "pontos": [
       "40.000 puffs, a maior duração da loja",
       "Mais que o dobro do V155",
       "Indicador de bateria e de líquido",
       "Três versões de uva"
     ],
-    descricao: [
+    "descricao": [
       "O Ignite V400 Ice é o pod de maior duração da Vaporex: 40.000 puffs, mais que o dobro do V155. É para quem não quer ficar trocando de aparelho toda hora e prefere comprar menos vezes.",
       "O indicador na lateral mostra quanto resta de bateria e de líquido. O acabamento claro, em tom gelo, deixa o aparelho fácil de achar na mochila ou no carro.",
       "A linha tem 6 sabores, com três opções para quem gosta de uva: Grape, Grape Mix e Sakura Grape, uva com um toque floral de flor de cerejeira. Para quem prefere mentolado, tem Mint e Menthol."
     ],
-    ficha: {
+    "ficha": {
       "Visor": "Indicador lateral",
       "Acabamento": "Claro, tom gelo",
       "Bateria": null,
       "Nicotina": null,
       "Recarga": null
     },
-    sabores: [
+    "sabores": [
       "Strawberry Kiwi",
       "Sakura Grape",
       "Mint",
@@ -154,35 +154,35 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    modelo: "Ignite V400 Mix",
-    slug: "ignite-v400-mix",
-    foto: "assets/produtos/ignite-v400-mix.png",
-    puffs: "40.000",
-    preco: 129.90,
-    destaque: "Dois sabores",
-    seo_titulo: "Ignite V400 Mix em Umuarama: 2 sabores em 1 pod | Vaporex",
-    seo_descricao: "Ignite V400 Mix: dois sabores no mesmo pod e 40.000 puffs. 7 combinações, como Cherry + Grape. Entrega em Umuarama em até 1h30.",
-    subtitulo: "Pod descartável de 40.000 puffs com dois sabores",
-    resumo: "Dois sabores no mesmo aparelho, para quem enjoa de um só. Mesma duração do V400 Ice, com 7 duplas já combinadas.",
-    pontos: [
+    "modelo": "Ignite V400 Mix",
+    "slug": "ignite-v400-mix",
+    "foto": "assets/produtos/ignite-v400-mix.png",
+    "puffs": "40.000",
+    "preco": 129.9,
+    "destaque": "Dois sabores",
+    "seo_titulo": "Ignite V400 Mix em Umuarama: 2 sabores em 1 pod | Vaporex",
+    "seo_descricao": "Ignite V400 Mix: dois sabores no mesmo pod e 40.000 puffs. 7 combinações, como Cherry + Grape. Entrega em Umuarama em até 1h30.",
+    "subtitulo": "Pod descartável de 40.000 puffs com dois sabores",
+    "resumo": "Dois sabores no mesmo aparelho, para quem enjoa de um só. Mesma duração do V400 Ice, com 7 duplas já combinadas.",
+    "pontos": [
       "Dois sabores no mesmo pod",
       "40.000 puffs, a maior duração da loja",
       "7 combinações",
       "Indicador de bateria e de líquido"
     ],
-    descricao: [
+    "descricao": [
       "O Ignite V400 Mix junta dois sabores no mesmo aparelho, para quem enjoa de um sabor só. Cada opção da lista já vem com a dupla definida, como Cherry + Grape ou Watermelon Ice + Grape Ice.",
       "Com 40.000 puffs, ele empata com o V400 Ice como o pod de maior duração da loja, e o indicador na lateral mostra quanto resta de bateria e de líquido.",
       "São 7 combinações. Seis delas levam uva em um dos lados; a Mighty Melon + Menthol é a dupla para quem gosta de fruta com mentolado."
     ],
-    ficha: {
+    "ficha": {
       "Sabores por aparelho": "2",
       "Visor": "Indicador lateral",
       "Bateria": null,
       "Nicotina": null,
       "Recarga": null
     },
-    sabores: [
+    "sabores": [
       "Icy Mint + Peach Grape",
       "Cherry + Grape",
       "Strawberry Grape Ice + Kiwi Watermelon Ice",
@@ -193,34 +193,34 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    modelo: "Ignite V80",
-    slug: "ignite-v80",
-    foto: "assets/produtos/ignite-v80.png",
-    puffs: "8.000",
-    preco: 89.90,
-    destaque: "",
-    seo_titulo: "Ignite V80 em Umuarama: pod de 8.000 puffs | Vaporex",
-    seo_descricao: "Ignite V80 com 8.000 puffs: compacto e sem nada para configurar. 6 sabores, como Passion Fruit Sour Kiwi. Entrega em Umuarama em até 1h30.",
-    subtitulo: "Pod descartável compacto de 8.000 puffs",
-    resumo: "O mais direto da linha: tira da caixa e usa, sem modo nem tela. Compacto, é o pod reserva ideal para o carro ou a mochila.",
-    pontos: [
+    "modelo": "Ignite V80",
+    "slug": "ignite-v80",
+    "foto": "assets/produtos/ignite-v80.png",
+    "puffs": "8.000",
+    "preco": 89.9,
+    "destaque": "",
+    "seo_titulo": "Ignite V80 em Umuarama: pod de 8.000 puffs | Vaporex",
+    "seo_descricao": "Ignite V80 com 8.000 puffs: compacto e sem nada para configurar. 6 sabores, como Passion Fruit Sour Kiwi. Entrega em Umuarama em até 1h30.",
+    "subtitulo": "Pod descartável compacto de 8.000 puffs",
+    "resumo": "O mais direto da linha: tira da caixa e usa, sem modo nem tela. Compacto, é o pod reserva ideal para o carro ou a mochila.",
+    "pontos": [
       "Compacto, sem nada para configurar",
       "8.000 puffs",
       "Sabor que só tem nele: Passion Fruit Sour Kiwi",
       "Bom como pod reserva"
     ],
-    descricao: [
+    "descricao": [
       "O Ignite V80 é o modelo mais direto da linha: tira da caixa e usa, sem modo nem tela para configurar. O formato compacto vai fácil no bolso.",
       "Com 8.000 puffs, é uma boa escolha como pod reserva, para deixar no carro ou na mochila, ou para testar um sabor novo antes de levar um aparelho maior.",
       "Tem 6 sabores, incluindo o Passion Fruit Sour Kiwi, maracujá com kiwi azedinho, que na Vaporex só tem nesse modelo."
     ],
-    ficha: {
+    "ficha": {
       "Formato": "Compacto",
       "Bateria": null,
       "Nicotina": null,
       "Recarga": null
     },
-    sabores: [
+    "sabores": [
       "Strawberry Ice",
       "Grape Ice",
       "Menthol",
@@ -230,28 +230,28 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    modelo: "Ignite Frozen",
-    slug: "ignite-frozen",
-    foto: "assets/produtos/ignite-frozen.png",
-    puffs: "20.000",
-    preco: 99.90,
-    destaque: "Só gelados",
-    seo_titulo: "Ignite Frozen (V200) em Umuarama: 20.000 puffs | Vaporex",
-    seo_descricao: "Ignite Frozen com 20.000 puffs e só sabores gelados: Grape Ice, Watermelon Ice, Menthol e Icy Mint. Entrega em Umuarama em até 1h30.",
-    subtitulo: "Pod descartável de 20.000 puffs com sabores gelados",
-    resumo: "A linha gelada da Ignite: todo sabor vem com gelo ou menta. Fica entre o V155 e o V300 em duração, com acabamento azul metálico.",
-    pontos: [
+    "modelo": "Ignite Frozen",
+    "slug": "ignite-frozen",
+    "foto": "assets/produtos/ignite-frozen.png",
+    "puffs": "20.000",
+    "preco": 99.9,
+    "destaque": "Só gelados",
+    "seo_titulo": "Ignite Frozen (V200) em Umuarama: 20.000 puffs | Vaporex",
+    "seo_descricao": "Ignite Frozen com 20.000 puffs e só sabores gelados: Grape Ice, Watermelon Ice, Menthol e Icy Mint. Entrega em Umuarama em até 1h30.",
+    "subtitulo": "Pod descartável de 20.000 puffs com sabores gelados",
+    "resumo": "A linha gelada da Ignite: todo sabor vem com gelo ou menta. Fica entre o V155 e o V300 em duração, com acabamento azul metálico.",
+    "pontos": [
       "Só sabores gelados",
       "20.000 puffs",
       "Indicador de bateria e de líquido",
       "Também vendido como Ignite V200"
     ],
-    descricao: [
+    "descricao": [
       "O Ignite Frozen, também vendido como Ignite V200, é a linha gelada da Ignite: todos os sabores vêm com gelo ou menta, com aquele final refrescante na tragada.",
       "Com 20.000 puffs, fica entre o V155 e o V300 em duração, e o indicador na lateral mostra quanto resta de bateria e de líquido. O acabamento azul metálico combina com a proposta gelada.",
       "São 4 sabores: Grape Ice e Watermelon Ice para quem quer fruta com gelo, Menthol e Icy Mint para quem quer frescor puro."
     ],
-    ficha: {
+    "ficha": {
       "Também chamado de": "Ignite V200",
       "Visor": "Indicador lateral",
       "Acabamento": "Azul metálico",
@@ -259,11 +259,31 @@ window.VAPOREX_CATALOGO = [
       "Nicotina": null,
       "Recarga": null
     },
-    sabores: [
+    "sabores": [
       "Grape Ice",
       "Watermelon Ice",
       "Menthol",
       "Icy Mint"
+    ]
+  },
+  {
+    "modelo": "Spearmint Ignite",
+    "slug": "spearmint-ignite",
+    "foto": "assets/produtos/spearmint-ignite.png",
+    "puffs": "teste",
+    "preco": 139,
+    "destaque": "Teste",
+    "seo_titulo": "Spearmint Ignite em Umuarama: teste puffs | Vaporex",
+    "seo_descricao": "Spearmint Ignite com teste puffs e 1 sabores. Entrega em Umuarama até 1h30 e pagamento na entrega.",
+    "subtitulo": "Pod descartável de teste puffs",
+    "resumo": "Teste",
+    "pontos": [],
+    "descricao": [
+      "Teste"
+    ],
+    "ficha": {},
+    "sabores": [
+      "Spearmint"
     ]
   }
 ];
