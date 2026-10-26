@@ -40,7 +40,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 89.9,
     "destaque": "Mais fino",
     "seo_titulo": "Ignite V155 em Umuarama: 15.500 puffs | Vaporex",
-    "seo_descricao": "Ignite V155 Ultra Slim com 15.500 puffs, modos Eco e Boost e 11 sabores. Entrega em Umuarama em até 1h30 e pagamento na entrega.",
+    "seo_descricao": "Ignite V155 Ultra Slim com 15.500 puffs, modos Eco e Boost e 11 sabores. Entrega em Umuarama em até 1h e pagamento na entrega.",
     "subtitulo": "Pod descartável ultrafino de 15.500 puffs",
     "resumo": "O pod mais fino da Ignite: cabe no bolso sem fazer volume. Tem visor de bateria e líquido e dois modos, o Eco, que rende mais, e o Boost, de tragada mais cheia.",
     "pontos": [
@@ -84,7 +84,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 109.9,
     "destaque": "Tela colorida",
     "seo_titulo": "Ignite V300 em Umuarama: 30.000 puffs com tela | Vaporex",
-    "seo_descricao": "Ignite V300 com 30.000 puffs, tela colorida com bateria e líquido em % e modo Boost. 7 sabores, entrega em Umuarama em até 1h30.",
+    "seo_descricao": "Ignite V300 com 30.000 puffs, tela colorida com bateria e líquido em % e modo Boost. 7 sabores, entrega em Umuarama em até 1h.",
     "subtitulo": "Pod descartável de 30.000 puffs com tela colorida",
     "resumo": "Tela colorida que mostra bateria e líquido em porcentagem, sem adivinhação. Rende quase o dobro do V155 e tem modo Boost para mais vapor e mais sabor.",
     "pontos": [
@@ -120,7 +120,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 129.9,
     "destaque": "Maior duração",
     "seo_titulo": "Ignite V400 Ice em Umuarama: 40.000 puffs | Vaporex",
-    "seo_descricao": "Ignite V400 Ice com 40.000 puffs, o pod que mais dura na Vaporex. 6 sabores, como Sakura Grape e Grape Mix. Entrega em Umuarama em até 1h30.",
+    "seo_descricao": "Ignite V400 Ice com 40.000 puffs, o pod que mais dura na Vaporex. 6 sabores, como Sakura Grape e Grape Mix. Entrega em Umuarama em até 1h.",
     "subtitulo": "Pod descartável de 40.000 puffs, o que mais dura na loja",
     "resumo": "O pod que mais dura na loja, com mais que o dobro do V155. Para quem prefere comprar menos vezes, com três versões de uva no cardápio.",
     "pontos": [
@@ -158,7 +158,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 129.9,
     "destaque": "Dois sabores",
     "seo_titulo": "Ignite V400 Mix em Umuarama: 2 sabores em 1 pod | Vaporex",
-    "seo_descricao": "Ignite V400 Mix: dois sabores no mesmo pod e 40.000 puffs. 7 combinações, como Cherry + Grape. Entrega em Umuarama em até 1h30.",
+    "seo_descricao": "Ignite V400 Mix: dois sabores no mesmo pod e 40.000 puffs. 7 combinações, como Cherry + Grape. Entrega em Umuarama em até 1h.",
     "subtitulo": "Pod descartável de 40.000 puffs com dois sabores",
     "resumo": "Dois sabores no mesmo aparelho, para quem enjoa de um só. Mesma duração do V400 Ice, com 7 duplas já combinadas.",
     "pontos": [
@@ -197,7 +197,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 89.9,
     "destaque": "",
     "seo_titulo": "Ignite V80 em Umuarama: pod de 8.000 puffs | Vaporex",
-    "seo_descricao": "Ignite V80 com 8.000 puffs: compacto e sem nada para configurar. 6 sabores, como Passion Fruit Sour Kiwi. Entrega em Umuarama em até 1h30.",
+    "seo_descricao": "Ignite V80 com 8.000 puffs: compacto e sem nada para configurar. 6 sabores, como Passion Fruit Sour Kiwi. Entrega em Umuarama em até 1h.",
     "subtitulo": "Pod descartável compacto de 8.000 puffs",
     "resumo": "O mais direto da linha: tira da caixa e usa, sem modo nem tela. Compacto, é o pod reserva ideal para o carro ou a mochila.",
     "pontos": [
@@ -234,7 +234,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 99.9,
     "destaque": "Só gelados",
     "seo_titulo": "Ignite Frozen (V200) em Umuarama: 20.000 puffs | Vaporex",
-    "seo_descricao": "Ignite Frozen com 20.000 puffs e só sabores gelados: Grape Ice, Watermelon Ice, Menthol e Icy Mint. Entrega em Umuarama em até 1h30.",
+    "seo_descricao": "Ignite Frozen com 20.000 puffs e só sabores gelados: Grape Ice, Watermelon Ice, Menthol e Icy Mint. Entrega em Umuarama em até 1h.",
     "subtitulo": "Pod descartável de 20.000 puffs com sabores gelados",
     "resumo": "A linha gelada da Ignite: todo sabor vem com gelo ou menta. Fica entre o V155 e o V300 em duração, com acabamento azul metálico.",
     "pontos": [
@@ -271,7 +271,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 69.9,
     "destaque": "Custo benefício",
     "seo_titulo": "NIK BAR em Umuarama: 10000 puffs | Vaporex",
-    "seo_descricao": "NIK BAR com 10000 puffs e 4 sabores. Entrega em Umuarama até 1h30 e pagamento na entrega.",
+    "seo_descricao": "NIK BAR com 10000 puffs e 4 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
     "subtitulo": "Pod descartável de 10000 puffs",
     "resumo": "",
     "pontos": [],
@@ -292,7 +292,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 89.9,
     "destaque": "",
     "seo_titulo": "NIK BAR 30K em Umuarama: 30000 puffs | Vaporex",
-    "seo_descricao": "NIK BAR 30K com 30000 puffs e 1 sabores. Entrega em Umuarama até 1h30 e pagamento na entrega.",
+    "seo_descricao": "NIK BAR 30K com 30000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
     "subtitulo": "Pod descartável de 30000 puffs",
     "resumo": "Outro custo benefício que cabe no seu bolso!",
     "pontos": [],
@@ -312,7 +312,7 @@ window.VAPOREX_CATALOGO = [
     "preco": 79.9,
     "destaque": "",
     "seo_titulo": "LIFE POD 10K em Umuarama: 10000 puffs | Vaporex",
-    "seo_descricao": "LIFE POD 10K com 10000 puffs e 4 sabores. Entrega em Umuarama até 1h30 e pagamento na entrega.",
+    "seo_descricao": "LIFE POD 10K com 10000 puffs e 4 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
     "subtitulo": "Pod descartável de 10000 puffs",
     "resumo": "",
     "pontos": [],
@@ -372,7 +372,7 @@ window.VAPOREX_LOJA = {
 
   cidade: "Umuarama",
   estado: "PR",
-  prazo_entrega: "até 1h30",
+  prazo_entrega: "até 1h",
   area_entrega: "",        /* ex.: "toda Umuarama" — vazio usa so' a cidade */
   horario: "",             /* ex.: "Todos os dias, das 10h às 23h" — vazio nao mostra */
   taxa_entrega: 0,         /* 0 = mostra "Entrega grátis" */

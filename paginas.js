@@ -129,6 +129,7 @@ function produtoLD(m){
 /* ------------------------------------------------------------ inicio */
 const faixa = CAT.map(V.numPuffs).filter(Boolean);
 const milMin = Math.min(...faixa) / 1000, milMax = Math.max(...faixa) / 1000;
+const marcas = V.marcas(CAT);
 const nSab = CAT.reduce((s, m) => s + (m.sabores || []).length, 0);
 
 const corpoInicio = `
@@ -137,8 +138,8 @@ const corpoInicio = `
     <div class="arte" role="img" aria-label="Vaporex Vape Store"></div>
     <div class="dentro w">
       <div class="texto">
-        <h1>Pods Ignite na sua porta em ${esc(L.prazo_entrega || 'pouco tempo')}</h1>
-        <p>Pod descartável Ignite com entrega em ${esc(cidade)}. ${CAT.length} modelos, de
+        <h1>Seu pod na porta em ${esc(L.prazo_entrega || 'pouco tempo')}</h1>
+        <p>Pods descartáveis ${esc(marcas)} com entrega em ${esc(cidade)}. ${CAT.length} modelos, de
           ${milMin} mil a ${milMax} mil puffs. Você escolhe o aparelho e o sabor, manda o
           pedido pelo WhatsApp e paga quando chegar.</p>
         <div class="acoes">
@@ -203,12 +204,12 @@ const arquivos = {};
 function grava(nome, txt){ arquivos[nome] = txt; }
 
 grava('index.html', pagina({
-  titulo: `Pod Ignite em ${cidade} com entrega em ${String(L.prazo_entrega || '').replace(/^até\s*/, '')} | Vaporex`,
-  descricao: `Pods descartáveis Ignite com entrega em ${cidade} em ${L.prazo_entrega}: V155, V300, V400 e mais, de ${milMin} mil a ${milMax} mil puffs. Pedido pelo WhatsApp, pagamento na entrega.`,
+  titulo: `Pod descartável em ${cidade} com entrega em ${String(L.prazo_entrega || '').replace(/^até\s*/, '')} | Vaporex`,
+  descricao: `Pods descartáveis ${marcas} com entrega em ${cidade} em ${L.prazo_entrega}: ${CAT.length} modelos, de ${milMin} mil a ${milMax} mil puffs. Pedido pelo WhatsApp, pagamento na entrega.`,
   url: '', imagem: 'assets/og/inicio.jpg', tipo: 'website',
   jsonld: [
     {'@context': 'https://schema.org', ...loja},
-    {'@context': 'https://schema.org', '@type': 'ItemList', name: 'Pods Ignite',
+    {'@context': 'https://schema.org', '@type': 'ItemList', name: 'Pods descartáveis',
      itemListElement: CAT.map((m, i) => ({'@type': 'ListItem', position: i + 1,
        url: abs(V.link(m)), name: m.modelo}))},
     {'@context': 'https://schema.org', '@type': 'FAQPage',

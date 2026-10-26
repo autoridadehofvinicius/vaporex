@@ -124,7 +124,7 @@ document.addEventListener('click', function(e){
   var i = +b.dataset.m, m = CAT[i]; if (!m) return;
   var sel = $('sel-' + i), sabor = sel && sel.value;
   /* Sem sabor, o pedido chegaria "1x Ignite V155" e o dono teria de perguntar
-     qual — perdendo o tempo que a entrega em 1h30 nao tem. */
+     qual — perdendo o tempo que a entrega em 1h nao tem. */
   if (!sabor){
     sel.parentNode.classList.add('falta');
     sel.focus();

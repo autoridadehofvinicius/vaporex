@@ -37,6 +37,18 @@ V.numPuffs = function(m){ return Number(String(m.puffs || '0').replace(/\D/g,'')
 V.disponiveis = function(m){
   return (m.sabores || []).map(V.normSabor).filter(function(s){ return s.estoque; });
 };
+/* Marcas do catalogo na ordem em que aparecem: "Ignite, NIK e LIFE".
+   Sai do proprio catalogo para a copy nao ficar velha quando o dono
+   cadastra marca nova pelo painel. */
+V.marcas = function(cat){
+  var vistas = [];
+  (cat || []).forEach(function(m){
+    var f = V.partesNome(m.modelo).fab;
+    if (f && vistas.indexOf(f) < 0) vistas.push(f);
+  });
+  return vistas.length < 2 ? vistas.join('') :
+    vistas.slice(0, -1).join(', ') + ' e ' + vistas[vistas.length - 1];
+};
 V.link = function(m){ return m.slug + '.html'; };
 
 /* Traducao e nota do sabor. Dupla do V400 Mix ("A + B") e' montada com os
@@ -270,8 +282,8 @@ V.duvidas = function(L){
      'avise no pedido para quanto precisa de troco.'],
     ['Preciso criar conta?', 'Não. Você escolhe os produtos, preenche o endereço e o pedido ' +
      'vai pronto para o WhatsApp da loja.'],
-    ['Qual pod Ignite dura mais?', 'O Ignite V400 Ice e o V400 Mix, com 40.000 puffs cada. ' +
-     'Depois vêm o V300 (30.000), o Frozen (20.000), o V155 (15.500) e o V80 (8.000). Puff é ' +
+    ['Qual pod dura mais?', 'O Ignite V400 Ice e o V400 Mix, com 40.000 puffs cada. ' +
+     'Cada modelo mostra quantos puffs tem no próprio cartão. Puff é ' +
      'cada tragada; quantos dias isso dá depende de quanto você usa.'],
     ['Qual a diferença entre o V400 Ice e o V400 Mix?', 'Os dois têm 40.000 puffs. O Ice tem ' +
      'um sabor por aparelho; o Mix tem dois sabores no mesmo pod, já combinados.'],
@@ -292,7 +304,7 @@ V.rodape = function(L){
     '<div class="colunas">' +
       '<div><div class="marca"><img src="assets/emblema.jpg" alt="" width="50" height="50">' +
         '<span>Vaporex Vape Store</span></div>' +
-        '<p>Pods Ignite com entrega em ' + esc(L.prazo_entrega || 'breve') +
+        '<p>Pods descartáveis de várias marcas com entrega em ' + esc(L.prazo_entrega || 'breve') +
           (L.cidade ? ' em ' + esc(L.cidade) + (L.estado ? '-' + esc(L.estado) : '') : '') +
           '. Pedido pelo WhatsApp, pagamento na entrega.</p></div>' +
       '<div><h2 class="rod-h">Atendimento</h2><ul>' +
