@@ -283,7 +283,8 @@ window.VAPOREX_CATALOGO = [
     ],
     "ficha": {},
     "sabores": [
-      "Spearmint"
+      "Spearmint",
+      "ignite"
     ]
   }
 ];
