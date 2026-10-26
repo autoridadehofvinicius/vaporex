@@ -143,10 +143,17 @@ document.addEventListener('click', function(e){
 var pp = $('pp');
 var PQ = {};
 if (pp && CAT){
-  var I = +pp.dataset.i, PM = CAT[I];
-  /* redesenha com os dados de agora: se o preco mudou em produtos.js depois
-     da ultima geracao, o cliente ve o preco certo mesmo assim */
+  /* Acha o modelo pelo SLUG, nao pela posicao: o produtos.js vem sempre
+     fresco e a pagina pode estar guardada no navegador ha 10 min. Se o dono
+     reordenou ou removeu modelos no painel nesse meio tempo, a posicao velha
+     apontaria para OUTRO produto. */
+  var I = pp.dataset.slug ? CAT.map(function(m){ return m.slug; }).indexOf(pp.dataset.slug) : +pp.dataset.i;
+  var PM = CAT[I];
+  /* redesenha com os dados de agora: preco e estoque que o dono mudou no
+     painel valem mesmo com a pagina guardada */
   if (PM) pp.innerHTML = V.paginaProduto(PM, I, CAT, LOJA);
+  else pp.innerHTML = '<div class="w nada" style="padding:64px 0">Este modelo saiu do catálogo. ' +
+    '<a href="index.html#catalogo">Veja os modelos disponíveis</a>.</div>';
 
   pp.addEventListener('click', function(e){
     var p = e.target.closest('[data-pq]');

@@ -251,7 +251,10 @@
 
 <div class="barra-fixa" id="barra" hidden><div class="faixa"><div><div class="tt" id="barra-pecas">Seu pedido</div><div class="vv" id="barra-total">R$ 0,00</div></div><button class="bt" id="barra-ir">Ver pedido</button></div></div><div class="folha" id="folha" hidden><div class="painel" role="dialog" aria-modal="true" aria-labelledby="folha-titulo"><div class="cabeca"><h2 id="folha-titulo">Seu pedido</h2><button class="fechar" id="folha-fechar" aria-label="Fechar">&times;</button></div><div id="folha-corpo"></div></div></div>
 
-<script src="produtos.js" onerror="window.SEM_CATALOGO=1"></script>
+<!-- produtos.js SEMPRE fresco: o GitHub Pages manda o navegador guardar a
+     pagina por 10 min, e o estoque que o dono muda no painel precisa valer na
+     hora. O catalogo e' remontado a partir daqui ao abrir. -->
+<script>document.write('<script src="produtos.js?v=' + Date.now() + '" onerror="window.SEM_CATALOGO=1"><\/script>')</script>
 <script src="render.js"></script>
 <script src="loja.js"></script>
 </body>

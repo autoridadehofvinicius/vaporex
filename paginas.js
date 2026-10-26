@@ -30,7 +30,7 @@ for (const m of CAT){
 }
 
 /* ------------------------------------------------------------ esqueleto */
-function pagina({titulo, descricao, url, imagem, tipo, jsonld, corpo, dataI}){
+function pagina({titulo, descricao, url, imagem, tipo, jsonld, corpo, dataI, slug}){
   return `<!doctype html>
 <!-- GERADO por gerar.js a partir de produtos.js. Nao edite aqui: edite
      produtos.js (ou render.js/gerar.js) e rode "node gerar.js". -->
@@ -65,7 +65,7 @@ ${V.porta()}
 
 <div id="loja" hidden>
 ${V.cabecalho(L)}
-<main${dataI != null ? ` id="pp" data-i="${dataI}"` : ''}>
+<main${dataI != null ? ` id="pp" data-i="${dataI}" data-slug="${esc(slug)}"` : ''}>
 ${corpo}
 </main>
 ${V.rodape(L)}
@@ -73,7 +73,10 @@ ${V.rodape(L)}
 
 ${V.folhas()}
 
-<script src="produtos.js" onerror="window.SEM_CATALOGO=1"></script>
+<!-- produtos.js SEMPRE fresco: o GitHub Pages manda o navegador guardar a
+     pagina por 10 min, e o estoque que o dono muda no painel precisa valer na
+     hora. O catalogo e' remontado a partir daqui ao abrir. -->
+<script>document.write('<script src="produtos.js?v=' + Date.now() + '" onerror="window.SEM_CATALOGO=1"><\\/script>')</script>
 <script src="render.js"></script>
 <script src="loja.js"></script>
 </body>
@@ -229,7 +232,8 @@ CAT.forEach((m, i) => {
         {'@type': 'ListItem', position: 3, name: m.modelo, item: abs(V.link(m))}]}
     ],
     corpo: V.paginaProduto(m, i, CAT, L),
-    dataI: i
+    dataI: i,
+    slug: m.slug
   }));
 });
 
