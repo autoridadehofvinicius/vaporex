@@ -324,6 +324,78 @@ window.VAPOREX_CATALOGO = [
       "Uva ice",
       "Uva e mel"
     ]
+  },
+  {
+    "modelo": "LIFE POD 20K",
+    "slug": "life-pod-20k",
+    "foto": "assets/produtos/life-pod-20k.png",
+    "puffs": "20000",
+    "preco": 94.9,
+    "destaque": "",
+    "seo_titulo": "LIFE POD 20K em Umuarama: 20000 puffs | Vaporex",
+    "seo_descricao": "LIFE POD 20K com 20000 puffs e 10 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 20000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "HALLS DE MENTA",
+      "CHICLETE DE MARACUJÁ",
+      "MAÇA VERDE",
+      "CHICLETE DE UVA",
+      "MELANCIA E LIMÃO",
+      "HALLS DE AMORA",
+      "MIAMI MINT",
+      "CHICLETE DE MENTA",
+      "CHICLETE DE BLUEBERRY",
+      "CHICLETE DE MELÃO"
+    ]
+  },
+  {
+    "modelo": "ELF BAR 15K",
+    "slug": "elf-bar-15k",
+    "foto": "assets/produtos/elf-bar-15k.png",
+    "puffs": "15000",
+    "preco": 79.9,
+    "destaque": "",
+    "seo_titulo": "ELF BAR 15K em Umuarama: 15000 puffs | Vaporex",
+    "seo_descricao": "ELF BAR 15K com 15000 puffs e 9 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 15000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "MORANGO E KIWI",
+      "MORANGO E MELANCIA",
+      "MELANCIA",
+      "CHICLETE DE UVA",
+      "ABACAXI GELADO",
+      "MANGA GELADA",
+      "ICY MINT",
+      "MIAMI MINT",
+      "MARACUJÁ E GOIABA"
+    ]
+  },
+  {
+    "modelo": "RESISTÊNCIA XROS",
+    "slug": "resistencia-xros",
+    "foto": "assets/produtos/resistencia-xros.png",
+    "puffs": "",
+    "preco": 35,
+    "destaque": "",
+    "seo_titulo": "RESISTÊNCIA XROS em Umuarama | Vaporex",
+    "seo_descricao": "RESISTÊNCIA XROS e 2 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "0,7",
+      "0,8"
+    ]
   }
 ];
 
