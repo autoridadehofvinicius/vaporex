@@ -321,7 +321,15 @@ window.VAPOREX_CATALOGO = [
       "Banana Bubblegum",
       "Pitaya",
       "Uva ice",
-      "Uva e mel"
+      "Uva e mel",
+      "Chiclete de Uva",
+      "Love 66",
+      "Chiclete de Menta",
+      "Maracujá e Manga",
+      "Morango e cocô",
+      "Chiclete de Morango",
+      "Melancia",
+      "Morango e Melancia"
     ]
   },
   {
