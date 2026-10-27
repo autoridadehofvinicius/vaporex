@@ -317,7 +317,6 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "Banana Bubblegum",
-      "Pitaya",
       "Uva ice",
       "Uva e mel",
       "Chiclete de Uva",
