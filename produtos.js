@@ -107,7 +107,6 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Banana Ice",
-      "Blueberry Strawberry Coconut",
       "Green Apple"
     ]
   },
@@ -219,7 +218,6 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "Strawberry Ice",
       "Grape Ice",
-      "Menthol",
       "Icy Mint",
       "Strawberry Kiwi",
       "Passion Fruit Sour Kiwi"
