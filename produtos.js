@@ -107,7 +107,27 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Banana Ice",
-      "Green Apple"
+      "Green Apple",
+      {
+        "nome": "Menthol",
+        "estoque": false
+      },
+      {
+        "nome": "Icy mint",
+        "estoque": false
+      },
+      {
+        "nome": "Minty Melon",
+        "estoque": false
+      },
+      {
+        "nome": "Cherry ice",
+        "estoque": false
+      },
+      {
+        "nome": "Pineapple ice",
+        "estoque": false
+      }
     ]
   },
   {
