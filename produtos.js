@@ -397,6 +397,26 @@ window.VAPOREX_CATALOGO = [
       "0,7",
       "0,8"
     ]
+  },
+  {
+    "modelo": "Ignite Shisha",
+    "slug": "ignite-shisha",
+    "foto": "assets/produtos/ignite-shisha.png",
+    "puffs": "40000",
+    "preco": 129.9,
+    "destaque": "DIFERENCIADO",
+    "seo_titulo": "Ignite Shisha em Umuarama: 40000 puffs | Vaporex",
+    "seo_descricao": "Ignite Shisha com 40000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 40000 puffs",
+    "resumo": "Estilo, praticidade e um design diferenciado! O Ignite Shisha se destaca pelo visual moderno e formato portátil, ideal para quem busca uma opção prática e cheia de personalidade.",
+    "pontos": [],
+    "descricao": [
+      "Estilo, praticidade e um design diferenciado! O Ignite Shisha se destaca pelo visual moderno e formato portátil, ideal para quem busca uma opção prática e cheia de personalidade."
+    ],
+    "ficha": {},
+    "sabores": [
+      "TRIPLLE MINT"
+    ]
   }
 ];
 
