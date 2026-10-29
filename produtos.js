@@ -488,6 +488,39 @@ window.VAPOREX_CATALOGO = [
       "GRAPE KIWI  (LINHA JUST JUICE)",
       "KIWI PASSION  (LINHA JUST JUICE)"
     ]
+  },
+  {
+    "modelo": "BLVK 50MG",
+    "slug": "blvk-50mg",
+    "foto": "assets/produtos/blvk-50mg.png",
+    "puffs": "35000",
+    "preco": 89.9,
+    "destaque": "GRANDE VARIEDADE",
+    "seo_titulo": "BLVK 50MG em Umuarama: 35000 puffs | Vaporex",
+    "seo_descricao": "BLVK 50MG com 35000 puffs e 14 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 35000 puffs",
+    "resumo": "Conheça as essências BLVK, com diferentes opções de aromas e sabores para quem busca variedade e qualidade.",
+    "pontos": [],
+    "descricao": [
+      "Conheça as essências BLVK, com diferentes opções de aromas e sabores para quem busca variedade e qualidade."
+    ],
+    "ficha": {},
+    "sabores": [
+      "SPEARMINT ORIGINAL (LIDER DE VENDAS)",
+      "CHERRY MENTHOL (LINHA DIAMOND)",
+      "GRAPE MENTHOL (LINHA DIAMOND)",
+      "BLUE LEMON ICE (LINHA FROST)",
+      "GRAPE BERRY (LINHA FROST)",
+      "MANGO PINEAPPLE (LINHA FROST)",
+      "PASSION GUAVA (LINHA FROST)",
+      "PEACH GUAVA (LINHA FROST)",
+      "GRAPE APPLE (LINHA FUSION)",
+      "DOUBLE KIWI (LINHA JUST JUICE)",
+      "GRAPE KIWI (LINHA JUST JUICE",
+      "KIWI PASSION (LINHA JUST JUICE)",
+      "MELON MENTHOL (LINHA DIAMOND)",
+      "SPEARMINT MENTHOL (LINHA DIAMOND)"
+    ]
   }
 ];
 
