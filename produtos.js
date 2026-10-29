@@ -519,6 +519,26 @@ window.VAPOREX_CATALOGO = [
       "MELON MENTHOL (LINHA DIAMOND)",
       "SPEARMINT MENTHOL (LINHA DIAMOND)"
     ]
+  },
+  {
+    "modelo": "IGNITE V400",
+    "slug": "ignite-v400",
+    "foto": "assets/produtos/ignite-v400.png",
+    "puffs": "40000",
+    "preco": 139.9,
+    "destaque": "LANÇAMENTO",
+    "seo_titulo": "IGNITE V400 em Umuarama: 40000 puffs | Vaporex",
+    "seo_descricao": "IGNITE V400 com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 40000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "GRAPE ICE",
+      "MIAMI MINT",
+      "COOL MENTHOL"
+    ]
   }
 ];
 
