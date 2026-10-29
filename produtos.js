@@ -66,7 +66,6 @@ window.VAPOREX_CATALOGO = [
       "Grape Ice",
       "Strawberry Kiwi",
       "Strawberry Banana",
-      "Pineapple Ice",
       "Banana Ice",
       "Watermelon Dragon Fruit",
       "Strawberry Ice",
