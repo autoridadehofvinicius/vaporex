@@ -105,28 +105,18 @@ window.VAPOREX_CATALOGO = [
       "Recarga": null
     },
     "sabores": [
-      "Banana Ice",
-      "Green Apple",
-      {
-        "nome": "Menthol",
-        "estoque": false
-      },
-      {
-        "nome": "Icy mint",
-        "estoque": false
-      },
-      {
-        "nome": "Minty Melon",
-        "estoque": false
-      },
-      {
-        "nome": "Cherry ice",
-        "estoque": false
-      },
-      {
-        "nome": "Pineapple ice",
-        "estoque": false
-      }
+      "BANANA GELADA",
+      "ICY MINT",
+      "MENTHOL",
+      "MELANCIA GELADA",
+      "ABACAXI E MANGA",
+      "ABACAXI GELADO",
+      "ABACAXI,KIWI E PITAYA",
+      "PESSÊGO E MANGA",
+      "MORANGO E KIWI GELADO",
+      "CEREJA GELADA",
+      "MORANGO GELADO",
+      "MAÇA VERDE"
     ]
   },
   {
