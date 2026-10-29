@@ -69,7 +69,6 @@ window.VAPOREX_CATALOGO = [
       "Pineapple Ice",
       "Banana Ice",
       "Watermelon Dragon Fruit",
-      "Icy Mint",
       "Strawberry Ice",
       "Kiwi Passion Fruit Guava",
       "Green Apple",
@@ -338,7 +337,6 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "Uva e mel",
       "Love 66",
-      "Chiclete de Menta",
       "Maracujá e Manga",
       "Morango e cocô",
       "Chiclete de Morango",
