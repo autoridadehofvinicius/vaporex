@@ -154,7 +154,10 @@ window.VAPOREX_CATALOGO = [
       "Mint",
       "Menthol",
       "Grape Mix",
-      "Grape"
+      "Grape",
+      "Strawberry Ice",
+      "Strawberry Watermelon",
+      "Watermelon ice"
     ]
   },
   {
