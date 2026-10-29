@@ -290,7 +290,9 @@ window.VAPOREX_CATALOGO = [
       "Menthol",
       "Grape ice",
       "Pineapple ice",
-      "Strawberry KIwi"
+      "Strawberry KIwi",
+      "Cherry watermelon",
+      "Watermelon ice"
     ]
   },
   {
