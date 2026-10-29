@@ -430,6 +430,64 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "TRIPLLE MINT"
     ]
+  },
+  {
+    "modelo": "IGNITE V500",
+    "slug": "ignite-v500",
+    "foto": "assets/produtos/ignite-v500.png",
+    "puffs": "50000",
+    "preco": 139.9,
+    "destaque": "Maior Durabilidade",
+    "seo_titulo": "IGNITE V500 em Umuarama: 50000 puffs | Vaporex",
+    "seo_descricao": "IGNITE V500 com 50000 puffs e 6 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 50000 puffs",
+    "resumo": "Potência, estilo e praticidade em um só dispositivo!\nO Ignite V500 é ideal para quem busca uma experiência diferenciada, design moderno e muita personalidade.",
+    "pontos": [],
+    "descricao": [
+      "Potência, estilo e praticidade em um só dispositivo!\nO Ignite V500 é ideal para quem busca uma experiência diferenciada, design moderno e muita personalidade."
+    ],
+    "ficha": {},
+    "sabores": [
+      "Cool menthol(Menta suave)",
+      "Manga e Maracujá",
+      "Abacaxi e Manga",
+      "Morango e Kiwi",
+      "Melancia e Kiwi",
+      "Pessêgo e Uva"
+    ]
+  },
+  {
+    "modelo": "BLVK 35MG",
+    "slug": "blvk-35mg",
+    "foto": "assets/produtos/blvk-35mg.png",
+    "puffs": "35000",
+    "preco": 89.9,
+    "destaque": "DIVERSOS SABORES",
+    "seo_titulo": "BLVK 35MG em Umuarama: 35000 puffs | Vaporex",
+    "seo_descricao": "BLVK 35MG com 35000 puffs e 14 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 35000 puffs",
+    "resumo": "Conheça as essências BLVK, com diferentes opções de aromas e sabores para quem busca variedade e qualidade.",
+    "pontos": [],
+    "descricao": [
+      "Conheça as essências BLVK, com diferentes opções de aromas e sabores para quem busca variedade e qualidade."
+    ],
+    "ficha": {},
+    "sabores": [
+      "SPEARMINT ORIGINAL (LIDER DE VENDAS)",
+      "CHERRY MENTHOL (LINHA DIAMOND)",
+      "GRAPE MENTHOL (LINHA DIAMOND)",
+      "MELON MENTHOL (LINHA DIAMOND)",
+      "SPEARMINT MENTHOL (LINHA DIAMOND)",
+      "BLUE LEMON ICE (LINHA FROST)",
+      "GRAPE BERRY  (LINHA FROST)",
+      "MANGO PINEAPPLE  (LINHA FROST)",
+      "PASSION GUAVA  (LINHA FROST)",
+      "PEACH GUAVA  (LINHA FROST)",
+      "GRAPE APPLE  (LINHA FUSION)",
+      "DOUBLE KIWI (LINHA JUST JUICE)",
+      "GRAPE KIWI  (LINHA JUST JUICE)",
+      "KIWI PASSION  (LINHA JUST JUICE)"
+    ]
   }
 ];
 
