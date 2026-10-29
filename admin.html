@@ -99,7 +99,8 @@ textarea.in{min-height:84px;resize:vertical;line-height:1.45}
 .aviso-bar.erro{background:#2a1510;color:var(--erro)}
 .aviso-bar.pend{background:#2a2410;color:var(--aviso)}
 
-main{padding:22px 0 120px}
+/* main.w, nao main: o .w (classe) zerava o padding de baixo e a barra de Publicar cobria o botao de adicionar */
+main.w{padding:22px 16px 140px}
 .intro{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:16px}
 .intro h2{color:var(--branco);font-size:24px;font-stretch:112%;font-weight:800}
 .intro p{font-size:14px;color:var(--fraco)}
