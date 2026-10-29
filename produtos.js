@@ -71,8 +71,7 @@ window.VAPOREX_CATALOGO = [
       "Watermelon Dragon Fruit",
       "Strawberry Ice",
       "Kiwi Passion Fruit Guava",
-      "Green Apple",
-      "Menthol"
+      "Green Apple"
     ]
   },
   {
@@ -362,8 +361,7 @@ window.VAPOREX_CATALOGO = [
       "HALLS DE AMORA",
       "MIAMI MINT",
       "CHICLETE DE MENTA",
-      "CHICLETE DE BLUEBERRY",
-      "CHICLETE DE MELÃO"
+      "CHICLETE DE BLUEBERRY"
     ]
   },
   {
