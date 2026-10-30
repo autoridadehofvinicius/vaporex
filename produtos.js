@@ -68,7 +68,6 @@ window.VAPOREX_CATALOGO = [
       "Strawberry Banana",
       "Banana Ice",
       "Watermelon Dragon Fruit",
-      "Strawberry Ice",
       "Kiwi Passion Fruit Guava",
       "Green Apple"
     ]
@@ -193,8 +192,7 @@ window.VAPOREX_CATALOGO = [
       "Strawberry Grape Ice + Kiwi Watermelon Ice",
       "Watermelon Ice + Grape Ice",
       "Strawberry Lemon + Grape Ice",
-      "Banana Cherry + Grape Ice",
-      "Mighty Melon + Menthol"
+      "Banana Cherry + Grape Ice"
     ]
   },
   {
@@ -229,8 +227,7 @@ window.VAPOREX_CATALOGO = [
       "Strawberry Ice",
       "Grape Ice",
       "Icy Mint",
-      "Strawberry Kiwi",
-      "Passion Fruit Sour Kiwi"
+      "Strawberry Kiwi"
     ]
   },
   {
@@ -329,10 +326,8 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "Uva e mel",
-      "Love 66",
       "Maracujá e Manga",
       "Morango e cocô",
-      "Chiclete de Morango",
       "Melancia",
       "Morango e Melancia"
     ]
