@@ -337,7 +337,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "life-pod-20k",
     "foto": "assets/produtos/life-pod-20k.png",
     "puffs": "20000",
-    "preco": 94.9,
+    "preco": 99.9,
     "destaque": "SABOR INDISCÚTIVEL",
     "seo_titulo": "LIFE POD 20K em Umuarama: 20000 puffs | Vaporex",
     "seo_descricao": "LIFE POD 20K com 20000 puffs e 10 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
