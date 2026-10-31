@@ -347,7 +347,6 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "HALLS DE MENTA",
       "CHICLETE DE MARACUJÁ",
-      "MAÇA VERDE",
       "MELANCIA E LIMÃO",
       "HALLS DE AMORA",
       "MIAMI MINT",
