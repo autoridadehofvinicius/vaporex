@@ -350,8 +350,7 @@ window.VAPOREX_CATALOGO = [
       "MELANCIA E LIMÃO",
       "HALLS DE AMORA",
       "MIAMI MINT",
-      "CHICLETE DE MENTA",
-      "CHICLETE DE BLUEBERRY"
+      "CHICLETE DE MENTA"
     ]
   },
   {
