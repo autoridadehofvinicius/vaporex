@@ -226,7 +226,6 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "Strawberry Ice",
       "Grape Ice",
-      "Icy Mint",
       "Strawberry Kiwi"
     ]
   },
@@ -325,7 +324,6 @@ window.VAPOREX_CATALOGO = [
     "descricao": [],
     "ficha": {},
     "sabores": [
-      "Uva e mel",
       "Maracujá e Manga",
       "Morango e cocô",
       "Melancia",
@@ -350,7 +348,6 @@ window.VAPOREX_CATALOGO = [
       "HALLS DE MENTA",
       "CHICLETE DE MARACUJÁ",
       "MAÇA VERDE",
-      "CHICLETE DE UVA",
       "MELANCIA E LIMÃO",
       "HALLS DE AMORA",
       "MIAMI MINT",
