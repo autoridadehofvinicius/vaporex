@@ -528,6 +528,26 @@ window.VAPOREX_CATALOGO = [
       "MIAMI MINT",
       "COOL MENTHOL"
     ]
+  },
+  {
+    "modelo": "XROS 5",
+    "slug": "xros-5",
+    "foto": "assets/produtos/xros-5.png",
+    "puffs": "",
+    "preco": 259.9,
+    "destaque": "RECARREGÁVEL",
+    "seo_titulo": "XROS 5 em Umuarama | Vaporex",
+    "seo_descricao": "XROS 5 e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável",
+    "resumo": "• Bateria: 1500 mAh com carregamento rápido USB-C 3A (atinge 80% em cerca de 20 minutos).\n• Potência: Ajustável de 5W a 30W (com modos como PWR, NOR e ECO).\n• Tela: Display OLED/colorido de 0,88\" com temas personalizáveis.\n• Capacidade do Pod: 3,0 mL com abastecimento superior e tecnologia anti-vazamento SSS.\n• Resistências/Coils: Tecnologia COREX 3.0, compatível com toda a linha de pods da série XROS (de 0.4Ω a 1.2Ω), permitindo vaporização MTL (traga fechada) e RDL (traga mais aberta).",
+    "pontos": [],
+    "descricao": [
+      "• Bateria: 1500 mAh com carregamento rápido USB-C 3A (atinge 80% em cerca de 20 minutos).\n• Potência: Ajustável de 5W a 30W (com modos como PWR, NOR e ECO).\n• Tela: Display OLED/colorido de 0,88\" com temas personalizáveis.\n• Capacidade do Pod: 3,0 mL com abastecimento superior e tecnologia anti-vazamento SSS.\n• Resistências/Coils: Tecnologia COREX 3.0, compatível com toda a linha de pods da série XROS (de 0.4Ω a 1.2Ω), permitindo vaporização MTL (traga fechada) e RDL (traga mais aberta)."
+    ],
+    "ficha": {},
+    "sabores": [
+      "BLACK"
+    ]
   }
 ];
 
