@@ -187,12 +187,10 @@ window.VAPOREX_CATALOGO = [
       "Recarga": null
     },
     "sabores": [
-      "Icy Mint + Peach Grape",
       "Cherry + Grape",
       "Strawberry Grape Ice + Kiwi Watermelon Ice",
       "Watermelon Ice + Grape Ice",
-      "Strawberry Lemon + Grape Ice",
-      "Banana Cherry + Grape Ice"
+      "Strawberry Lemon + Grape Ice"
     ]
   },
   {
@@ -324,7 +322,6 @@ window.VAPOREX_CATALOGO = [
     "descricao": [],
     "ficha": {},
     "sabores": [
-      "Maracujá e Manga",
       "Morango e cocô",
       "Melancia",
       "Morango e Melancia"
@@ -384,7 +381,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "resistencia-xros",
     "foto": "assets/produtos/resistencia-xros.png",
     "puffs": "0",
-    "preco": 35,
+    "preco": 40,
     "destaque": "COIL",
     "seo_titulo": "RESISTÊNCIA XROS em Umuarama | Vaporex",
     "seo_descricao": "RESISTÊNCIA XROS e 2 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
@@ -467,7 +464,6 @@ window.VAPOREX_CATALOGO = [
       "SPEARMINT MENTHOL (LINHA DIAMOND)",
       "BLUE LEMON ICE (LINHA FROST)",
       "GRAPE BERRY  (LINHA FROST)",
-      "MANGO PINEAPPLE  (LINHA FROST)",
       "PASSION GUAVA  (LINHA FROST)",
       "PEACH GUAVA  (LINHA FROST)",
       "GRAPE APPLE  (LINHA FUSION)",
@@ -499,11 +495,9 @@ window.VAPOREX_CATALOGO = [
       "BLUE LEMON ICE (LINHA FROST)",
       "GRAPE BERRY (LINHA FROST)",
       "MANGO PINEAPPLE (LINHA FROST)",
-      "PASSION GUAVA (LINHA FROST)",
       "PEACH GUAVA (LINHA FROST)",
       "GRAPE APPLE (LINHA FUSION)",
       "DOUBLE KIWI (LINHA JUST JUICE)",
-      "GRAPE KIWI (LINHA JUST JUICE",
       "KIWI PASSION (LINHA JUST JUICE)",
       "MELON MENTHOL (LINHA DIAMOND)",
       "SPEARMINT MENTHOL (LINHA DIAMOND)"
@@ -527,26 +521,6 @@ window.VAPOREX_CATALOGO = [
       "GRAPE ICE",
       "MIAMI MINT",
       "COOL MENTHOL"
-    ]
-  },
-  {
-    "modelo": "XROS 5",
-    "slug": "xros-5",
-    "foto": "assets/produtos/xros-5.png",
-    "puffs": "",
-    "preco": 259.9,
-    "destaque": "RECARREGÁVEL",
-    "seo_titulo": "XROS 5 em Umuarama | Vaporex",
-    "seo_descricao": "XROS 5 e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável",
-    "resumo": "• Bateria: 1500 mAh com carregamento rápido USB-C 3A (atinge 80% em cerca de 20 minutos).\n• Potência: Ajustável de 5W a 30W (com modos como PWR, NOR e ECO).\n• Tela: Display OLED/colorido de 0,88\" com temas personalizáveis.\n• Capacidade do Pod: 3,0 mL com abastecimento superior e tecnologia anti-vazamento SSS.\n• Resistências/Coils: Tecnologia COREX 3.0, compatível com toda a linha de pods da série XROS (de 0.4Ω a 1.2Ω), permitindo vaporização MTL (traga fechada) e RDL (traga mais aberta).",
-    "pontos": [],
-    "descricao": [
-      "• Bateria: 1500 mAh com carregamento rápido USB-C 3A (atinge 80% em cerca de 20 minutos).\n• Potência: Ajustável de 5W a 30W (com modos como PWR, NOR e ECO).\n• Tela: Display OLED/colorido de 0,88\" com temas personalizáveis.\n• Capacidade do Pod: 3,0 mL com abastecimento superior e tecnologia anti-vazamento SSS.\n• Resistências/Coils: Tecnologia COREX 3.0, compatível com toda a linha de pods da série XROS (de 0.4Ω a 1.2Ω), permitindo vaporização MTL (traga fechada) e RDL (traga mais aberta)."
-    ],
-    "ficha": {},
-    "sabores": [
-      "BLACK"
     ]
   }
 ];
