@@ -149,7 +149,6 @@ window.VAPOREX_CATALOGO = [
       "Strawberry Kiwi",
       "Sakura Grape",
       "Mint",
-      "Menthol",
       "Grape Mix",
       "Grape",
       "Strawberry Ice",
@@ -190,7 +189,8 @@ window.VAPOREX_CATALOGO = [
       "Cherry + Grape",
       "Strawberry Grape Ice + Kiwi Watermelon Ice",
       "Watermelon Ice + Grape Ice",
-      "Strawberry Lemon + Grape Ice"
+      "Strawberry Lemon + Grape Ice",
+      "Pineapple + Coconut"
     ]
   },
   {
@@ -322,9 +322,7 @@ window.VAPOREX_CATALOGO = [
     "descricao": [],
     "ficha": {},
     "sabores": [
-      "Morango e cocô",
-      "Melancia",
-      "Morango e Melancia"
+      "Morango e cocô"
     ]
   },
   {
@@ -345,7 +343,6 @@ window.VAPOREX_CATALOGO = [
       "HALLS DE MENTA",
       "CHICLETE DE MARACUJÁ",
       "MELANCIA E LIMÃO",
-      "HALLS DE AMORA",
       "MIAMI MINT",
       "CHICLETE DE MENTA"
     ]
