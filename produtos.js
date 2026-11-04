@@ -343,7 +343,8 @@ window.VAPOREX_CATALOGO = [
       "CHICLETE DE MARACUJÁ",
       "MELANCIA E LIMÃO",
       "MIAMI MINT",
-      "CHICLETE DE MENTA"
+      "CHICLETE DE MENTA",
+      "UVA VERDE"
     ]
   },
   {
