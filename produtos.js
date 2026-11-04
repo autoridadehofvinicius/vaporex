@@ -64,7 +64,6 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Grape Ice",
-      "Strawberry Kiwi",
       "Strawberry Banana",
       "Banana Ice",
       "Watermelon Dragon Fruit",
@@ -148,7 +147,6 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "Strawberry Kiwi",
       "Sakura Grape",
-      "Mint",
       "Grape Mix",
       "Grape",
       "Strawberry Ice",
@@ -187,7 +185,6 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Cherry + Grape",
-      "Strawberry Grape Ice + Kiwi Watermelon Ice",
       "Watermelon Ice + Grape Ice",
       "Strawberry Lemon + Grape Ice"
     ]
