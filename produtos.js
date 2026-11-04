@@ -189,8 +189,7 @@ window.VAPOREX_CATALOGO = [
       "Cherry + Grape",
       "Strawberry Grape Ice + Kiwi Watermelon Ice",
       "Watermelon Ice + Grape Ice",
-      "Strawberry Lemon + Grape Ice",
-      "Pineapple + Coconut"
+      "Strawberry Lemon + Grape Ice"
     ]
   },
   {
@@ -322,7 +321,10 @@ window.VAPOREX_CATALOGO = [
     "descricao": [],
     "ficha": {},
     "sabores": [
-      "Morango e cocô"
+      {
+        "nome": "Morango e cocô",
+        "estoque": false
+      }
     ]
   },
   {
