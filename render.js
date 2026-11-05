@@ -40,6 +40,30 @@ V.fmtNum = function(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); 
 V.fmtPuffs = function(m){ var n = V.numPuffs(m); return n ? V.fmtNum(n) : ''; };
 V.fmtSub = function(s){ return String(s || '').replace(/ de 0 puffs/g, '')
   .replace(/\b(\d{4,})\b/g, function(x){ return V.fmtNum(x); }); };
+/* O painel aceita texto livre: o dono cola descricao com "✅ item ✅ item" ou
+   "• item • item" e as vezes em CAIXA ALTA. Na tela isso vira resumo + lista
+   de tiques, igual aos cartoes escritos a mao. So' age se nao houver pontos. */
+V.textoCartao = function(m){
+  var res = String(m.resumo || '').trim(), pts = (m.pontos || []).slice();
+  var mod = String(m.modelo || '').trim();
+  /* descricao que comeca repetindo o nome do modelo ("LIFE POD 20K Design...") */
+  if (mod && res.toUpperCase().indexOf(mod.toUpperCase()) === 0)
+    res = res.slice(mod.length).trim();
+  if (res && res === res.toUpperCase() && /[A-ZÀ-Ú]{4}/.test(res)) {
+    res = res.charAt(0) + res.slice(1).toLowerCase();
+    /* nome de marca/modelo volta como estava (XROS, BLVK) */
+    mod.split(/\s+/).forEach(function(w){
+      if (w.length > 2) res = res.replace(new RegExp('\\b' + w.toLowerCase() + '\\b', 'g'), w);
+    });
+  }
+  if (!pts.length && /[✅•]/.test(res)) {
+    var partes = res.split(/\s*[✅•]\s*/).map(function(s){ return s.trim(); })
+      .filter(Boolean);
+    if (/^[✅•]/.test(res)) { pts = partes; res = ''; }
+    else { res = partes.shift() || ''; pts = partes; }
+  }
+  return { resumo: res, pontos: pts };
+};
 V.disponiveis = function(m){
   return (m.sabores || []).map(V.normSabor).filter(function(s){ return s.estoque; });
 };
@@ -93,10 +117,10 @@ V.cartao = function(m, i, achados, noCar){
     '<div class="fab">' + esc(nm.fab) + '</div>' +
     '<h3' + (nm.cod.length > 12 || nm.cod.split(' ').some(function(w){ return w.length > 8; }) ? ' class="longo"' : '') + '><a href="' + url + '">' + esc(nm.cod) + '</a></h3>' +
     (m.subtitulo ? '<p class="subtitulo">' + esc(V.fmtSub(m.subtitulo)) + '</p>' : '') +
-    (m.resumo ? '<p class="resumo">' + esc(m.resumo) + '</p>' : '') +
+    (V.textoCartao(m).resumo ? '<p class="resumo">' + esc(V.textoCartao(m).resumo) + '</p>' : '') +
     /* os diferenciais em lista: e' o que o cliente compara entre um cartao e
        outro, e lista se le na diagonal, paragrafo nao */
-    (m.pontos && m.pontos.length ? '<ul class="pontos">' + m.pontos.map(function(p){
+    (V.textoCartao(m).pontos.length ? '<ul class="pontos">' + V.textoCartao(m).pontos.map(function(p){
       return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' : '') +
     '<div class="ficha-curta">' +
       (V.fmtPuffs(m) ? '<span><b>' + esc(V.fmtPuffs(m)) + '</b> puffs</span>' : '') +
@@ -183,12 +207,12 @@ V.paginaProduto = function(m, i, CAT, LOJA){
       '<div class="pp-info">' +
         '<div class="fab">' + esc(nm.fab) + '</div>' +
         '<h1><span class="sr">' + esc(nm.fab) + ' </span>' + esc(nm.cod) + '</h1>' +
-        (m.subtitulo ? '<p class="subtitulo">' + esc(m.subtitulo) + '</p>' : '') +
+        (m.subtitulo ? '<p class="subtitulo">' + esc(V.fmtSub(m.subtitulo)) + '</p>' : '') +
         (V.temPreco(m)
           ? '<div class="preco">' + moeda(m.preco) + '</div>' +
             '<div class="pagto">Pague na entrega: Pix, dinheiro ou cartão</div>'
           : '<div class="sem-preco">Preço a definir. Chame no WhatsApp.</div>') +
-        (m.pontos && m.pontos.length ? '<ul class="pontos">' + m.pontos.map(function(p){
+        (V.textoCartao(m).pontos.length ? '<ul class="pontos">' + V.textoCartao(m).pontos.map(function(p){
           return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' : '') +
         '<h2 class="pp-h">Escolha os sabores</h2>' +
         V.listaSabores(m) +
