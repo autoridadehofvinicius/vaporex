@@ -261,6 +261,71 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
+    "modelo": "IGNITE V500",
+    "slug": "ignite-v500",
+    "foto": "assets/produtos/ignite-v500.png",
+    "puffs": "50000",
+    "preco": 139.9,
+    "destaque": "Maior Durabilidade",
+    "seo_titulo": "IGNITE V500 em Umuarama: 50000 puffs | Vaporex",
+    "seo_descricao": "IGNITE V500 com 50000 puffs e 6 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 50000 puffs",
+    "resumo": "Potência, estilo e praticidade em um só dispositivo!\nO Ignite V500 é ideal para quem busca uma experiência diferenciada, design moderno e muita personalidade.",
+    "pontos": [],
+    "descricao": [
+      "Potência, estilo e praticidade em um só dispositivo!\nO Ignite V500 é ideal para quem busca uma experiência diferenciada, design moderno e muita personalidade."
+    ],
+    "ficha": {},
+    "sabores": [
+      "Cool menthol(Menta suave)",
+      "Manga e Maracujá",
+      "Abacaxi e Manga",
+      "Morango e Kiwi",
+      "Melancia e Kiwi",
+      "Pessêgo e Uva"
+    ]
+  },
+  {
+    "modelo": "Ignite Shisha",
+    "slug": "ignite-shisha",
+    "foto": "assets/produtos/ignite-shisha.png",
+    "puffs": "40000",
+    "preco": 129.9,
+    "destaque": "DIFERENCIADO",
+    "seo_titulo": "Ignite Shisha em Umuarama: 40000 puffs | Vaporex",
+    "seo_descricao": "Ignite Shisha com 40000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 40000 puffs",
+    "resumo": "Estilo, praticidade e um design diferenciado! O Ignite Shisha se destaca pelo visual moderno e formato portátil, ideal para quem busca uma opção prática e cheia de personalidade.",
+    "pontos": [],
+    "descricao": [
+      "Estilo, praticidade e um design diferenciado! O Ignite Shisha se destaca pelo visual moderno e formato portátil, ideal para quem busca uma opção prática e cheia de personalidade."
+    ],
+    "ficha": {},
+    "sabores": [
+      "TRIPLLE MINT"
+    ]
+  },
+  {
+    "modelo": "IGNITE V400 SWEET EDITION",
+    "slug": "ignite-v400-sweet-edition",
+    "foto": "assets/produtos/ignite-v400-sweet-edition.png",
+    "puffs": "40000",
+    "preco": 129.9,
+    "destaque": "MAIOR DURABILIDADE",
+    "seo_titulo": "IGNITE V400 SWEET EDITION em Umuarama: 40000 puffs | Vaporex",
+    "seo_descricao": "IGNITE V400 SWEET EDITION com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 40000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "GRAPE ICE",
+      "MIAMI MINT",
+      "COOL MENTHOL"
+    ]
+  },
+  {
     "modelo": "NIK BAR",
     "slug": "nik-bar",
     "foto": "assets/produtos/nik-bar.png",
@@ -301,6 +366,26 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "Grape ice"
+    ]
+  },
+  {
+    "modelo": "BATERIA LIFE POD 3 COM ADAPTADOR",
+    "slug": "bateria-life-pod-3-com-adaptador",
+    "foto": "assets/produtos/bateria-life-pod-3-com-adaptador.png",
+    "puffs": "0",
+    "preco": 69.9,
+    "destaque": "BATERIA LIFE POD",
+    "seo_titulo": "BATERIA LIFE POD 3 COM ADAPTADOR em Umuarama: 0 puffs | Vaporex",
+    "seo_descricao": "BATERIA LIFE POD 3 COM ADAPTADOR com 0 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 0 puffs",
+    "resumo": "• Capacidade de Bateria: 1400 mAh (com carregamento rápido via USB-C).\n• Visor / Indicador: Possui visor colorido ou tela indicadora de nível de bateria.",
+    "pontos": [],
+    "descricao": [
+      "• Capacidade de Bateria: 1400 mAh (com carregamento rápido via USB-C).\n• Visor / Indicador: Possui visor colorido ou tela indicadora de nível de bateria."
+    ],
+    "ficha": {},
+    "sabores": [
+      "BATERIA LIFE POD 1400mha"
     ]
   },
   {
@@ -413,51 +498,6 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    "modelo": "Ignite Shisha",
-    "slug": "ignite-shisha",
-    "foto": "assets/produtos/ignite-shisha.png",
-    "puffs": "40000",
-    "preco": 129.9,
-    "destaque": "DIFERENCIADO",
-    "seo_titulo": "Ignite Shisha em Umuarama: 40000 puffs | Vaporex",
-    "seo_descricao": "Ignite Shisha com 40000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 40000 puffs",
-    "resumo": "Estilo, praticidade e um design diferenciado! O Ignite Shisha se destaca pelo visual moderno e formato portátil, ideal para quem busca uma opção prática e cheia de personalidade.",
-    "pontos": [],
-    "descricao": [
-      "Estilo, praticidade e um design diferenciado! O Ignite Shisha se destaca pelo visual moderno e formato portátil, ideal para quem busca uma opção prática e cheia de personalidade."
-    ],
-    "ficha": {},
-    "sabores": [
-      "TRIPLLE MINT"
-    ]
-  },
-  {
-    "modelo": "IGNITE V500",
-    "slug": "ignite-v500",
-    "foto": "assets/produtos/ignite-v500.png",
-    "puffs": "50000",
-    "preco": 139.9,
-    "destaque": "Maior Durabilidade",
-    "seo_titulo": "IGNITE V500 em Umuarama: 50000 puffs | Vaporex",
-    "seo_descricao": "IGNITE V500 com 50000 puffs e 6 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 50000 puffs",
-    "resumo": "Potência, estilo e praticidade em um só dispositivo!\nO Ignite V500 é ideal para quem busca uma experiência diferenciada, design moderno e muita personalidade.",
-    "pontos": [],
-    "descricao": [
-      "Potência, estilo e praticidade em um só dispositivo!\nO Ignite V500 é ideal para quem busca uma experiência diferenciada, design moderno e muita personalidade."
-    ],
-    "ficha": {},
-    "sabores": [
-      "Cool menthol(Menta suave)",
-      "Manga e Maracujá",
-      "Abacaxi e Manga",
-      "Morango e Kiwi",
-      "Melancia e Kiwi",
-      "Pessêgo e Uva"
-    ]
-  },
-  {
     "modelo": "BLVK 35MG",
     "slug": "blvk-35mg",
     "foto": "assets/produtos/blvk-35mg.png",
@@ -518,46 +558,6 @@ window.VAPOREX_CATALOGO = [
       "KIWI PASSION (LINHA JUST JUICE)",
       "MELON MENTHOL (LINHA DIAMOND)",
       "SPEARMINT MENTHOL (LINHA DIAMOND)"
-    ]
-  },
-  {
-    "modelo": "IGNITE V400",
-    "slug": "ignite-v400",
-    "foto": "assets/produtos/ignite-v400.png",
-    "puffs": "40000",
-    "preco": 139.9,
-    "destaque": "LANÇAMENTO",
-    "seo_titulo": "IGNITE V400 em Umuarama: 40000 puffs | Vaporex",
-    "seo_descricao": "IGNITE V400 com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 40000 puffs",
-    "resumo": "",
-    "pontos": [],
-    "descricao": [],
-    "ficha": {},
-    "sabores": [
-      "GRAPE ICE",
-      "MIAMI MINT",
-      "COOL MENTHOL"
-    ]
-  },
-  {
-    "modelo": "BATERIA LIFE POD 3 COM ADAPTADOR",
-    "slug": "bateria-life-pod-3-com-adaptador",
-    "foto": "assets/produtos/bateria-life-pod-3-com-adaptador.png",
-    "puffs": "0",
-    "preco": 69.9,
-    "destaque": "BATERIA LIFE POD",
-    "seo_titulo": "BATERIA LIFE POD 3 COM ADAPTADOR em Umuarama: 0 puffs | Vaporex",
-    "seo_descricao": "BATERIA LIFE POD 3 COM ADAPTADOR com 0 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 0 puffs",
-    "resumo": "• Capacidade de Bateria: 1400 mAh (com carregamento rápido via USB-C).\n• Visor / Indicador: Possui visor colorido ou tela indicadora de nível de bateria.",
-    "pontos": [],
-    "descricao": [
-      "• Capacidade de Bateria: 1400 mAh (com carregamento rápido via USB-C).\n• Visor / Indicador: Possui visor colorido ou tela indicadora de nível de bateria."
-    ],
-    "ficha": {},
-    "sabores": [
-      "BATERIA LIFE POD 1400mha"
     ]
   }
 ];
