@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://autoridadehofvinicius.github.io/vaporex/sitemap.xml
+Sitemap: https://vaporexumuvape.com.br/sitemap.xml

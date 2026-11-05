@@ -635,5 +635,5 @@ window.VAPOREX_LOJA = {
        "https://vaporex.com.br/"  ou  "https://usuario.github.io/vaporex/"
      Sem ele o gerador nao consegue montar o sitemap nem a imagem que aparece
      quando o link e' colado no WhatsApp (os dois exigem endereco completo). */
-  site_url: "https://autoridadehofvinicius.github.io/vaporex/"
+  site_url: "https://vaporexumuvape.com.br/"
 };
