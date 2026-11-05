@@ -559,6 +559,24 @@ window.VAPOREX_CATALOGO = [
       "MELON MENTHOL (LINHA DIAMOND)",
       "SPEARMINT MENTHOL (LINHA DIAMOND)"
     ]
+  },
+  {
+    "modelo": "XROS 5",
+    "slug": "xros-5",
+    "foto": "assets/produtos/xros-5.png",
+    "puffs": "0",
+    "preco": 249.9,
+    "destaque": "RECARREGAVEL",
+    "seo_titulo": "XROS 5 em Umuarama: 0 puffs | Vaporex",
+    "seo_descricao": "XROS 5 com 0 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 0 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "COR PRETA"
+    ]
   }
 ];
 
