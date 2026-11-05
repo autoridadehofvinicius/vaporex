@@ -34,6 +34,12 @@ V.normSabor = function(s){
 };
 V.temPreco = function(m){ return typeof m.preco === 'number' && m.preco > 0; };
 V.numPuffs = function(m){ return Number(String(m.puffs || '0').replace(/\D/g,'')) || 0; };
+/* '40000' e '40.000' convivem no catalogo (o painel gravava sem ponto): na tela
+   sai tudo com ponto, e '0 puffs' some (bateria, resistencia, pod recarregavel) */
+V.fmtNum = function(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); };
+V.fmtPuffs = function(m){ var n = V.numPuffs(m); return n ? V.fmtNum(n) : ''; };
+V.fmtSub = function(s){ return String(s || '').replace(/ de 0 puffs/g, '')
+  .replace(/\b(\d{4,})\b/g, function(x){ return V.fmtNum(x); }); };
 V.disponiveis = function(m){
   return (m.sabores || []).map(V.normSabor).filter(function(s){ return s.estoque; });
 };
@@ -82,19 +88,19 @@ V.cartao = function(m, i, achados, noCar){
     '<a class="foto" href="' + url + '">' +
       (m.destaque ? '<span class="selo">' + esc(m.destaque) + '</span>' : '') +
       (m.foto ? '<img src="' + esc(m.foto) + '" alt="' + esc(m.modelo) +
-        ', pod descartável de ' + esc(m.puffs) + ' puffs" loading="lazy" width="560" height="560">' : '') +
+        (V.fmtPuffs(m) ? ', ' + esc(V.fmtPuffs(m)) + ' puffs' : '') + '" loading="lazy" width="560" height="560">' : '') +
     '</a>' +
     '<div class="fab">' + esc(nm.fab) + '</div>' +
-    '<h3><a href="' + url + '">' + esc(nm.cod) + '</a></h3>' +
-    (m.subtitulo ? '<p class="subtitulo">' + esc(m.subtitulo) + '</p>' : '') +
+    '<h3' + (nm.cod.length > 12 || nm.cod.split(' ').some(function(w){ return w.length > 8; }) ? ' class="longo"' : '') + '><a href="' + url + '">' + esc(nm.cod) + '</a></h3>' +
+    (m.subtitulo ? '<p class="subtitulo">' + esc(V.fmtSub(m.subtitulo)) + '</p>' : '') +
     (m.resumo ? '<p class="resumo">' + esc(m.resumo) + '</p>' : '') +
     /* os diferenciais em lista: e' o que o cliente compara entre um cartao e
        outro, e lista se le na diagonal, paragrafo nao */
     (m.pontos && m.pontos.length ? '<ul class="pontos">' + m.pontos.map(function(p){
       return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' : '') +
     '<div class="ficha-curta">' +
-      (m.puffs ? '<span><b>' + esc(m.puffs) + '</b> puffs</span>' : '') +
-      '<span><b>' + V.disponiveis(m).length + '</b> sabores</span></div>' +
+      (V.fmtPuffs(m) ? '<span><b>' + esc(V.fmtPuffs(m)) + '</b> puffs</span>' : '') +
+      '<span><b>' + V.disponiveis(m).length + '</b> ' + (V.disponiveis(m).length === 1 ? 'sabor' : 'sabores') + '</span></div>' +
     (achados && achados.length
       ? '<div class="achou">Tem ' + achados.map(esc).join(', ') + '</div>' : '') +
     '<div class="linha-preco">' +
@@ -119,7 +125,7 @@ V.cartao = function(m, i, achados, noCar){
 /* -------------------------------------------------- pagina do produto */
 V.ficha = function(m){
   var linhas = [];
-  if (m.puffs) linhas.push(['Duração', m.puffs + ' puffs']);
+  if (V.fmtPuffs(m)) linhas.push(['Duração', V.fmtPuffs(m) + ' puffs']);
   linhas.push(['Sabores disponíveis', String(V.disponiveis(m).length)]);
   var f = m.ficha || {};
   Object.keys(f).forEach(function(k){

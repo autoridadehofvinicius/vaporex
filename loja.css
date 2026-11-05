@@ -194,11 +194,11 @@ a{color:inherit}
 .sel select option{background:var(--painel);color:var(--branco)}
 .ordem{flex:0 0 210px}
 
-.prateleira{display:grid;grid-template-columns:repeat(3,1fr);
+.prateleira{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:clamp(36px,5vw,56px) clamp(20px,3vw,36px)}
-@media (max-width:980px){.prateleira{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:620px){.prateleira{grid-template-columns:1fr}}
-.modelo{display:flex;flex-direction:column}
+@media (max-width:980px){.prateleira{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.prateleira{grid-template-columns:minmax(0,1fr)}}
+.modelo{display:flex;flex-direction:column;min-width:0}
 
 /* A FOTO NO ESCURO, com halo verde: aprovado pelo cliente. O halo e' o que
    recorta o aparelho preto do fundo preto. */
@@ -215,6 +215,10 @@ a{color:inherit}
 .modelo .fab{margin-top:18px;font-size:14px;color:var(--fraco)}
 .modelo h3{font-weight:900;font-size:clamp(40px,4.8vw,52px);line-height:.92;
   letter-spacing:-.02em;color:var(--branco);font-stretch:125%}
+/* nome comprido (V400 SWEET EDITION, LIFE POD 3 COM ADAPTADOR) desce um degrau:
+   em 52px ele alargava a coluna e o cartao ficava maior que os vizinhos */
+.modelo h3.longo{font-size:clamp(30px,3.3vw,38px)}
+.modelo h3{overflow-wrap:break-word}
 .modelo h3 a{text-decoration:none}
 .modelo h3 a:hover{color:var(--verde-texto)}
 .modelo .subtitulo{margin-top:8px;font-size:15px;font-weight:600;color:var(--branco)}

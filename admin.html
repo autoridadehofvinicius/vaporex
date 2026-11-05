@@ -710,7 +710,7 @@ $('nv-add').addEventListener('click', async function(){
     seo_titulo: (nome + ' em ' + cidade + (puffs ? ': ' + puffs + ' puffs' : '') + ' | Vaporex').slice(0, 65),
     seo_descricao: (nome + (puffs ? ' com ' + puffs + ' puffs' : '') + ' e ' + sabs.length +
       ' sabores. Entrega em ' + cidade + ' ' + (GLOB.loja.prazo_entrega || '') + ' e pagamento na entrega.').slice(0, 160),
-    subtitulo: 'Pod descartável' + (puffs ? ' de ' + puffs + ' puffs' : ''),
+    subtitulo: 'Pod descartável' + (Number(String(puffs).replace(/\D/g,'')) ? ' de ' + String(Number(String(puffs).replace(/\D/g,''))).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' puffs' : ''),
     resumo: $('nv-resumo').value.trim(),
     pontos: [],
     descricao: $('nv-resumo').value.trim() ? [$('nv-resumo').value.trim()] : [],
