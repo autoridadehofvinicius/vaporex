@@ -318,10 +318,22 @@ window.VAPOREX_CATALOGO = [
     "descricao": [],
     "ficha": {},
     "sabores": [
-      {
-        "nome": "Morango e cocô",
-        "estoque": false
-      }
+      "Morango e cocô",
+      "Chiclete de Uva",
+      "Chiclete de Morango",
+      "Polar ice",
+      "Chiclete de  Menta",
+      "Pêseego e Manga",
+      "Love 66",
+      "Chilclete de Cereja",
+      "Cereja e Limão",
+      "Uva Gelada",
+      "Uva verde",
+      "Miami Mint",
+      "Maracujá Gelado",
+      "Maracujá e Manga",
+      "Watermelon Ice",
+      "Chiclete de Melancia"
     ]
   },
   {
@@ -344,7 +356,15 @@ window.VAPOREX_CATALOGO = [
       "MELANCIA E LIMÃO",
       "MIAMI MINT",
       "CHICLETE DE MENTA",
-      "UVA VERDE"
+      "UVA VERDE",
+      "MANGA E MELÃO",
+      "CHICLETE DE MELÃO",
+      "CHICLETE DE MANGA",
+      "MANGA GELADA",
+      "MORANGO E KIWI",
+      "CHICLETE DE BLUEBERRY",
+      "MAÇA VERDE",
+      "CHICLETE DE CEREJA"
     ]
   },
   {
@@ -518,6 +538,26 @@ window.VAPOREX_CATALOGO = [
       "GRAPE ICE",
       "MIAMI MINT",
       "COOL MENTHOL"
+    ]
+  },
+  {
+    "modelo": "BATERIA LIFE POD 3 COM ADAPTADOR",
+    "slug": "bateria-life-pod-3-com-adaptador",
+    "foto": "assets/produtos/bateria-life-pod-3-com-adaptador.png",
+    "puffs": "0",
+    "preco": 69.9,
+    "destaque": "BATERIA LIFE POD",
+    "seo_titulo": "BATERIA LIFE POD 3 COM ADAPTADOR em Umuarama: 0 puffs | Vaporex",
+    "seo_descricao": "BATERIA LIFE POD 3 COM ADAPTADOR com 0 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 0 puffs",
+    "resumo": "• Capacidade de Bateria: 1400 mAh (com carregamento rápido via USB-C).\n• Visor / Indicador: Possui visor colorido ou tela indicadora de nível de bateria.",
+    "pontos": [],
+    "descricao": [
+      "• Capacidade de Bateria: 1400 mAh (com carregamento rápido via USB-C).\n• Visor / Indicador: Possui visor colorido ou tela indicadora de nível de bateria."
+    ],
+    "ficha": {},
+    "sabores": [
+      "BATERIA LIFE POD 1400mha"
     ]
   }
 ];
