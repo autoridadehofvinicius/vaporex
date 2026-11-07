@@ -255,9 +255,7 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Grape Ice",
-      "Watermelon Ice",
-      "Menthol",
-      "Icy Mint"
+      "Watermelon Ice"
     ]
   },
   {
