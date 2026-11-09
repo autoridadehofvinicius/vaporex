@@ -185,8 +185,7 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Cherry + Grape",
-      "Watermelon Ice + Grape Ice",
-      "Strawberry Lemon + Grape Ice"
+      "Framboesa + Uva"
     ]
   },
   {
