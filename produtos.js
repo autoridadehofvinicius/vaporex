@@ -218,7 +218,6 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Strawberry Ice",
-      "Grape Ice",
       "Strawberry Kiwi"
     ]
   },
