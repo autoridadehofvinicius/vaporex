@@ -254,7 +254,9 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Grape Ice",
-      "Watermelon Ice"
+      "Watermelon Ice",
+      "Icy Mint",
+      "Strawberry Ice"
     ]
   },
   {
@@ -572,6 +574,48 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "COR PRETA"
+    ]
+  },
+  {
+    "modelo": "BLACK SHEEP 2 SABORES",
+    "slug": "black-sheep-2-sabores",
+    "foto": "assets/produtos/black-sheep-2-sabores.png",
+    "puffs": "40000",
+    "preco": 129.9,
+    "destaque": "DIFERENCIADO",
+    "seo_titulo": "BLACK SHEEP 2 SABORES em Umuarama: 40000 puffs | Vaporex",
+    "seo_descricao": "BLACK SHEEP 2 SABORES com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 40.000 puffs",
+    "resumo": "O The Black Sheep 40000 Puffs é um pod descartável de alta performance projetado para quem busca máxima durabilidade e versatilidade. O grande diferencial deste dispositivo é o seu sistema de tanque duplo (Dual Tank), que permite carregar dois sabores diferentes no mesmo aparelho e alternar entre eles com um simples comando.",
+    "pontos": [],
+    "descricao": [
+      "O The Black Sheep 40000 Puffs é um pod descartável de alta performance projetado para quem busca máxima durabilidade e versatilidade. O grande diferencial deste dispositivo é o seu sistema de tanque duplo (Dual Tank), que permite carregar dois sabores diferentes no mesmo aparelho e alternar entre eles com um simples comando."
+    ],
+    "ficha": {},
+    "sabores": [
+      "Grape + Grape",
+      "Açai Grape + Açai Strawberry",
+      "Chiclete de Blueberry + Maça Verde"
+    ]
+  },
+  {
+    "modelo": "BLACK SHEEP 55K",
+    "slug": "black-sheep-55k",
+    "foto": "assets/produtos/black-sheep-55k.png",
+    "puffs": "55000",
+    "preco": 139.9,
+    "destaque": "LANÇAMENTO",
+    "seo_titulo": "BLACK SHEEP 55K em Umuarama: 55000 puffs | Vaporex",
+    "seo_descricao": "BLACK SHEEP 55K com 55000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 55.000 puffs",
+    "resumo": "O Black Sheep Cyber Tank Pro 55K é um pod descartável de alto rendimento que oferece até 55.000 puffs (caladas), equipado com mesh coil, fluxo de ar ajustável e display digital em tempo real para monitorar bateria e líquido.",
+    "pontos": [],
+    "descricao": [
+      "O Black Sheep Cyber Tank Pro 55K é um pod descartável de alto rendimento que oferece até 55.000 puffs (caladas), equipado com mesh coil, fluxo de ar ajustável e display digital em tempo real para monitorar bateria e líquido."
+    ],
+    "ficha": {},
+    "sabores": [
+      "MARACUJÁ ICE"
     ]
   }
 ];
