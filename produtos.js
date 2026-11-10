@@ -76,7 +76,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "ignite-v300",
     "foto": "assets/produtos/ignite-v300.png",
     "puffs": "30.000",
-    "preco": 109.9,
+    "preco": 114.9,
     "destaque": "Tela colorida",
     "seo_titulo": "Ignite V300 em Umuarama: 30.000 puffs com tela | Vaporex",
     "seo_descricao": "Ignite V300 com 30.000 puffs, tela colorida com bateria e líquido em % e modo Boost. 7 sabores, entrega em Umuarama em até 1h.",
@@ -111,8 +111,7 @@ window.VAPOREX_CATALOGO = [
       "PESSÊGO E MANGA",
       "MORANGO E KIWI GELADO",
       "CEREJA GELADA",
-      "MORANGO GELADO",
-      "MAÇA VERDE"
+      "MORANGO GELADO"
     ]
   },
   {
