@@ -33,6 +33,39 @@
 
 window.VAPOREX_CATALOGO = [
   {
+    "modelo": "Ignite V80",
+    "slug": "ignite-v80",
+    "foto": "assets/produtos/ignite-v80.png",
+    "puffs": "8.000",
+    "preco": 94.9,
+    "destaque": "",
+    "seo_titulo": "Ignite V80 em Umuarama: pod de 8.000 puffs | Vaporex",
+    "seo_descricao": "Ignite V80 com 8.000 puffs: compacto e sem nada para configurar. 6 sabores, como Passion Fruit Sour Kiwi. Entrega em Umuarama em até 1h.",
+    "subtitulo": "Pod descartável compacto de 8.000 puffs",
+    "resumo": "O mais direto da linha: tira da caixa e usa, sem modo nem tela. Compacto, é o pod reserva ideal para o carro ou a mochila.",
+    "pontos": [
+      "Compacto, sem nada para configurar",
+      "8.000 puffs",
+      "Sabor que só tem nele: Passion Fruit Sour Kiwi",
+      "Bom como pod reserva"
+    ],
+    "descricao": [
+      "O Ignite V80 é o modelo mais direto da linha: tira da caixa e usa, sem modo nem tela para configurar. O formato compacto vai fácil no bolso.",
+      "Com 8.000 puffs, é uma boa escolha como pod reserva, para deixar no carro ou na mochila, ou para testar um sabor novo antes de levar um aparelho maior.",
+      "Tem 6 sabores, incluindo o Passion Fruit Sour Kiwi, maracujá com kiwi azedinho, que na Vaporex só tem nesse modelo."
+    ],
+    "ficha": {
+      "Formato": "Compacto",
+      "Bateria": null,
+      "Nicotina": null,
+      "Recarga": null
+    },
+    "sabores": [
+      "Strawberry Ice",
+      "Strawberry Kiwi"
+    ]
+  },
+  {
     "modelo": "Ignite V155",
     "slug": "ignite-v155",
     "foto": "assets/produtos/ignite-v155.png",
@@ -68,6 +101,43 @@ window.VAPOREX_CATALOGO = [
       "Banana Ice",
       "Kiwi Passion Fruit Guava",
       "Green Apple"
+    ]
+  },
+  {
+    "modelo": "Ignite Frozen",
+    "slug": "ignite-frozen",
+    "foto": "assets/produtos/ignite-frozen.png",
+    "puffs": "20.000",
+    "preco": 99.9,
+    "destaque": "Só gelados",
+    "seo_titulo": "Ignite Frozen (V200) em Umuarama: 20.000 puffs | Vaporex",
+    "seo_descricao": "Ignite Frozen com 20.000 puffs e só sabores gelados: Grape Ice, Watermelon Ice, Menthol e Icy Mint. Entrega em Umuarama em até 1h.",
+    "subtitulo": "Pod descartável de 20.000 puffs com sabores gelados",
+    "resumo": "A linha gelada da Ignite: todo sabor vem com gelo ou menta. Fica entre o V155 e o V300 em duração, com acabamento azul metálico.",
+    "pontos": [
+      "Só sabores gelados",
+      "20.000 puffs",
+      "Indicador de bateria e de líquido",
+      "Também vendido como Ignite V200"
+    ],
+    "descricao": [
+      "O Ignite Frozen, também vendido como Ignite V200, é a linha gelada da Ignite: todos os sabores vêm com gelo ou menta, com aquele final refrescante na tragada.",
+      "Com 20.000 puffs, fica entre o V155 e o V300 em duração, e o indicador na lateral mostra quanto resta de bateria e de líquido. O acabamento azul metálico combina com a proposta gelada.",
+      "São 4 sabores: Grape Ice e Watermelon Ice para quem quer fruta com gelo, Menthol e Icy Mint para quem quer frescor puro."
+    ],
+    "ficha": {
+      "Também chamado de": "Ignite V200",
+      "Visor": "Indicador lateral",
+      "Acabamento": "Azul metálico",
+      "Bateria": null,
+      "Nicotina": null,
+      "Recarga": null
+    },
+    "sabores": [
+      "Grape Ice",
+      "Watermelon Ice",
+      "Icy Mint",
+      "Strawberry Ice"
     ]
   },
   {
@@ -153,6 +223,26 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
+    "modelo": "IGNITE V400 SWEET EDITION",
+    "slug": "ignite-v400-sweet-edition",
+    "foto": "assets/produtos/ignite-v400-sweet-edition.png",
+    "puffs": "40000",
+    "preco": 129.9,
+    "destaque": "MAIOR DURABILIDADE",
+    "seo_titulo": "IGNITE V400 SWEET EDITION em Umuarama: 40000 puffs | Vaporex",
+    "seo_descricao": "IGNITE V400 SWEET EDITION com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 40000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "GRAPE ICE",
+      "MIAMI MINT",
+      "COOL MENTHOL"
+    ]
+  },
+  {
     "modelo": "Ignite V400 Mix",
     "slug": "ignite-v400-mix",
     "foto": "assets/produtos/ignite-v400-mix.png",
@@ -184,76 +274,6 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "Cherry + Grape",
       "Framboesa + Uva"
-    ]
-  },
-  {
-    "modelo": "Ignite V80",
-    "slug": "ignite-v80",
-    "foto": "assets/produtos/ignite-v80.png",
-    "puffs": "8.000",
-    "preco": 94.9,
-    "destaque": "",
-    "seo_titulo": "Ignite V80 em Umuarama: pod de 8.000 puffs | Vaporex",
-    "seo_descricao": "Ignite V80 com 8.000 puffs: compacto e sem nada para configurar. 6 sabores, como Passion Fruit Sour Kiwi. Entrega em Umuarama em até 1h.",
-    "subtitulo": "Pod descartável compacto de 8.000 puffs",
-    "resumo": "O mais direto da linha: tira da caixa e usa, sem modo nem tela. Compacto, é o pod reserva ideal para o carro ou a mochila.",
-    "pontos": [
-      "Compacto, sem nada para configurar",
-      "8.000 puffs",
-      "Sabor que só tem nele: Passion Fruit Sour Kiwi",
-      "Bom como pod reserva"
-    ],
-    "descricao": [
-      "O Ignite V80 é o modelo mais direto da linha: tira da caixa e usa, sem modo nem tela para configurar. O formato compacto vai fácil no bolso.",
-      "Com 8.000 puffs, é uma boa escolha como pod reserva, para deixar no carro ou na mochila, ou para testar um sabor novo antes de levar um aparelho maior.",
-      "Tem 6 sabores, incluindo o Passion Fruit Sour Kiwi, maracujá com kiwi azedinho, que na Vaporex só tem nesse modelo."
-    ],
-    "ficha": {
-      "Formato": "Compacto",
-      "Bateria": null,
-      "Nicotina": null,
-      "Recarga": null
-    },
-    "sabores": [
-      "Strawberry Ice",
-      "Strawberry Kiwi"
-    ]
-  },
-  {
-    "modelo": "Ignite Frozen",
-    "slug": "ignite-frozen",
-    "foto": "assets/produtos/ignite-frozen.png",
-    "puffs": "20.000",
-    "preco": 99.9,
-    "destaque": "Só gelados",
-    "seo_titulo": "Ignite Frozen (V200) em Umuarama: 20.000 puffs | Vaporex",
-    "seo_descricao": "Ignite Frozen com 20.000 puffs e só sabores gelados: Grape Ice, Watermelon Ice, Menthol e Icy Mint. Entrega em Umuarama em até 1h.",
-    "subtitulo": "Pod descartável de 20.000 puffs com sabores gelados",
-    "resumo": "A linha gelada da Ignite: todo sabor vem com gelo ou menta. Fica entre o V155 e o V300 em duração, com acabamento azul metálico.",
-    "pontos": [
-      "Só sabores gelados",
-      "20.000 puffs",
-      "Indicador de bateria e de líquido",
-      "Também vendido como Ignite V200"
-    ],
-    "descricao": [
-      "O Ignite Frozen, também vendido como Ignite V200, é a linha gelada da Ignite: todos os sabores vêm com gelo ou menta, com aquele final refrescante na tragada.",
-      "Com 20.000 puffs, fica entre o V155 e o V300 em duração, e o indicador na lateral mostra quanto resta de bateria e de líquido. O acabamento azul metálico combina com a proposta gelada.",
-      "São 4 sabores: Grape Ice e Watermelon Ice para quem quer fruta com gelo, Menthol e Icy Mint para quem quer frescor puro."
-    ],
-    "ficha": {
-      "Também chamado de": "Ignite V200",
-      "Visor": "Indicador lateral",
-      "Acabamento": "Azul metálico",
-      "Bateria": null,
-      "Nicotina": null,
-      "Recarga": null
-    },
-    "sabores": [
-      "Grape Ice",
-      "Watermelon Ice",
-      "Icy Mint",
-      "Strawberry Ice"
     ]
   },
   {
@@ -299,26 +319,6 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "TRIPLLE MINT"
-    ]
-  },
-  {
-    "modelo": "IGNITE V400 SWEET EDITION",
-    "slug": "ignite-v400-sweet-edition",
-    "foto": "assets/produtos/ignite-v400-sweet-edition.png",
-    "puffs": "40000",
-    "preco": 129.9,
-    "destaque": "MAIOR DURABILIDADE",
-    "seo_titulo": "IGNITE V400 SWEET EDITION em Umuarama: 40000 puffs | Vaporex",
-    "seo_descricao": "IGNITE V400 SWEET EDITION com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 40000 puffs",
-    "resumo": "",
-    "pontos": [],
-    "descricao": [],
-    "ficha": {},
-    "sabores": [
-      "GRAPE ICE",
-      "MIAMI MINT",
-      "COOL MENTHOL"
     ]
   },
   {
