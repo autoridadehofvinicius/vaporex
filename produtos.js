@@ -496,7 +496,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "blvk-35mg",
     "foto": "assets/produtos/blvk-35mg.png",
     "puffs": "0",
-    "preco": 89.9,
+    "preco": 94.9,
     "destaque": "DIVERSOS SABORES",
     "seo_titulo": "Essência BLVK Nic Salt 35mg em Umuarama | Vaporex",
     "seo_descricao": "Essência BLVK Nic Salt 35mg em vários sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
@@ -528,7 +528,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "blvk-50mg",
     "foto": "assets/produtos/blvk-50mg.png",
     "puffs": "0",
-    "preco": 89.9,
+    "preco": 94.9,
     "destaque": "GRANDE VARIEDADE",
     "seo_titulo": "Essência BLVK Nic Salt 50mg em Umuarama | Vaporex",
     "seo_descricao": "Essência BLVK Nic Salt 50mg em vários sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
@@ -552,24 +552,6 @@ window.VAPOREX_CATALOGO = [
       "KIWI PASSION (LINHA JUST JUICE)",
       "MELON MENTHOL (LINHA DIAMOND)",
       "SPEARMINT MENTHOL (LINHA DIAMOND)"
-    ]
-  },
-  {
-    "modelo": "XROS 5",
-    "slug": "xros-5",
-    "foto": "assets/produtos/xros-5.png",
-    "puffs": "0",
-    "preco": 249.9,
-    "destaque": "RECARREGAVEL",
-    "seo_titulo": "XROS 5 em Umuarama: 0 puffs | Vaporex",
-    "seo_descricao": "XROS 5 com 0 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod recarregável XROS 5",
-    "resumo": "",
-    "pontos": [],
-    "descricao": [],
-    "ficha": {},
-    "sabores": [
-      "COR PRETA"
     ]
   },
   {
