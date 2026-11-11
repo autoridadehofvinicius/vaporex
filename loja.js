@@ -203,6 +203,11 @@ function total(){
   return CARRINHO.reduce(function(s,x){ return s + x.preco * x.qtd; }, 0)
     + (CARRINHO.length ? Number(LOJA.taxa_entrega || 0) : 0);
 }
+/* Acrescimo do cartao de CREDITO: 4% da taxa da maquininha (pedido do dono, 11/11/2026).
+   Debito, Pix e dinheiro nao tem acrescimo. */
+var ACRESCIMO_CREDITO = 0.04;
+var CREDITO = 'Cartão de crédito';
+function acrescimo(){ return Math.round(total() * ACRESCIMO_CREDITO * 100) / 100; }
 function pecas(){ return CARRINHO.reduce(function(s,x){ return s + x.qtd; }, 0); }
 function atualizaCartoes(){
   (CAT || []).forEach(function(m, i){
@@ -301,7 +306,14 @@ function verDados(){
       campo('referencia','Ponto de referência (opcional)','text','Perto de quê?','') +
       '<div class="campo"><label for="pagamento">Forma de pagamento</label>' +
         '<select id="pagamento"><option>Pix na entrega</option>' +
-        '<option>Dinheiro</option><option>Cartão na entrega</option></select></div>' +
+        '<option>Dinheiro</option><option>Cartão de débito</option>' +
+        '<option>' + CREDITO + '</option></select></div>' +
+      '<div class="aviso-credito" id="cx-credito" hidden role="status">' +
+        '<b>No cartão de crédito o valor tem acréscimo de 4%</b>, que é a taxa da maquininha.' +
+        '<div class="contas"><span>Pedido</span><span>' + moeda(total()) + '</span>' +
+        '<span>Acréscimo de 4%</span><span>+ ' + moeda(acrescimo()) + '</span>' +
+        '<span class="t">Total no crédito</span><span class="t">' + moeda(total() + acrescimo()) + '</span></div>' +
+        'No Pix, dinheiro ou débito não tem acréscimo.</div>' +
       '<div class="campo" id="cx-troco" hidden><label for="troco">Troco para quanto?</label>' +
         '<input id="troco" type="text" inputmode="decimal" placeholder="Ex.: 100"></div>' +
       '<div class="campo"><label for="obs">Observação (opcional)</label>' +
@@ -310,7 +322,10 @@ function verDados(){
       '<div class="aviso-form">O WhatsApp abre com o pedido escrito. ' +
       '<b>Toque em enviar lá dentro</b> para a loja receber.</div>' +
     '</form>';
-  $('pagamento').onchange = function(){ $('cx-troco').hidden = this.value !== 'Dinheiro'; };
+  $('pagamento').onchange = function(){
+    $('cx-troco').hidden = this.value !== 'Dinheiro';
+    $('cx-credito').hidden = this.value !== CREDITO;
+  };
   $('form-pedido').onsubmit = enviar;
   mostraFolha();
 }
@@ -347,7 +362,13 @@ function enviar(ev){
   });
   if (Number(LOJA.taxa_entrega) > 0) L.push('Taxa de entrega: ' + moeda(LOJA.taxa_entrega));
   L.push('');
-  L.push('*TOTAL: ' + moeda(total()) + '*');
+  if ($('pagamento').value === CREDITO){
+    L.push('Subtotal: ' + moeda(total()));
+    L.push('Acréscimo cartão de crédito (4%): ' + moeda(acrescimo()));
+    L.push('*TOTAL NO CRÉDITO: ' + moeda(total() + acrescimo()) + '*');
+  } else {
+    L.push('*TOTAL: ' + moeda(total()) + '*');
+  }
   L.push('');
   L.push('*Entrega*');
   L.push('Nome: ' + v('nome'));

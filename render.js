@@ -308,8 +308,9 @@ V.duvidas = function(L){
     ['Entregam no meu bairro?', L.area_entrega
       ? 'A loja entrega em ' + L.area_entrega + '. Ficou na dúvida? Mande o bairro no WhatsApp antes de pedir.'
       : 'A loja entrega em ' + cid + '. Mande seu bairro no WhatsApp antes de pedir e a loja confirma na hora.'],
-    ['Como eu pago?', 'Na entrega, por Pix, dinheiro ou cartão. Se for pagar em dinheiro, ' +
-     'avise no pedido para quanto precisa de troco.'],
+    ['Como eu pago?', 'Na entrega, por Pix, dinheiro ou cartão. No cartão de crédito há ' +
+     'acréscimo de 4% (taxa da maquininha); Pix, dinheiro e débito não têm acréscimo. ' +
+     'Se for pagar em dinheiro, avise no pedido para quanto precisa de troco.'],
     ['Preciso criar conta?', 'Não. Você escolhe os produtos, preenche o endereço e o pedido ' +
      'vai pronto para o WhatsApp da loja.'],
     ['Qual pod dura mais?', 'O Ignite V400 Ice e o V400 Mix, com 40.000 puffs cada. ' +

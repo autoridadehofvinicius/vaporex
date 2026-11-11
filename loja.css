@@ -417,6 +417,13 @@ footer .lei{margin-top:36px;padding-top:20px;border-top:1px solid var(--fio);
 .enviar{width:100%;margin-top:6px}
 .aviso-form{font-size:13.5px;color:var(--fraco);margin-top:12px;line-height:1.6}
 .aviso-form b{color:var(--branco)}
+.aviso-credito{margin:-4px 0 16px;padding:14px 16px;border:1px solid #E8B04A;border-radius:12px;
+  background:rgba(232,176,74,.08);color:var(--texto);font-size:14px;line-height:1.55}
+.aviso-credito b{color:#F5C46A}
+.aviso-credito .contas{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin:10px 0;
+  padding:10px 0;border-top:1px solid var(--fio-2);border-bottom:1px solid var(--fio-2);font-variant-numeric:tabular-nums}
+.aviso-credito .contas span:nth-child(even){text-align:right}
+.aviso-credito .t{color:var(--branco);font-weight:700}
 
 /* ------------------------------------------------------------ confirmado */
 .ok{text-align:center;padding:24px 0}
