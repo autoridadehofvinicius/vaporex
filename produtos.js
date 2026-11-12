@@ -136,7 +136,6 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "Grape Ice",
       "Watermelon Ice",
-      "Icy Mint",
       "Strawberry Ice"
     ]
   },
@@ -572,8 +571,7 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "Grape + Grape",
-      "Açai Grape + Açai Strawberry",
-      "Chiclete de Blueberry + Maça Verde"
+      "Açai Grape + Açai Strawberry"
     ]
   },
   {
