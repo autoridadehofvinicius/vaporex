@@ -430,7 +430,6 @@ window.VAPOREX_CATALOGO = [
     "descricao": [],
     "ficha": {},
     "sabores": [
-      "HALLS DE MENTA",
       "CHICLETE DE MARACUJÁ",
       "MELANCIA E LIMÃO",
       "CHICLETE DE MENTA",
