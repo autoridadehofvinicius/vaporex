@@ -440,8 +440,7 @@ window.VAPOREX_CATALOGO = [
       "MANGA GELADA",
       "MORANGO E KIWI",
       "CHICLETE DE BLUEBERRY",
-      "MAÇA VERDE",
-      "CHICLETE DE CEREJA"
+      "MAÇA VERDE"
     ]
   },
   {
