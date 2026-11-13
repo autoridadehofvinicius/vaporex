@@ -290,7 +290,6 @@ window.VAPOREX_CATALOGO = [
     ],
     "ficha": {},
     "sabores": [
-      "Cool menthol(Menta suave)",
       "Manga e Maracujá",
       "Abacaxi e Manga",
       "Morango e Kiwi",
