@@ -134,7 +134,6 @@ window.VAPOREX_CATALOGO = [
       "Recarga": null
     },
     "sabores": [
-      "Grape Ice",
       "Watermelon Ice",
       "Strawberry Ice"
     ]
@@ -178,8 +177,8 @@ window.VAPOREX_CATALOGO = [
       "ABACAXI,KIWI E PITAYA",
       "PESSÊGO E MANGA",
       "MORANGO E KIWI GELADO",
-      "CEREJA GELADA",
-      "MORANGO GELADO"
+      "MORANGO GELADO",
+      "GRAPE ICE"
     ]
   },
   {
