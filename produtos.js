@@ -169,7 +169,6 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "BANANA GELADA",
-      "ICY MINT",
       "MENTHOL",
       "MELANCIA GELADA",
       "ABACAXI E MANGA",
