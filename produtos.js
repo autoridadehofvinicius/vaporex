@@ -169,15 +169,13 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "BANANA GELADA",
-      "MENTHOL",
       "MELANCIA GELADA",
       "ABACAXI E MANGA",
       "ABACAXI GELADO",
       "ABACAXI,KIWI E PITAYA",
       "PESSÊGO E MANGA",
       "MORANGO E KIWI GELADO",
-      "MORANGO GELADO",
-      "GRAPE ICE"
+      "MORANGO GELADO"
     ]
   },
   {
