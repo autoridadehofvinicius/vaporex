@@ -296,26 +296,6 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    "modelo": "Ignite Shisha",
-    "slug": "ignite-shisha",
-    "foto": "assets/produtos/ignite-shisha.png",
-    "puffs": "40000",
-    "preco": 129.9,
-    "destaque": "DIFERENCIADO",
-    "seo_titulo": "Ignite Shisha em Umuarama: 40000 puffs | Vaporex",
-    "seo_descricao": "Ignite Shisha com 40000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 40000 puffs",
-    "resumo": "Estilo, praticidade e um design diferenciado! O Ignite Shisha se destaca pelo visual moderno e formato portátil, ideal para quem busca uma opção prática e cheia de personalidade.",
-    "pontos": [],
-    "descricao": [
-      "Estilo, praticidade e um design diferenciado! O Ignite Shisha se destaca pelo visual moderno e formato portátil, ideal para quem busca uma opção prática e cheia de personalidade."
-    ],
-    "ficha": {},
-    "sabores": [
-      "TRIPLLE MINT"
-    ]
-  },
-  {
     "modelo": "NIK BAR",
     "slug": "nik-bar",
     "foto": "assets/produtos/nik-bar.png",
@@ -335,26 +315,6 @@ window.VAPOREX_CATALOGO = [
       "Pineapple ice",
       "Cherry watermelon",
       "Watermelon ice"
-    ]
-  },
-  {
-    "modelo": "NIK BAR 30K",
-    "slug": "nik-bar-30k",
-    "foto": "assets/produtos/nik-bar-30k.png",
-    "puffs": "30000",
-    "preco": 94.9,
-    "destaque": "INDESCRITÍVEL",
-    "seo_titulo": "NIK BAR 30K em Umuarama: 30000 puffs | Vaporex",
-    "seo_descricao": "NIK BAR 30K com 30000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 30000 puffs",
-    "resumo": "\n\n💨 Potência, sabor e estilo em uma só experiência.\n⚡ Até 30.000 puffs*\n✨ Design moderno e praticidade para o seu dia a dia.",
-    "pontos": [],
-    "descricao": [
-      "Outro custo benefício que cabe no seu bolso!"
-    ],
-    "ficha": {},
-    "sabores": [
-      "Grape ice"
     ]
   },
   {
