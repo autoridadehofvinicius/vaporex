@@ -396,7 +396,6 @@ window.VAPOREX_CATALOGO = [
       "Chiclete de Uva",
       "Chiclete de Morango",
       "Polar ice",
-      "Chiclete de  Menta",
       "Pêseego e Manga",
       "Love 66",
       "Chilclete de Cereja",
