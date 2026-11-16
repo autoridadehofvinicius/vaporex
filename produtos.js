@@ -104,41 +104,6 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    "modelo": "Ignite Frozen",
-    "slug": "ignite-frozen",
-    "foto": "assets/produtos/ignite-frozen.png",
-    "puffs": "20.000",
-    "preco": 99.9,
-    "destaque": "Só gelados",
-    "seo_titulo": "Ignite Frozen (V200) em Umuarama: 20.000 puffs | Vaporex",
-    "seo_descricao": "Ignite Frozen com 20.000 puffs e só sabores gelados: Grape Ice, Watermelon Ice, Menthol e Icy Mint. Entrega em Umuarama em até 1h.",
-    "subtitulo": "Pod descartável de 20.000 puffs com sabores gelados",
-    "resumo": "A linha gelada da Ignite: todo sabor vem com gelo ou menta. Fica entre o V155 e o V300 em duração, com acabamento azul metálico.",
-    "pontos": [
-      "Só sabores gelados",
-      "20.000 puffs",
-      "Indicador de bateria e de líquido",
-      "Também vendido como Ignite V200"
-    ],
-    "descricao": [
-      "O Ignite Frozen, também vendido como Ignite V200, é a linha gelada da Ignite: todos os sabores vêm com gelo ou menta, com aquele final refrescante na tragada.",
-      "Com 20.000 puffs, fica entre o V155 e o V300 em duração, e o indicador na lateral mostra quanto resta de bateria e de líquido. O acabamento azul metálico combina com a proposta gelada.",
-      "São 4 sabores: Grape Ice e Watermelon Ice para quem quer fruta com gelo, Menthol e Icy Mint para quem quer frescor puro."
-    ],
-    "ficha": {
-      "Também chamado de": "Ignite V200",
-      "Visor": "Indicador lateral",
-      "Acabamento": "Azul metálico",
-      "Bateria": null,
-      "Nicotina": null,
-      "Recarga": null
-    },
-    "sabores": [
-      "Watermelon Ice",
-      "Strawberry Ice"
-    ]
-  },
-  {
     "modelo": "Ignite V300",
     "slug": "ignite-v300",
     "foto": "assets/produtos/ignite-v300.png",
@@ -181,7 +146,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "ignite-v400-ice",
     "foto": "assets/produtos/ignite-v400-ice.png",
     "puffs": "40.000",
-    "preco": 129.9,
+    "preco": 134.9,
     "destaque": "Maior duração",
     "seo_titulo": "Ignite V400 Ice em Umuarama: 40.000 puffs | Vaporex",
     "seo_descricao": "Ignite V400 Ice com 40.000 puffs, o pod que mais dura na Vaporex. 6 sabores, como Sakura Grape e Grape Mix. Entrega em Umuarama em até 1h.",
@@ -220,7 +185,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "ignite-v400-sweet-edition",
     "foto": "assets/produtos/ignite-v400-sweet-edition.png",
     "puffs": "40000",
-    "preco": 129.9,
+    "preco": 134.9,
     "destaque": "MAIOR DURABILIDADE",
     "seo_titulo": "IGNITE V400 SWEET EDITION em Umuarama: 40000 puffs | Vaporex",
     "seo_descricao": "IGNITE V400 SWEET EDITION com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
@@ -240,7 +205,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "ignite-v400-mix",
     "foto": "assets/produtos/ignite-v400-mix.png",
     "puffs": "40.000",
-    "preco": 129.9,
+    "preco": 139.9,
     "destaque": "Dois sabores",
     "seo_titulo": "Ignite V400 Mix em Umuarama: 2 sabores em 1 pod | Vaporex",
     "seo_descricao": "Ignite V400 Mix: dois sabores no mesmo pod e 40.000 puffs. 7 combinações, como Cherry + Grape. Entrega em Umuarama em até 1h.",
@@ -274,7 +239,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "ignite-v500",
     "foto": "assets/produtos/ignite-v500.png",
     "puffs": "50000",
-    "preco": 139.9,
+    "preco": 149.9,
     "destaque": "Maior Durabilidade",
     "seo_titulo": "IGNITE V500 em Umuarama: 50000 puffs | Vaporex",
     "seo_descricao": "IGNITE V500 com 50000 puffs e 6 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
@@ -340,7 +305,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "life-pod-10k",
     "foto": "assets/produtos/life-pod-10k.png",
     "puffs": "10000",
-    "preco": 79.9,
+    "preco": 84.9,
     "destaque": "SABOR INDISCÚTIVEL",
     "seo_titulo": "LIFE POD 10K em Umuarama: 10000 puffs | Vaporex",
     "seo_descricao": "LIFE POD 10K com 10000 puffs e 4 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
@@ -503,7 +468,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "black-sheep-2-sabores",
     "foto": "assets/produtos/black-sheep-2-sabores.png",
     "puffs": "40000",
-    "preco": 129.9,
+    "preco": 139.9,
     "destaque": "DIFERENCIADO",
     "seo_titulo": "BLACK SHEEP 2 SABORES em Umuarama: 40000 puffs | Vaporex",
     "seo_descricao": "BLACK SHEEP 2 SABORES com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
@@ -515,8 +480,7 @@ window.VAPOREX_CATALOGO = [
     ],
     "ficha": {},
     "sabores": [
-      "Grape + Grape",
-      "Açai Grape + Açai Strawberry"
+      "Grape + Grape"
     ]
   },
   {
@@ -524,7 +488,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "black-sheep-55k",
     "foto": "assets/produtos/black-sheep-55k.png",
     "puffs": "55000",
-    "preco": 139.9,
+    "preco": 149.9,
     "destaque": "LANÇAMENTO",
     "seo_titulo": "BLACK SHEEP 55K em Umuarama: 55000 puffs | Vaporex",
     "seo_descricao": "BLACK SHEEP 55K com 55000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
