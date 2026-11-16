@@ -362,7 +362,31 @@ window.VAPOREX_CATALOGO = [
       "CHICLETE DE BLUEBERRY",
       "MAÇA VERDE",
       "LOVE 66",
-      "MIAMI MINT"
+      "MIAMI MINT",
+      "MARACUJÁ GELADO",
+      "HALLS DE MENTA"
+    ]
+  },
+  {
+    "modelo": "LIFE POD SK",
+    "slug": "life-pod-sk",
+    "foto": "assets/produtos/life-pod-sk.png",
+    "puffs": "18000",
+    "preco": 99.9,
+    "destaque": "LANÇAMENTO",
+    "seo_titulo": "LIFE POD SK em Umuarama: 18000 puffs | Vaporex",
+    "seo_descricao": "LIFE POD SK com 18000 puffs e 5 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 18.000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "HALLS DE AMORA",
+      "HALLS DE MENTA",
+      "HALLS DE CEREJA",
+      "MARACUJÁ E MANGA",
+      "TROPICAL ICE"
     ]
   },
   {
@@ -506,28 +530,6 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "MARACUJÁ ICE"
-    ]
-  },
-  {
-    "modelo": "LIFE POD SK",
-    "slug": "life-pod-sk",
-    "foto": "assets/produtos/life-pod-sk.png",
-    "puffs": "18000",
-    "preco": 99.9,
-    "destaque": "LANÇAMENTO",
-    "seo_titulo": "LIFE POD SK em Umuarama: 18000 puffs | Vaporex",
-    "seo_descricao": "LIFE POD SK com 18000 puffs e 5 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 18.000 puffs",
-    "resumo": "",
-    "pontos": [],
-    "descricao": [],
-    "ficha": {},
-    "sabores": [
-      "HALLS DE AMORA",
-      "HALLS DE MENTA",
-      "HALLS DE CEREJA",
-      "MARACUJÁ E MANGA",
-      "TROPICAL ICE"
     ]
   }
 ];
