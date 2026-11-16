@@ -168,10 +168,8 @@ window.VAPOREX_CATALOGO = [
       "Recarga": null
     },
     "sabores": [
-      "BANANA GELADA",
       "MELANCIA GELADA",
       "ABACAXI E MANGA",
-      "ABACAXI GELADO",
       "ABACAXI,KIWI E PITAYA",
       "PESSÊGO E MANGA",
       "MORANGO E KIWI GELADO",
