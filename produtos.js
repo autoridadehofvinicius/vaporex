@@ -205,7 +205,7 @@ window.VAPOREX_CATALOGO = [
     "slug": "ignite-v400-mix",
     "foto": "assets/produtos/ignite-v400-mix.png",
     "puffs": "40.000",
-    "preco": 139.9,
+    "preco": 134.9,
     "destaque": "Dois sabores",
     "seo_titulo": "Ignite V400 Mix em Umuarama: 2 sabores em 1 pod | Vaporex",
     "seo_descricao": "Ignite V400 Mix: dois sabores no mesmo pod e 40.000 puffs. 7 combinações, como Cherry + Grape. Entrega em Umuarama em até 1h.",
@@ -231,7 +231,10 @@ window.VAPOREX_CATALOGO = [
     },
     "sabores": [
       "Cherry + Grape",
-      "Framboesa + Uva"
+      "Framboesa + Uva",
+      "Uva + Pessêgo",
+      "Icy Mint + Uva c/ Pessêgo",
+      "Melão Mentolado + Menthol"
     ]
   },
   {
@@ -357,7 +360,9 @@ window.VAPOREX_CATALOGO = [
       "MANGA GELADA",
       "MORANGO E KIWI",
       "CHICLETE DE BLUEBERRY",
-      "MAÇA VERDE"
+      "MAÇA VERDE",
+      "LOVE 66",
+      "MIAMI MINT"
     ]
   },
   {
@@ -501,6 +506,28 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "MARACUJÁ ICE"
+    ]
+  },
+  {
+    "modelo": "LIFE POD SK",
+    "slug": "life-pod-sk",
+    "foto": "assets/produtos/life-pod-sk.png",
+    "puffs": "18000",
+    "preco": 99.9,
+    "destaque": "LANÇAMENTO",
+    "seo_titulo": "LIFE POD SK em Umuarama: 18000 puffs | Vaporex",
+    "seo_descricao": "LIFE POD SK com 18000 puffs e 5 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 18.000 puffs",
+    "resumo": "",
+    "pontos": [],
+    "descricao": [],
+    "ficha": {},
+    "sabores": [
+      "HALLS DE AMORA",
+      "HALLS DE MENTA",
+      "HALLS DE CEREJA",
+      "MARACUJÁ E MANGA",
+      "TROPICAL ICE"
     ]
   }
 ];
