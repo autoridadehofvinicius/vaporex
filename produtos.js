@@ -99,8 +99,7 @@ window.VAPOREX_CATALOGO = [
       "Grape Ice",
       "Strawberry Banana",
       "Banana Ice",
-      "Kiwi Passion Fruit Guava",
-      "Green Apple"
+      "Kiwi Passion Fruit Guava"
     ]
   },
   {
