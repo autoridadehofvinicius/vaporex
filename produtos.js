@@ -138,7 +138,8 @@ window.VAPOREX_CATALOGO = [
       "ABACAXI,KIWI E PITAYA",
       "PESSÊGO E MANGA",
       "MORANGO E KIWI GELADO",
-      "MORANGO GELADO"
+      "MORANGO GELADO",
+      "PINEAPPLE ICE"
     ]
   },
   {
@@ -234,7 +235,9 @@ window.VAPOREX_CATALOGO = [
       "Framboesa + Uva",
       "Uva + Pessêgo",
       "Icy Mint + Uva c/ Pessêgo",
-      "Melão Mentolado + Menthol"
+      "Melão Mentolado + Menthol",
+      "Blueberry + Morango",
+      "Abacaxi e coco"
     ]
   },
   {
@@ -457,7 +460,6 @@ window.VAPOREX_CATALOGO = [
       "MELON MENTHOL (LINHA DIAMOND)",
       "GRAPE BERRY  (LINHA FROST)",
       "PASSION GUAVA  (LINHA FROST)",
-      "PEACH GUAVA  (LINHA FROST)",
       "GRAPE APPLE  (LINHA FUSION)",
       "KIWI PASSION  (LINHA JUST JUICE)"
     ]
