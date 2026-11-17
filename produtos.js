@@ -138,8 +138,7 @@ window.VAPOREX_CATALOGO = [
       "ABACAXI,KIWI E PITAYA",
       "PESSÊGO E MANGA",
       "MORANGO E KIWI GELADO",
-      "MORANGO GELADO",
-      "PINEAPPLE ICE"
+      "MORANGO GELADO"
     ]
   },
   {
