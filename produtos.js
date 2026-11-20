@@ -415,6 +415,70 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
+    "modelo": "BLACK SHEEP 15K ULTRA SLIM",
+    "slug": "black-sheep-15k-ultra-slim",
+    "foto": "assets/produtos/black-sheep-15k-ultra-slim.png",
+    "puffs": "15000",
+    "preco": 84.9,
+    "destaque": "LANÇAMENTO",
+    "seo_titulo": "BLACK SHEEP 15K ULTRA SLIM em Umuarama: 15000 puffs | Vaporex",
+    "seo_descricao": "BLACK SHEEP 15K ULTRA SLIM com 15000 puffs e 5 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 15.000 puffs",
+    "resumo": "NOVO LANÇAMENTO SUPER FINO!",
+    "pontos": [],
+    "descricao": [
+      "NOVO LANÇAMENTO SUPER FINO!"
+    ],
+    "ficha": {},
+    "sabores": [
+      "MARACUJÁ GELADO",
+      "UVA GELADA",
+      "MENTHOL",
+      "MORANGO E KIWI GELADO",
+      "MELANCIA GELADO"
+    ]
+  },
+  {
+    "modelo": "BLACK SHEEP 2 SABORES",
+    "slug": "black-sheep-2-sabores",
+    "foto": "assets/produtos/black-sheep-2-sabores.png",
+    "puffs": "40000",
+    "preco": 139.9,
+    "destaque": "DIFERENCIADO",
+    "seo_titulo": "BLACK SHEEP 2 SABORES em Umuarama: 40000 puffs | Vaporex",
+    "seo_descricao": "BLACK SHEEP 2 SABORES com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 40.000 puffs",
+    "resumo": "O The Black Sheep 40000 Puffs é um pod descartável de alta performance projetado para quem busca máxima durabilidade e versatilidade. O grande diferencial deste dispositivo é o seu sistema de tanque duplo (Dual Tank), que permite carregar dois sabores diferentes no mesmo aparelho e alternar entre eles com um simples comando.",
+    "pontos": [],
+    "descricao": [
+      "O The Black Sheep 40000 Puffs é um pod descartável de alta performance projetado para quem busca máxima durabilidade e versatilidade. O grande diferencial deste dispositivo é o seu sistema de tanque duplo (Dual Tank), que permite carregar dois sabores diferentes no mesmo aparelho e alternar entre eles com um simples comando."
+    ],
+    "ficha": {},
+    "sabores": [
+      "Grape + Grape"
+    ]
+  },
+  {
+    "modelo": "BLACK SHEEP 55K",
+    "slug": "black-sheep-55k",
+    "foto": "assets/produtos/black-sheep-55k.png",
+    "puffs": "55000",
+    "preco": 149.9,
+    "destaque": "LANÇAMENTO",
+    "seo_titulo": "BLACK SHEEP 55K em Umuarama: 55000 puffs | Vaporex",
+    "seo_descricao": "BLACK SHEEP 55K com 55000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 55.000 puffs",
+    "resumo": "O Black Sheep Cyber Tank Pro 55K é um pod descartável de alto rendimento que oferece até 55.000 puffs (caladas), equipado com mesh coil, fluxo de ar ajustável e display digital em tempo real para monitorar bateria e líquido.",
+    "pontos": [],
+    "descricao": [
+      "O Black Sheep Cyber Tank Pro 55K é um pod descartável de alto rendimento que oferece até 55.000 puffs (caladas), equipado com mesh coil, fluxo de ar ajustável e display digital em tempo real para monitorar bateria e líquido."
+    ],
+    "ficha": {},
+    "sabores": [
+      "MARACUJÁ ICE"
+    ]
+  },
+  {
     "modelo": "ELF BAR 15K",
     "slug": "elf-bar-15k",
     "foto": "assets/produtos/elf-bar-15k.png",
@@ -505,70 +569,6 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "SPEARMINT ORIGINAL (LIDER DE VENDAS)",
       "GRAPE APPLE (LINHA FUSION)"
-    ]
-  },
-  {
-    "modelo": "BLACK SHEEP 2 SABORES",
-    "slug": "black-sheep-2-sabores",
-    "foto": "assets/produtos/black-sheep-2-sabores.png",
-    "puffs": "40000",
-    "preco": 139.9,
-    "destaque": "DIFERENCIADO",
-    "seo_titulo": "BLACK SHEEP 2 SABORES em Umuarama: 40000 puffs | Vaporex",
-    "seo_descricao": "BLACK SHEEP 2 SABORES com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 40.000 puffs",
-    "resumo": "O The Black Sheep 40000 Puffs é um pod descartável de alta performance projetado para quem busca máxima durabilidade e versatilidade. O grande diferencial deste dispositivo é o seu sistema de tanque duplo (Dual Tank), que permite carregar dois sabores diferentes no mesmo aparelho e alternar entre eles com um simples comando.",
-    "pontos": [],
-    "descricao": [
-      "O The Black Sheep 40000 Puffs é um pod descartável de alta performance projetado para quem busca máxima durabilidade e versatilidade. O grande diferencial deste dispositivo é o seu sistema de tanque duplo (Dual Tank), que permite carregar dois sabores diferentes no mesmo aparelho e alternar entre eles com um simples comando."
-    ],
-    "ficha": {},
-    "sabores": [
-      "Grape + Grape"
-    ]
-  },
-  {
-    "modelo": "BLACK SHEEP 55K",
-    "slug": "black-sheep-55k",
-    "foto": "assets/produtos/black-sheep-55k.png",
-    "puffs": "55000",
-    "preco": 149.9,
-    "destaque": "LANÇAMENTO",
-    "seo_titulo": "BLACK SHEEP 55K em Umuarama: 55000 puffs | Vaporex",
-    "seo_descricao": "BLACK SHEEP 55K com 55000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 55.000 puffs",
-    "resumo": "O Black Sheep Cyber Tank Pro 55K é um pod descartável de alto rendimento que oferece até 55.000 puffs (caladas), equipado com mesh coil, fluxo de ar ajustável e display digital em tempo real para monitorar bateria e líquido.",
-    "pontos": [],
-    "descricao": [
-      "O Black Sheep Cyber Tank Pro 55K é um pod descartável de alto rendimento que oferece até 55.000 puffs (caladas), equipado com mesh coil, fluxo de ar ajustável e display digital em tempo real para monitorar bateria e líquido."
-    ],
-    "ficha": {},
-    "sabores": [
-      "MARACUJÁ ICE"
-    ]
-  },
-  {
-    "modelo": "BLACK SHEEP 15K ULTRA SLIM",
-    "slug": "black-sheep-15k-ultra-slim",
-    "foto": "assets/produtos/black-sheep-15k-ultra-slim.png",
-    "puffs": "15000",
-    "preco": 84.9,
-    "destaque": "LANÇAMENTO",
-    "seo_titulo": "BLACK SHEEP 15K ULTRA SLIM em Umuarama: 15000 puffs | Vaporex",
-    "seo_descricao": "BLACK SHEEP 15K ULTRA SLIM com 15000 puffs e 5 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 15.000 puffs",
-    "resumo": "NOVO LANÇAMENTO SUPER FINO!",
-    "pontos": [],
-    "descricao": [
-      "NOVO LANÇAMENTO SUPER FINO!"
-    ],
-    "ficha": {},
-    "sabores": [
-      "MARACUJÁ GELADO",
-      "UVA GELADA",
-      "MENTHOL",
-      "MORANGO E KIWI GELADO",
-      "MELANCIA GELADO"
     ]
   }
 ];
