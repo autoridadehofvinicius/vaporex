@@ -101,6 +101,27 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
+    "modelo": "IGNITE FROZEN",
+    "slug": "ignite-frozen",
+    "foto": "assets/produtos/ignite-frozen.png",
+    "puffs": "20000",
+    "preco": 104.9,
+    "destaque": "SÓ GELADOS",
+    "seo_titulo": "IGNITE FROZEN em Umuarama: 20000 puffs | Vaporex",
+    "seo_descricao": "IGNITE FROZEN com 20000 puffs e 2 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 20.000 puffs",
+    "resumo": "O Ignite V Frozen Icy (também identificado como Ignite V200 Frozen) é um pod descartável recarregável da linha gelada da Ignite, com capacidade anunciada de até 20.000 puffs e foco em refrescância contínua.",
+    "pontos": [],
+    "descricao": [
+      "O Ignite V Frozen Icy (também identificado como Ignite V200 Frozen) é um pod descartável recarregável da linha gelada da Ignite, com capacidade anunciada de até 20.000 puffs e foco em refrescância contínua."
+    ],
+    "ficha": {},
+    "sabores": [
+      "MENTHOL",
+      "MORANGO GELADO"
+    ]
+  },
+  {
     "modelo": "Ignite V300",
     "slug": "ignite-v300",
     "foto": "assets/produtos/ignite-v300.png",
@@ -134,7 +155,13 @@ window.VAPOREX_CATALOGO = [
       "ABACAXI E MANGA",
       "ABACAXI,KIWI E PITAYA",
       "PESSÊGO E MANGA",
-      "MORANGO GELADO"
+      "MORANGO GELADO",
+      "BANANA E AGUA DE COCO",
+      "ICY MINT",
+      "MENTHOL",
+      "BLUEBERRY, MORANGO E COCO",
+      "ALOE GRAPE",
+      "MORANGO E BANANA"
     ]
   },
   {
@@ -518,6 +545,30 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "MARACUJÁ ICE"
+    ]
+  },
+  {
+    "modelo": "BLACK SHEEP 15K ULTRA SLIM",
+    "slug": "black-sheep-15k-ultra-slim",
+    "foto": "assets/produtos/black-sheep-15k-ultra-slim.png",
+    "puffs": "15000",
+    "preco": 84.9,
+    "destaque": "LANÇAMENTO",
+    "seo_titulo": "BLACK SHEEP 15K ULTRA SLIM em Umuarama: 15000 puffs | Vaporex",
+    "seo_descricao": "BLACK SHEEP 15K ULTRA SLIM com 15000 puffs e 5 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 15.000 puffs",
+    "resumo": "NOVO LANÇAMENTO SUPER FINO!",
+    "pontos": [],
+    "descricao": [
+      "NOVO LANÇAMENTO SUPER FINO!"
+    ],
+    "ficha": {},
+    "sabores": [
+      "MARACUJÁ GELADO",
+      "UVA GELADA",
+      "MENTHOL",
+      "MORANGO E KIWI GELADO",
+      "MELANCIA GELADO"
     ]
   }
 ];
