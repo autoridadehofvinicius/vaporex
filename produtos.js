@@ -415,30 +415,6 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    "modelo": "BLACK SHEEP 15K ULTRA SLIM",
-    "slug": "black-sheep-15k-ultra-slim",
-    "foto": "assets/produtos/black-sheep-15k-ultra-slim.png",
-    "puffs": "15000",
-    "preco": 84.9,
-    "destaque": "LANÇAMENTO",
-    "seo_titulo": "BLACK SHEEP 15K ULTRA SLIM em Umuarama: 15000 puffs | Vaporex",
-    "seo_descricao": "BLACK SHEEP 15K ULTRA SLIM com 15000 puffs e 5 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 15.000 puffs",
-    "resumo": "NOVO LANÇAMENTO SUPER FINO!",
-    "pontos": [],
-    "descricao": [
-      "NOVO LANÇAMENTO SUPER FINO!"
-    ],
-    "ficha": {},
-    "sabores": [
-      "MARACUJÁ GELADO",
-      "UVA GELADA",
-      "MENTHOL",
-      "MORANGO E KIWI GELADO",
-      "MELANCIA GELADO"
-    ]
-  },
-  {
     "modelo": "BLACK SHEEP 2 SABORES",
     "slug": "black-sheep-2-sabores",
     "foto": "assets/produtos/black-sheep-2-sabores.png",
@@ -569,6 +545,30 @@ window.VAPOREX_CATALOGO = [
     "sabores": [
       "SPEARMINT ORIGINAL (LIDER DE VENDAS)",
       "GRAPE APPLE (LINHA FUSION)"
+    ]
+  },
+  {
+    "modelo": "BLACK SHEEP SHEEP SLATE",
+    "slug": "black-sheep-sheep-slate",
+    "foto": "assets/produtos/black-sheep-sheep-slate.png",
+    "puffs": "15000",
+    "preco": 84.9,
+    "destaque": "LANÇAMENTO EXCLUSIVO",
+    "seo_titulo": "BLACK SHEEP SHEEP SLATE em Umuarama: 15000 puffs | Vaporex",
+    "seo_descricao": "BLACK SHEEP SHEEP SLATE com 15000 puffs e 5 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
+    "subtitulo": "Pod descartável de 15.000 puffs",
+    "resumo": "Custo benefício entregando o que há de melhor!",
+    "pontos": [],
+    "descricao": [
+      "Custo benefício entregando o que há de melhor!"
+    ],
+    "ficha": {},
+    "sabores": [
+      "UVA GELADA",
+      "MARACUJÁ GELADO",
+      "MENTHOL",
+      "MELANCIA GELADA",
+      "MORANGO E KIWI GELADO"
     ]
   }
 ];
