@@ -95,7 +95,6 @@ window.VAPOREX_CATALOGO = [
       "Recarga": null
     },
     "sabores": [
-      "Grape Ice",
       "Strawberry Banana",
       "Kiwi Passion Fruit Guava"
     ]
@@ -459,26 +458,6 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    "modelo": "BLACK SHEEP 55K",
-    "slug": "black-sheep-55k",
-    "foto": "assets/produtos/black-sheep-55k.png",
-    "puffs": "55000",
-    "preco": 149.9,
-    "destaque": "LANÇAMENTO",
-    "seo_titulo": "BLACK SHEEP 55K em Umuarama: 55000 puffs | Vaporex",
-    "seo_descricao": "BLACK SHEEP 55K com 55000 puffs e 1 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 55.000 puffs",
-    "resumo": "O Black Sheep Cyber Tank Pro 55K é um pod descartável de alto rendimento que oferece até 55.000 puffs (caladas), equipado com mesh coil, fluxo de ar ajustável e display digital em tempo real para monitorar bateria e líquido.",
-    "pontos": [],
-    "descricao": [
-      "O Black Sheep Cyber Tank Pro 55K é um pod descartável de alto rendimento que oferece até 55.000 puffs (caladas), equipado com mesh coil, fluxo de ar ajustável e display digital em tempo real para monitorar bateria e líquido."
-    ],
-    "ficha": {},
-    "sabores": [
-      "MARACUJÁ ICE"
-    ]
-  },
-  {
     "modelo": "ELF BAR 15K",
     "slug": "elf-bar-15k",
     "foto": "assets/produtos/elf-bar-15k.png",
@@ -541,13 +520,11 @@ window.VAPOREX_CATALOGO = [
     "ficha": {},
     "sabores": [
       "SPEARMINT ORIGINAL (LIDER DE VENDAS)",
-      "CHERRY MENTHOL (LINHA DIAMOND)",
       "GRAPE MENTHOL (LINHA DIAMOND)",
       "MELON MENTHOL (LINHA DIAMOND)",
       "GRAPE BERRY  (LINHA FROST)",
       "PASSION GUAVA  (LINHA FROST)",
-      "GRAPE APPLE  (LINHA FUSION)",
-      "KIWI PASSION  (LINHA JUST JUICE)"
+      "GRAPE APPLE  (LINHA FUSION)"
     ]
   },
   {
