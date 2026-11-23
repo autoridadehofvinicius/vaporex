@@ -95,8 +95,7 @@ window.VAPOREX_CATALOGO = [
       "Recarga": null
     },
     "sabores": [
-      "Strawberry Banana",
-      "Kiwi Passion Fruit Guava"
+      "Strawberry Banana"
     ]
   },
   {
