@@ -277,10 +277,7 @@ window.VAPOREX_CATALOGO = [
     ],
     "ficha": {},
     "sabores": [
-      "Manga e Maracujá",
       "Abacaxi e Manga",
-      "Morango e Kiwi",
-      "Melancia e Kiwi",
       "Pessêgo e Uva"
     ]
   },
@@ -351,7 +348,6 @@ window.VAPOREX_CATALOGO = [
       "Cereja e Limão",
       "Uva Gelada",
       "Uva verde",
-      "Miami Mint",
       "Maracujá Gelado",
       "Maracujá e Manga",
       "Watermelon Ice",
