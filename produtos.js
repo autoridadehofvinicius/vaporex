@@ -184,9 +184,7 @@ window.VAPOREX_CATALOGO = [
     "descricao": [],
     "ficha": {},
     "sabores": [
-      "GRAPE ICE",
-      "MIAMI MINT",
-      "COOL MENTHOL"
+      "MIAMI MINT"
     ]
   },
   {
@@ -487,8 +485,7 @@ window.VAPOREX_CATALOGO = [
     ],
     "ficha": {},
     "sabores": [
-      "SPEARMINT ORIGINAL (LIDER DE VENDAS)",
-      "GRAPE APPLE (LINHA FUSION)"
+      "SPEARMINT ORIGINAL (LIDER DE VENDAS)"
     ]
   }
 ];
