@@ -121,7 +121,6 @@ window.VAPOREX_CATALOGO = [
       "ABACAXI E MANGA",
       "ABACAXI,KIWI E PITAYA",
       "PESSÊGO E MANGA",
-      "MORANGO GELADO",
       "BANANA E AGUA DE COCO",
       "ICY MINT",
       "MENTHOL",
