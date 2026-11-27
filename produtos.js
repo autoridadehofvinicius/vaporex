@@ -243,7 +243,6 @@ window.VAPOREX_CATALOGO = [
     ],
     "ficha": {},
     "sabores": [
-      "Abacaxi e Manga",
       "Pessêgo e Uva"
     ]
   },
