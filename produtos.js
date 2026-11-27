@@ -226,26 +226,6 @@ window.VAPOREX_CATALOGO = [
     ]
   },
   {
-    "modelo": "IGNITE V500",
-    "slug": "ignite-v500",
-    "foto": "assets/produtos/ignite-v500.png",
-    "puffs": "50000",
-    "preco": 149.9,
-    "destaque": "Maior Durabilidade",
-    "seo_titulo": "IGNITE V500 em Umuarama: 50000 puffs | Vaporex",
-    "seo_descricao": "IGNITE V500 com 50000 puffs e 6 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 50000 puffs",
-    "resumo": "Potência, estilo e praticidade em um só dispositivo!\nO Ignite V500 é ideal para quem busca uma experiência diferenciada, design moderno e muita personalidade.",
-    "pontos": [],
-    "descricao": [
-      "Potência, estilo e praticidade em um só dispositivo!\nO Ignite V500 é ideal para quem busca uma experiência diferenciada, design moderno e muita personalidade."
-    ],
-    "ficha": {},
-    "sabores": [
-      "Pessêgo e Uva"
-    ]
-  },
-  {
     "modelo": "NIK BAR",
     "slug": "nik-bar",
     "foto": "assets/produtos/nik-bar.png",
