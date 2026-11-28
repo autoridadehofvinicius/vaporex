@@ -241,7 +241,11 @@ window.VAPOREX_CATALOGO = [
       "Maracujá Gelado",
       "Maracujá e Manga",
       "Watermelon Ice",
-      "Chiclete de Melancia"
+      "Chiclete de Melancia",
+      "Banoffe",
+      "Miami Mint",
+      "Chiclete de menta",
+      "Halls de Amora"
     ]
   },
   {
