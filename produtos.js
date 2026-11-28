@@ -33,40 +33,6 @@
 
 window.VAPOREX_CATALOGO = [
   {
-    "modelo": "Ignite V155",
-    "slug": "ignite-v155",
-    "foto": "assets/produtos/ignite-v155.png",
-    "puffs": "15.500",
-    "preco": 99.9,
-    "destaque": "Mais fino",
-    "seo_titulo": "Ignite V155 em Umuarama: 15.500 puffs | Vaporex",
-    "seo_descricao": "Ignite V155 Ultra Slim com 15.500 puffs, modos Eco e Boost e 11 sabores. Entrega em Umuarama em até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável ultrafino de 15.500 puffs",
-    "resumo": "O pod mais fino da Ignite: cabe no bolso sem fazer volume. Tem visor de bateria e líquido e dois modos, o Eco, que rende mais, e o Boost, de tragada mais cheia.",
-    "pontos": [
-      "O mais fino da linha Ignite",
-      "Visor de bateria e de líquido",
-      "Modos Eco e Boost",
-      "11 sabores, a maior variedade da loja"
-    ],
-    "descricao": [
-      "O Ignite V155 Ultra Slim é o pod mais fino da linha Ignite. O corpo achatado cabe no bolso da calça sem fazer volume e quase não pesa na mão: é o modelo de quem leva o pod para todo lado.",
-      "No visor da frente você acompanha quanto resta de bateria e de líquido, então ele não acaba de surpresa no meio do dia. E você escolhe como ele trabalha: o modo Eco usa menos potência e faz o pod render mais; o Boost aumenta a potência para uma tragada mais cheia, com mais vapor e mais sabor.",
-      "São 15.500 puffs e 11 sabores, a maior variedade da loja. Tem fruta com gelo, como Grape Ice e Pineapple Ice, combinações como Kiwi Passion Fruit Guava e os mentolados puros, Menthol e Icy Mint."
-    ],
-    "ficha": {
-      "Visor": "Bateria e líquido",
-      "Modos": "Eco e Boost",
-      "Formato": "Ultrafino",
-      "Bateria": null,
-      "Nicotina": null,
-      "Recarga": null
-    },
-    "sabores": [
-      "Strawberry Banana"
-    ]
-  },
-  {
     "modelo": "IGNITE FROZEN",
     "slug": "ignite-frozen",
     "foto": "assets/produtos/ignite-frozen.png",
@@ -165,24 +131,6 @@ window.VAPOREX_CATALOGO = [
       "Strawberry Ice",
       "Strawberry Watermelon",
       "Watermelon ice"
-    ]
-  },
-  {
-    "modelo": "IGNITE V400 SWEET EDITION",
-    "slug": "ignite-v400-sweet-edition",
-    "foto": "assets/produtos/ignite-v400-sweet-edition.png",
-    "puffs": "40000",
-    "preco": 134.9,
-    "destaque": "MAIOR DURABILIDADE",
-    "seo_titulo": "IGNITE V400 SWEET EDITION em Umuarama: 40000 puffs | Vaporex",
-    "seo_descricao": "IGNITE V400 SWEET EDITION com 40000 puffs e 3 sabores. Entrega em Umuarama até 1h e pagamento na entrega.",
-    "subtitulo": "Pod descartável de 40000 puffs",
-    "resumo": "",
-    "pontos": [],
-    "descricao": [],
-    "ficha": {},
-    "sabores": [
-      "MIAMI MINT"
     ]
   },
   {
