@@ -117,7 +117,6 @@ window.VAPOREX_CATALOGO = [
       "Recarga": null
     },
     "sabores": [
-      "MELANCIA GELADA",
       "ABACAXI E MANGA",
       "ABACAXI,KIWI E PITAYA",
       "PESSÊGO E MANGA",
@@ -285,7 +284,6 @@ window.VAPOREX_CATALOGO = [
       "Morango e cocô",
       "Chiclete de Uva",
       "Chiclete de Morango",
-      "Polar ice",
       "Pêseego e Manga",
       "Love 66",
       "Chilclete de Cereja",
